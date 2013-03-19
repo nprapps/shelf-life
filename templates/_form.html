@@ -1,28 +1,35 @@
 <div class="tumblr-form">
-    <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://{{ SERVERS[0] }}/family-meal/">
-        <img src="img/family-meal-200.jpg" alt="Sample Photo" class="sample-photo" />
+    <!--
+    <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://{{ SERVERS[0] }}/{{ PROJECT_SLUG }}/">
+    -->
+    <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://localhost:8001/{{ PROJECT_SLUG }}/">
+        <img src="img/pantry-300.jpg" alt="Sample Photo" class="sample-photo" />
         <ol>
             <li class="form-intro">
                 <!-- <h2>This project has now concluded. Thank you for your submissions.</h2> -->
-                <p>This is some text for the form kicker.</p>
+                <p>What food are you holding onto in your pantry that you can't quite figure out what to do with? Show us your dregs, the surplus, the exotic, the overly-ambitious. (And guys, be honest, be real, and please don't brag.)</p>
                 </li>
             <li class="form-photo">
                 <label for="image" class="instructions">
-                        <strong>SHOW:</strong><br />Take a photo.
+                        <strong>SHOW:</strong><br />Gather together and take a photo of no more than three food things in your kitchen that you need some help with. (Click here for tips on how to send us a nice shot.)
                 </label>
-                <input type="file" name="image" width="90" accept="image/*" disabled="disabled">
+                <input type="file" name="image" width="90" accept="image/*">
             </li>
             <li class="form-message">
                 <label for="message" class="instructions">
-                        <strong>SHARE:</strong><br />Tell us about you.
+                  <strong>SHARE:</strong><br />Dig deep, reach into the back of that cabinet or fridge, and we bet you have something that stumps you. Show us no more than three things you've been hanging onto, and tell us how you got them.
                 </label>
-                <textarea name="message" disabled="disabled"></textarea>
+                <textarea name="message"></textarea>
             </li>
             <li class="form-signature">
-            <label for="signed_name">Initialed,</label>
-                <input type="text" name="signed_name" placeholder="Your Initials" class="signed-name" disabled="disabled"></input>
-                from
-                <input type="text" name="location" placeholder="Your City And State" class="signed-location" disabled="disabled"></input>
+            <label for="signed_name">From:</label>
+                <input type="text" name="signed_name" placeholder="Your Name" class="signed-name"></input>
+            <label for="email">Email (We won't publish it!):</label>
+                <input type="text" name="email" placeholder="you@domain.com" class="signed-email"></input>
+            </li>
+            <li class="form-submit">
+                <span class="gentle-reminder" style="display: none;">Please add a photo, an explanation, your initials and where you&rsquo;re from. Thanks!<br/></span>
+                <button type="submit" class="btn">Send</button>
             </li>
         </ol>
     </form>
@@ -55,7 +62,6 @@
                 var btn = $('.form-submit button');
 
                 btn.text('Sending, please wait...');
-                btn.attr('disabled', 'disabled');
 
                 return true;
             });

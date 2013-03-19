@@ -4,10 +4,12 @@ from glob import glob
 import os
 
 from fabric.api import *
+from jinja2 import Template
 
 import app
 import app_config
 from etc import github
+import tumblr_utils
 
 """
 Base configuration
@@ -242,6 +244,19 @@ def bootstrap_issues():
     github.create_default_labels(auth)
     github.create_default_tickets(auth)
 
+def create_log_file():
+    """
+    Creates the log file for recording Tumblr POSTs.
+    """
+    sudo('touch /var/log/%s.log' % app_config.PROJECT_SLUG)
+    sudo('chown ubuntu /var/log/%s.log' % app_config.PROJECT_SLUG)
+
+def install_scout_plugins():
+    """
+    Install plugins to Scout.
+    """
+    run('ln -s %(repo_path)s/scout/*.rb ~/.scout' % env)
+
 """
 Deployment
 """
@@ -263,6 +278,56 @@ def _gzip_www():
     """
     local('python gzip_www.py')
     local('rm -rf gzip/live-data')
+
+def render_confs():
+    """
+    Renders server configurations.
+    """
+    require('settings', provided_by=[production, staging])
+
+    with settings(warn_only=True):
+        local('mkdir confs/rendered')
+
+    context = app_config.get_secrets()
+    context['PROJECT_SLUG'] = app_config.PROJECT_SLUG
+    context['PROJECT_NAME'] = app_config.PROJECT_NAME
+    context['DEPLOYMENT_TARGET'] = env.settings
+
+    for service, remote_path in SERVICES:
+        file_path = 'confs/rendered/%s.%s.conf' % (app_config.PROJECT_SLUG, service)
+
+        with open('confs/%s.conf' % service, 'r') as read_template:
+
+            with open(file_path, 'wb') as write_template:
+                payload = Template(read_template.read())
+                write_template.write(payload.render(**context))
+
+
+def deploy_confs():
+    """
+    Deploys rendered server configurations to the specified server.
+    This will reload nginx and the appropriate uwsgi config.
+    """
+    require('settings', provided_by=[production, staging])
+
+    render_confs()
+
+    with settings(warn_only=True):
+        run('touch /tmp/%s.sock' % app_config.PROJECT_SLUG)
+
+        for service, remote_path in SERVICES:
+            service_name = '%s.%s' % (app_config.PROJECT_SLUG, service)
+            file_name = '%s.conf' % service_name
+            local_path = 'confs/rendered/%s' % file_name
+            put(local_path, remote_path, use_sudo=True)
+
+            if service == 'nginx':
+                sudo('ln -s %s%s /etc/nginx/sites-enabled/%s' % (remote_path, file_name, file_name))
+                sudo('service nginx reload')
+
+            else:
+                sudo('initctl reload-configuration')
+                sudo('service %s restart' % service_name)
 
 def deploy(remote='origin'):
     """
@@ -305,7 +370,7 @@ def _confirm(message):
     answer = prompt(message, default="Not at all")
 
     if answer.lower() not in ('y', 'yes', 'buzz off','screw you'):
-        exit() 
+        exit()
 
 def shiva_the_destroyer():
     """

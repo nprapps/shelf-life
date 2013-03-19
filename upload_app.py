@@ -17,14 +17,13 @@ app = Flask(app_config.PROJECT_NAME)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 logger = logging.getLogger('tumblr')
-file_handler = logging.FileHandler('/var/log/familymeal.log')
+file_handler = logging.FileHandler('/var/log/what-the-food.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
-
-@app.route('/family-meal/', methods=['POST'])
+@app.route('/what-the-food/', methods=['POST'])
 def _post_to_tumblr():
     """
     Handles the POST to Tumblr.
@@ -55,13 +54,13 @@ def _post_to_tumblr():
         context = {
             'message': strip_breaks(strip_html(request.form['message'])),
             'name': strip_html(request.form['signed_name']),
-            'location': strip_html(request.form['location']),
+            'email': strip_html(request.form['email']),
             'app_config': app_config
         }
 
         caption = render_template('caption.html', **context)
         t = Tumblpy(
-            app_key=app_config.TUMBLR_KEY,
+            app_key=os.environ['TUMBLR_CONSUMER_KEY'],
             app_secret=os.environ['TUMBLR_APP_SECRET'],
             oauth_token=os.environ['TUMBLR_OAUTH_TOKEN'],
             oauth_token_secret=os.environ['TUMBLR_OAUTH_TOKEN_SECRET'])
@@ -73,6 +72,7 @@ def _post_to_tumblr():
         )
 
         with open('/tmp%s' % file_path, 'w') as f:
+            print 'yo'
             f.write(request.files['image'].read())
 
         params = {
@@ -81,8 +81,11 @@ def _post_to_tumblr():
             "tags": app_config.TUMBLR_TAGS,
             "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
         }
+        print params
 
         try:
+            print app_config.TUMBLR_URL
+            print 'yo'
             tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
             tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
             logger.info('200 %s' % tumblr_url)
