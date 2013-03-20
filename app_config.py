@@ -14,12 +14,11 @@ PROJECT_SLUG = 'what-the-food'
 REPOSITORY_NAME = 'what-the-food'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
-PRODUCTION_SERVERS = ['cron.nprapps.org']
+PRODUCTION_SERVERS = ['50.112.9.120']
 
-# STAGING_S3_BUCKETS = ['stage-apps.npr.org']
-# STAGING_SERVERS = ['cron-staging.nprapps.org']
 STAGING_S3_BUCKETS = ['tumblr-stage.npr.org']
-STAGING_SERVERS = ['50.112.9.120']
+# STAGING_SERVERS = ['50.112.87.147']
+STAGING_SERVERS = PRODUCTION_SERVERS
 
 S3_BUCKETS = []
 SERVERS = []

@@ -29,6 +29,11 @@ env.repo_path = '%(path)s/repository' % env
 env.virtualenv_path = '%(path)s/virtualenv' % env
 env.forward_agent = True
 
+SERVICES = [
+    ('nginx', '/etc/nginx/sites-available/'),
+    ('uwsgi', '/etc/init/')
+]
+
 """
 Environments
 """
