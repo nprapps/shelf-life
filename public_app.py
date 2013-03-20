@@ -73,7 +73,6 @@ def _post_to_tumblr():
     )
 
     with open('/var/www%s' % file_path, 'w') as f:
-        print 'yo'
         f.write(request.files['image'].read())
 
     params = {
@@ -82,13 +81,9 @@ def _post_to_tumblr():
         "tags": app_config.TUMBLR_TAGS,
         "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
     }
-    print params
 
     try:
-        print app_config.TUMBLR_URL
         tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
-        print 'blehhhh'
-        print tumblr_post
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
         logger.info('200 %s' % tumblr_url)
 
