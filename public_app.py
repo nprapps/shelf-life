@@ -60,6 +60,7 @@ def _post_to_tumblr():
         }
 
         caption = render_template('caption.html', **context)
+
         t = Tumblpy(
             app_key=os.environ['TUMBLR_CONSUMER_KEY'],
             app_secret=os.environ['TUMBLR_APP_SECRET'],
@@ -101,7 +102,9 @@ def _post_to_tumblr():
 
     except Exception, e:
         logger.error('%s' % e)
-        return 'ERROR'
+        print e
+        print e.message
+        return 'BAD BAD BAD'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=app_config.DEBUG)
