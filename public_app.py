@@ -17,19 +17,19 @@ app = Flask(app_config.PROJECT_NAME)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 logger = logging.getLogger('tumblr')
-file_handler = logging.FileHandler('/var/log/what-the-food.log')
+file_handler = logging.FileHandler('/var/log/what-the-fridge.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-@app.route('/what-the-food/test/', methods=['GET'])
+@app.route('/what-the-fridge/test/', methods=['GET'])
 def _test_application():
     return datetime.datetime.now().isoformat()
 
 
-@app.route('/what-the-food/', methods=['POST'])
+@app.route('/what-the-fridge/', methods=['POST'])
 def _post_to_tumblr():
     """
     Handles the POST to Tumblr.
