@@ -1,28 +1,22 @@
-nprapps' Project Template
+What the Fridge?
 =========================
 
-* [About this template](#about-this-template)
+* [About this app](#about-this-app)
 * [Assumptions](#assumptions)
 * [What's in here?](#whats-in-here)
-* [Copy the template](#copy-the-template)
+* [Copy the app](#copy-the-app)
 * [Configure the project](#configure-the-project)
 * [Install requirements](#install-requirements)
 * [Project secrets](#project-secrets)
 * [Bootstrap issues](#bootstrap-issues)
 * [Adding a template/view](#adding-a-templateview)
 * [Run the project locally](#run-the-project-locally)
-* [Run Javascript tests](#run-javascript-tests)
-* [Run Python tests](#run-python-tests)
-* [Compile static assets](#compile-static-assets)
-* [Test the rendered app](#test-the-rendered-app)
-* [Deploy to S3](#deploy-to-s3)
-* [Deploy to EC2](#deploy-to-ec2)
-* [Installing cron jobs](#installing-cron-jobs)
+* [Deploy the app](#deploy-to-s3)
 
-About this template
+About this app
 -------------------
 
-This template provides a a project skeleton suitable for any project that is to be served entirely as flat files. Facilities are provided for rendering html from data, compiling LESS into CSS, deploying to S3, etc. (It actually supports deploying to servers too, but that's less well-tested.)
+This app provides an HTML form for embedding and a mechanism to crowdsource user-submitted content via a Tumblog.
 
 Assumptions
 -----------
@@ -38,6 +32,7 @@ What's in here?
 
 The project contains the following folders and important files:
 
+* ``confs`` -- Server configuration files for nginx and uwsgi. Edit the templates, don't touch anything in ``confs/rendered``.
 * ``data`` -- Data files, such as those used to generate HTML.
 * ``etc`` -- Miscellaneous scripts and metadata for project bootstrapping.
 * ``jst`` -- Javascript ([Underscore.js](http://documentcloud.github.com/underscore/#template)) templates.
@@ -51,23 +46,15 @@ The project contains the following folders and important files:
 * ``app_config.py`` -- Global project configuration for scripts, deployment, etc.
 * ``crontab`` -- Cron jobs to be installed as part of the project.
 * ``fabfile.py`` -- [Fabric](http://docs.fabfile.org/en/latest/) commands automating setup and deployment.
+* ``public_app.py`` -- A simple Flask dynamic app that provides an endpoint for form POSTs.
 
-Copy the template
+Copy the app
 -----------------
 
 ```
-git clone git@github.com:nprapps/app-template.git $NEW_PROJECT_NAME
+git clone git@github.com:nprapps/what-the-fridge.git
 
-# Optional: checkout an initial project branch
-# git checkout [init-map|init-table|init-chat]
-
-cd $NEW_PROJECT_NAME
-rm -rf .git
-git init
-git add * .gitignore
-git commit -am "Initial import from app-template."
-git remote add origin git@github.com:nprapps/$NEW_PROJECT_NAME.git
-git push -u origin master
+cd what-the-fridge
 ```
 
 Configure the project
@@ -102,9 +89,9 @@ curl https://npmjs.org/install.sh | sh
 Then install the project requirements:
 
 ```
-cd $NEW_PROJECT_NAME
+cd what-the-fridge
 npm install less universal-jst
-mkvirtualenv $NEW_PROJECT_NAME
+mkvirtualenv what-the-fridge
 pip install -r requirements.txt
 ```
 
@@ -133,70 +120,27 @@ Run the project locally
 A flask app is used to run the project locally. It will automatically recompile templates and assets on demand.
 
 ```
-workon $NEW_PROJECT_NAME
+workon what-the-fridge
 python app.py
 ```
 
+`app.py` is used for the Tumblr form which will be baked out to a flat file.
+
+To run the simple app that will post to Tumblr (via intermediate server for image uploads):
+
+```
+python public_app.py
+```
+
+This will run on `:8001`.
+
 Visit [localhost:8000](http://localhost:8000) in your browser.
 
-Run Javascript tests
---------------------
-
-With the project running, visit [localhost:8000/test/SpecRunner.html](http://localhost:8000/test/SpecRunner.html).
-
-Run Python tests
-----------------
-
-Python unit tests are stored in the ``tests`` directory. Run them with ``fab tests``.
-
-Compile static assets
----------------------
-
-Compile LESS to CSS, compile javascript templates to Javascript and minify all assets:
-
-```
-workon $NEW_PROJECT_NAME
-fab render
-```
-
-(This is done automatically whenever you deploy to S3.)
-
-Test the rendered app
----------------------
-
-If you want to test the app once you've rendered it out, just use the Python webserver:
-
-```
-cd www
-python -m SimpleHTTPServer
-```
-
-Deploy to S3
+Deploy the app
 ------------
 
-```
-fab staging master deploy
-```
+There are two parts – deploy the form to S3 and the simple app (`public_app.py`) to EC2.
 
-Deploy to EC2
--------------
-
-The current configuration is for running cron jobs only. Web server configuration is not included.
-
-* In ``fabfile.py`` set ``env.deploy_to_servers`` to ``True``.
-* Optionally, set ``env.install_crontab`` to ``True``.
-* Run ``fab staging master setup`` to configure the server.
-* Run ``fab staging master deploy`` to deploy the app.
-
-Instal cron jobs
-----------------
-
-Cron jobs are defined in the file `crontab`. Each task should use the `cron.sh` shim to ensure the project's virtualenv is properly activated prior to execution. For example:
-
-```
-* * * * * ubuntu bash /home/ubuntu/apps/$PROJECT_NAME/repository/cron.sh fab $DEPLOYMENT_TARGET cron_test
-```
-
-**Note:** In this example you will need to replace `$PROJECT_NAME` with your actual deployed project name.
-
-To install your crontab set `env.install_crontab` to `True` at the top of `fabfile.py`. Cron jobs will be automatically installed each time you deploy to EC2.
+* Run ``fab <ENV> master setup`` to configure the server (where ENV is either staging or production).
+* Run ``fab <ENV> master deploy`` to deploy the app.
+* Run ``fab <ENV> deploy_confs`` to render the server conf files (nginx and uwsgi) and then deploy them to the server. This will also restart your app on the server.
