@@ -186,6 +186,7 @@ def setup_directories():
     require('settings', provided_by=[production, staging])
 
     run('mkdir -p %(path)s' % env)
+    run('mkdir -p /var/www/uploads/%(deployed_name)s' % env)
 
 def setup_virtualenv():
     """
