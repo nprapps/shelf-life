@@ -48,62 +48,57 @@ def _post_to_tumblr():
         value = re.sub(r'\r\n|\r|\n', '\n', value)
         return value.replace('\n', '<br />')
 
+    # Request is a global. Import it down here where we need it.
+    from flask import request
+
+    context = {
+        'message': strip_breaks(strip_html(request.form['message'])),
+        'name': strip_html(request.form['signed_name']),
+        'email': strip_html(request.form['email']),
+        'app_config': app_config
+    }
+
+    caption = render_template('caption.html', **context)
+
+    t = Tumblpy(
+        app_key=os.environ['TUMBLR_CONSUMER_KEY'],
+        app_secret=os.environ['TUMBLR_APP_SECRET'],
+        oauth_token=os.environ['TUMBLR_OAUTH_TOKEN'],
+        oauth_token_secret=os.environ['TUMBLR_OAUTH_TOKEN_SECRET'])
+
+    file_path = '/uploads/%s/%s_%s' % (
+        app_config.PROJECT_SLUG,
+        str(time.mktime(datetime.datetime.now().timetuple())).replace('.', ''),
+        secure_filename(request.files['image'].filename.replace(' ', '-'))
+    )
+
+    with open('/var/www%s' % file_path, 'w') as f:
+        print 'yo'
+        f.write(request.files['image'].read())
+
+    params = {
+        "type": "photo",
+        "caption": caption,
+        "tags": app_config.TUMBLR_TAGS,
+        "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
+    }
+    print params
+
     try:
-        # Request is a global. Import it down here where we need it.
-        from flask import request
-
-        context = {
-            'message': strip_breaks(strip_html(request.form['message'])),
-            'name': strip_html(request.form['signed_name']),
-            'email': strip_html(request.form['email']),
-            'app_config': app_config
-        }
-
-        caption = render_template('caption.html', **context)
-
-        t = Tumblpy(
-            app_key=os.environ['TUMBLR_CONSUMER_KEY'],
-            app_secret=os.environ['TUMBLR_APP_SECRET'],
-            oauth_token=os.environ['TUMBLR_OAUTH_TOKEN'],
-            oauth_token_secret=os.environ['TUMBLR_OAUTH_TOKEN_SECRET'])
-
-        file_path = '/uploads/%s/%s_%s' % (
-            app_config.PROJECT_SLUG,
-            str(time.mktime(datetime.datetime.now().timetuple())).replace('.', ''),
-            secure_filename(request.files['image'].filename.replace(' ', '-'))
-        )
-
-        with open('/var/www%s' % file_path, 'w') as f:
-            print 'yo'
-            f.write(request.files['image'].read())
-
-        params = {
-            "type": "photo",
-            "caption": caption,
-            "tags": app_config.TUMBLR_TAGS,
-            "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
-        }
-        print params
-
-        try:
-            print app_config.TUMBLR_URL
-            tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
-            print 'blehhhh'
-            print tumblr_post
-            tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
-            logger.info('200 %s' % tumblr_url)
-
-            return redirect('%s#posts' % tumblr_url, code=301)
-
-        except TumblpyError, e:
-            logger.error('%s %s' % (e.error_code, e.msg))
-            return 'TUMBLR ERROR'
+        print app_config.TUMBLR_URL
+        tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
+        print 'blehhhh'
+        print tumblr_post
+        tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
+        logger.info('200 %s' % tumblr_url)
 
         return redirect('%s#posts' % tumblr_url, code=301)
 
-    except Exception, e:
-        logger.error('%s' % e)
-        return 'BAD BAD BAD: %s' % e
+    except TumblpyError, e:
+        logger.error('%s %s' % (e.error_code, e.msg))
+        return 'TUMBLR ERROR'
+
+    return redirect('%s#posts' % tumblr_url, code=301)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=app_config.DEBUG)
