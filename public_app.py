@@ -87,8 +87,9 @@ def _post_to_tumblr():
 
         try:
             print app_config.TUMBLR_URL
-            print 'yo'
             tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
+            print 'blehhhh'
+            print tumblr_post
             tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
             logger.info('200 %s' % tumblr_url)
 
