@@ -31,7 +31,7 @@ env.virtualenv_path = '%(path)s/virtualenv' % env
 env.forward_agent = True
 
 SERVICES = [
-    ('nginx', '/etc/nginx/sites-available/'),
+    ('nginx', '/etc/nginx/locations-enabled/'),
     ('uwsgi', '/etc/init/')
 ]
 
@@ -330,7 +330,6 @@ def deploy_confs():
             put(local_path, remote_path, use_sudo=True)
 
             if service == 'nginx':
-                sudo('ln -s %s%s /etc/nginx/sites-enabled/%s' % (remote_path, file_name, file_name))
                 sudo('service nginx reload')
 
             else:
