@@ -24,8 +24,8 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-@app.route('/what-the-food/test/', methods=['GET'])
-def _test_applicatoin():
+@app.route('/test/', methods=['GET'])
+def _test_application():
     return datetime.datetime.now().isoformat()
 
 
@@ -71,13 +71,13 @@ def _post_to_tumblr():
             oauth_token=os.environ['TUMBLR_OAUTH_TOKEN'],
             oauth_token_secret=os.environ['TUMBLR_OAUTH_TOKEN_SECRET'])
 
-        file_path = '/upload/%s/%s_%s' % (
+        file_path = '/uploads/%s/%s_%s' % (
             app_config.PROJECT_SLUG,
             str(time.mktime(datetime.datetime.now().timetuple())).replace('.', ''),
             secure_filename(request.files['image'].filename.replace(' ', '-'))
         )
 
-        with open('/tmp%s' % file_path, 'w') as f:
+        with open('/var/www%s' % file_path, 'w') as f:
             print 'yo'
             f.write(request.files['image'].read())
 
