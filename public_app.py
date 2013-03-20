@@ -24,7 +24,7 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-@app.route('/test/', methods=['GET'])
+@app.route('/what-the-food/test/', methods=['GET'])
 def _test_application():
     return datetime.datetime.now().isoformat()
 
