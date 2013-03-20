@@ -49,6 +49,23 @@ GOOGLE_ANALYTICS_ID = 'UA-5828686-4'
 
 TUMBLR_TAGS = 'food, noms'
 
+def get_secrets():
+    """
+    A method for accessing our secrets.
+    """
+    secrets = [
+        'TUMBLR_OAUTH_TOKEN',
+        'TUMBLR_OAUTH_TOKEN_SECRET',
+        'TUMBLR_APP_SECRET',
+        'AWS_SECRET_ACCESS_KEY',
+        'AWS_ACCESS_KEY_ID'
+    ]
+    secrets_dict = {}
+    for secret in secrets:
+        secrets_dict[secret] = os.environ.get(secret, None)
+
+    return secrets_dict
+
 def configure_targets(deployment_target):
     """
     Configure deployment targets. Abstracted so this can be
