@@ -102,9 +102,7 @@ def _post_to_tumblr():
 
     except Exception, e:
         logger.error('%s' % e)
-        print e
-        print e.message
-        return 'BAD BAD BAD'
+        return 'BAD BAD BAD: %s' % e
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=app_config.DEBUG)
