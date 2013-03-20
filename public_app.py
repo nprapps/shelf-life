@@ -24,11 +24,6 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-@app.route('/what-the-fridge/test/', methods=['GET'])
-def _test_application():
-    return datetime.datetime.now().isoformat()
-
-
 @app.route('/what-the-fridge/', methods=['POST'])
 def _post_to_tumblr():
     """
