@@ -23,6 +23,12 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
+
+@app.route('/what-the-food/test/', methods=['GET'])
+def _test_applicatoin():
+    return datetime.datetime.now().isoformat()
+
+
 @app.route('/what-the-food/', methods=['POST'])
 def _post_to_tumblr():
     """
