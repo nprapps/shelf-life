@@ -21,7 +21,8 @@ env.deploy_to_servers = True
 env.install_crontab = False
 env.deploy_web_services = True
 
-env.repo_url = 'git@github.com:nprapps/%(repo_name)s.git' % env
+# env.repo_url = 'git@github.com:nprapps/%(repo_name)s.git' % env
+env.repo_url = 'git://github.com/nprapps/%(repo_name)s.git' % env
 env.alt_repo_url = None #'git@bitbucket.org:nprapps/%(repo_name)s.git' % env
 env.user = 'ubuntu'
 env.python = 'python2.7'
