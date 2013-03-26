@@ -402,6 +402,15 @@ def shiva_the_destroyer():
                 uninstall_crontab()
 
 """
+Logging
+"""
+def parse_log_to_json():
+    tumblr_utils.parse_log_to_json()
+
+def parse_log_last_24():
+    tumblr_utils.parse_log_last_24()
+
+"""
 App-template meta-commands
 """
 

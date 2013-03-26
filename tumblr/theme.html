@@ -1,0 +1,1597 @@
+<html>
+    <head>
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage} : NPR</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+        <meta name="font:Body" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+        <meta name="if:Two column posts" content="1"/>
+
+        <!-- Appearance option -->
+        <meta name="if:Show blog title" content="1"/>
+        <meta name="if:Show blog description" content="1"/>
+        <meta name="if:Show profile photo" content="0"/>
+        <meta name="if:Use endless scrolling" content="1"/>
+        <meta name="if:Use larger font for quotes" content="0"/>
+        <meta name="if:Show image shadows" content="1"/>
+        <meta name="if:Show post notes" content="1"/>
+        <meta name="if:Show copyright in footer" content="0"/>
+        <meta name="text:Disqus Shortname" content="" />
+
+        <link rel="shortcut icon" href="http://www.npr.org/favicon.ico" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+
+        <!-- HTML5 Shiv -->
+        <!--[if lt IE 9]>
+                <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
+
+        <!-- Theme CSS -->
+        <style type="text/css" media="screen">
+            html {
+                -webkit-text-size-adjust: none; /* prevent font scaling in landscape */
+            }
+            body {
+                -webkit-font-smoothing: antialiased;
+                font: 15px/1.5 Arial, Helvetica, sans-serif;
+                color: #111;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                background-color: #888;
+            }
+            *:active, *:focus { outline-width: 0px; }
+            iframe { display: block; }
+
+            #nav { background-color: #e0e0e0; height: 44px; overflow: hidden; border-bottom: 2px solid #fff; }
+            #nav ul { list-style: none; margin: 0; padding: 0; }
+            #nav ul li { float: left; height: 44px; line-height: 44px; margin-left: 22px; font-size: 12px; }
+            #nav ul li:first-child { margin-left: 0; }
+            #nav a, #nav a:link, #nav a:visited { color: #6d8ac4; font-weight: bold; text-transform: lowercase; }
+            #nav a:hover, #nav a:active { color: #bccae5; }
+            #nav .site-links { float: left; margin-left: 30px; }
+            #nav .site-links-2 { float: right; margin-right: 120px; }
+            #nav .npr img { margin: 10px 0 0 0; width: 61px; }
+            #nav .stations { padding-left: 22px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG4nAABzrwAA92wAAIZNAABt8wAA6sIAADA+AAAYLjTjngYAAAGBSURBVHjapJO7UQMxEIa/u6GAowO7AptRAeAKODowoSJ8qRXYDhTbJFaIqQB3YMitwVQAHeAOjuQXozkYE7AzmpX2oX38u0XbtgC4EJcA3pqGE9S1KyWcAxPgjb/pDZjIh2K63veAV+DZW3PjQhwCQ2/NphN5DBy8NQcX4hNwBVyUQA1UQONCrIAdMPgl8gDYyaaRT11M1/udahq5ECfAHXChj5dyboCtMr331qxciLvvHgAv4pfA1ltzlHOls5RsK5tvn5J/UplFTr/WWZ1HndSfupMtxXS9nyjdvozfgQ2w6ASbAWPZVbJrShkfszpHwnoGfOrMJBtl/TkCm6Jt2zRIM+A24e9CfM/De2v62Tw8AAtvzbyUcg6sEv4uxBroqeuPQE+yNA8r+XCWRch34Fo8wZhk2+6uFGmZspGtVPdBWQB8AEPgXD34AWNOKdWhoFzonutOfnAnnjKodM91v5fgQuwJ31PU99Z8pMdZRzkWH3lrnju9udKmjoF5kn8NAFaQnhYx4i5jAAAAAElFTkSuQmCC) no-repeat 0% 50%; }
+            #nav .shop { padding-left: 18px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAICAYAAAAvOAWIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA97wAAIT6AAB5yAAA7p8AADFuAAAPXaV5P1wAAAB/SURBVHjafM6xCUJBEITh7x1WYA/mmtiSuZGI+NIXGRrYgRVoERYiiBe9yORMVjkOdGH4l2F22G57vBVkzII/J6HDGU+Uf0pxtMMDCwxR0NIkwhk9LrhjimVDqXrpFMGMFa4Nv82wxzz2EtzUrJvXwTF+/GgM/1WHDw1bf3gPAMfKIptJWVXJAAAAAElFTkSuQmCC) no-repeat 0% 50%; }
+            #nav ul.social-links { position: absolute; right: 0; top: 0; background-color: white; }
+            #nav ul.social-links span { margin-right: 20px; }
+            #nav ul.social-links a { display: block; height: 44px; width: 44px; text-indent: -999em; background: url(data:image/png;base64,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) no-repeat; }
+            #nav ul.social-links a:hover { opacity: .7; }
+            #nav ul.social-links li { margin-left: 0; }
+            #nav ul.social-links .facebook a { background-position: 0px -144px; }
+            #nav ul.social-links .twitter a { background-position: 0px -96px; border-right:2px solid white;}
+
+            #container { padding: 0 0 30px 0; }
+
+            #header {
+                background-color: #ebebeb;
+                padding: 50px 30px 30px 30px;
+                margin: 0;
+                border-bottom: 2px solid #fff;
+            }
+
+            #blog_info h1 {
+                font: normal 48px Arial, Helvetica, sans-serif;
+                color: #555;
+                margin-bottom: 10px;
+            }
+            #blog_info h1 a { color: #555; }
+            #blog_info .description { color: #787878; }
+            #blog_info p.project-credits {
+                color: #999;
+                margin-top: 15px;
+                margin-bottom: 0;
+                font-size: 11px;
+                font-style: italic;
+            }
+
+            #dmp-form {
+                color: #fff;
+                margin: 30px 0;
+                padding: 0 30px;
+            }
+            #dmp-form .wrap {
+                -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+                width: 100%;
+                overflow: hidden;
+            }
+            #dmp-form .hdr {
+                cursor: pointer;
+                overflow: hidden;
+                background-color: #7598c9;
+                height: 88px;
+            }
+            #dmp-form .hdr:hover {
+                background-color: #9eb7dd;
+            }
+            #dmp-form .hdr:after {
+                visibility: hidden;
+                display: block;
+                content: "";
+                clear: both;
+                height: 0;
+            }
+            #dmp-form .hdr h3 {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 88px;
+                padding-right: 10px;
+            }
+            #dmp-form .hdr h3 span {
+                background: url('http://apps.npr.org/familymeal/img/btn-share-large.png') no-repeat 50% 50%;
+                width: 88px; height: 88px;
+                border-right: 1px solid #fff;
+                margin-right: 22px;
+                display: inline-block;
+                float: left;
+            }
+            #dmp-form .dmp-iframe {
+                height: 670px;
+                width: 100%;
+            }
+
+            #dmp-form .dmp-iframe-wrapper {
+                display: none;
+                color: #111;
+                background-color: #f1f1f1;
+                padding-bottom:35px;
+            }
+
+            #dmp-form .legal {
+                margin: 0 auto;
+                padding: 0 20px;
+                font-size: 11px;
+                font-style: italic;
+                max-width: 560px;
+            }
+
+            img { max-width: 100% }
+            .post .top.media img { width: 100%; }
+            a { text-decoration: none; color: #4774cc; }
+            a img { border-width: 0px; }
+            strong { font-weight: bold; }
+            em { font-style: italic; }
+
+            .group:after {
+                visibility: hidden;
+                display: block;
+                content: "";
+                clear: both;
+                height: 0;
+                }
+            * html .group             { zoom: 1; } /* IE6 */
+            *:first-child+html .group { zoom: 1; } /* IE7 */
+
+            iframe#tumblr_controls {
+                top: 53px !important;
+            }
+
+            #posts {
+                color: #4C4C4C;
+                position: relative;
+                padding: 0 30px;
+                z-index: 1;
+            }
+            #posts .post {
+                list-style-type: none;
+                margin: 30px 0;
+            }
+            #posts .post .wrap {
+                padding: 30px;
+                border: 3px solid #f7f7f7;
+                background-color: #fff;
+                -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.04) inset;
+                -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.04) inset;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.04) inset;
+                /* box shadow from: http://matthamm.com/box-shadow-curl.html */
+            }
+            #posts .post .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+
+
+{block:IfDisqusShortname}
+            #posts .post #disqus_thread {
+                border-top: 1px solid #E6E6E6;
+                margin: 20px 0 0 0;
+                padding: 25px 0 0 0;
+            }
+
+            #posts .post .caption a.disquscomments {
+                font-size: 12px;
+                font-family: 'Times New Roman', Times, serif;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+{/block:IfDisqusShortname}
+
+            .top.audio * {
+                width: 100%;
+                height: 91px
+            }
+
+            .top.media {
+                line-height: 0;
+                {block:IfShowImageShadows}
+                    -webkit-box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, .27);
+                    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, .27);
+                {/block:IfShowImageShadows}
+                position: relative;
+                display: inline-block;
+            }
+
+            .top.media.photoset {
+                line-height: 0;
+                {block:IfShowImageShadows}
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                {/block:IfShowImageShadows}
+                position: relative;
+                display: inline-block;
+            }
+
+            .media img {
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+            }
+
+            .link_post .link {
+                color: #4774cc;
+                font-size: 21px;
+                font-weight: bold;
+                border: 1px solid rgba(71, 116, 204, 0.13);
+                background: rgba(71, 116, 204, 0.13);
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                padding: 15px 53px 15px 20px;
+                position: relative;
+                display: block;
+            }
+
+            .link .arrow {
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 12px solid #4774cc;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                margin-top: -8px;
+                display: block;
+            }
+
+            .link_post .link:hover {
+                border: 1px solid rgba(71, 116, 204, 0.2);
+                background: rgba(71, 116, 204, 0.2);
+            }
+
+            .link_post .link:active {
+                position: relative;
+                top: 1px;
+            }
+
+            #posts .post .media {
+                width: 50%;
+                float: left;
+            }
+            #posts .post .caption_and_post_info.isphoto {
+                width: 50%;
+                float: right;
+                margin-top: 0;
+            }
+            #posts .post .caption_and_post_info.isphoto .cont,
+            #posts .post .caption_and_post_info.isphoto .post_info {
+                margin-left: 30px;
+            }
+            #posts .post .caption_and_post_info.after_top_part {
+                border-top: 0;
+                padding-top: 0;
+            }
+
+            .post .caption {
+                width: auto;
+                float: none;
+                padding-bottom: 15px;
+                overflow: hidden;
+            }
+
+            .post .caption p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .post .caption p.told-to-npr {
+                font-style: italic;
+                color: #666;
+                font-size: 14px;
+            }
+
+            .post .caption p.footnote {
+                font-style: italic;
+                color: #666;
+                font-size: 12px;
+            }
+
+            .content_source {
+                margin-bottom: 20px;
+            }
+
+            .content_source img {
+                margin: 0 0 0 4px !important;
+                opacity: 0.7;
+                vertical-align: middle;
+            }
+
+            .caption a, .description a {
+                color: #4774cc;
+                padding: 0 1px;
+            }
+
+            .caption a:hover, .description a:hover {
+                background: rgba(71, 116, 204, 0.13);
+            }
+
+            .caption a:active, .description a:active {
+                background: rgba(71, 116, 204, 0.2);
+            }
+
+            .caption h2 {
+                font: normal 30px/1.14 Georgia, serif;
+                margin: 0 0 18px 0;
+            }
+            .caption h2 a { color: #000; }
+            .caption h2 a:hover { color: #4065a2; background: transparent; }
+
+            .caption blockquote {
+                border-left: 2px solid #E6E6E6;
+                padding: 1px 0 1px 20px;
+            }
+
+            .caption pre {
+                background: #eee;
+                font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Anonymous Pro", "Courier New", monospace, serif;
+                overflow: scroll;
+                padding: 10px;
+                border-radius: 3px;
+                font-size: 13px;
+                line-height: 19px;
+            }
+
+            .caption p,
+            .caption ol,
+            .caption ul,
+            .caption pre,
+            .caption h1,
+            .caption h2,
+            .post h3,
+            .caption h4,
+            .caption h5,
+            .caption blockquote,
+            .caption img,
+            .caption embed,
+            .caption object {
+                margin: 0 0 20px 0;
+                color: #111;
+            }
+
+            .caption p:empty {
+                display: none;
+            }
+
+            .caption iframe {
+                display: block !important;
+            }
+
+            .post .caption ul,
+            .post .caption ol {
+                margin-left: 18px;
+            }
+
+            .caption .question {
+                display: block;
+                padding: 15px;
+                font-size: 15px;
+            }
+
+            .caption .answer {
+                margin-top: 20px;
+            }
+
+            .caption .asker {
+                line-height: 24px;
+                margin: 25px 20px 0 23px;
+            }
+
+            .caption .asker img {
+                float: left;
+                margin: 0 7px 0 0;
+            }
+
+            .caption .asker a {
+                margin-left: 0;
+            }
+
+            .caption .quote {
+                color: #333;
+                font-weight: bold;
+            }
+
+            .quote span {
+                display: inline-block;
+            }
+
+            .quote.short_text {
+                font-size: 50px;
+                letter-spacing: -2px;
+                line-height: 48px;
+                margin: 0 0 18px 0;
+            }
+
+            .quote.short_text span {
+                margin: 0 0 0 -22px;
+            }
+
+            .quote.medium_text {
+                font-size: 36px;
+                letter-spacing: -1px;
+                line-height: 36px;
+                margin: 0 0 20px 0;
+            }
+
+            .quote.medium_text span {
+                margin: 0 0 0 -13px;
+            }
+
+            .quote.long_text,
+            .quote.text {
+                font-size: 24px;
+                line-height: 27px;
+                margin: 0 0 20px 0;
+            }
+
+            .quote.long_text span {
+                margin: 0 0 0 -9px;
+            }
+
+            .quote.larger_text {
+                font-size: 50px !important;
+                letter-spacing: -2px !important;
+                line-height: 48px !important;
+                margin: 0 0 18px 0 !important;
+            }
+
+            .quote.larger_text span {
+                margin: 0 0 0 -22px !important;
+            }
+
+            .quote_source {
+                margin: 0 0 20px 0 !important;
+            }
+
+            .caption .conversation {
+                margin-left: 0 !important;
+                margin-bottom: 30px;
+                list-style-type: none;
+            }
+
+            .conversation .chat_line {
+                padding: 10px 16px;
+            }
+
+            .conversation .chat_line.user1 {
+                background: #f5f5f5;
+            }
+
+            .conversation .chat_line.user2 {
+                background: #fff;
+            }
+
+            .conversation .chat_line.user3 {
+                background: #ddd;
+            }
+
+            .conversation .chat_line.user4 {
+                background: #ccc;
+            }
+
+            .post .post_info {
+                width: auto;
+                font-size: 12px;
+                list-style-type: none;
+                -webkit-font-smoothing: subpixel-antialiased;
+                margin: 1px 0 10px -3px;
+                overflow: hidden;
+            }
+
+            .post_info li {
+                line-height: 14px;
+                margin-bottom: 10px;
+                float: left;
+            }
+
+            .post_info li a {
+                margin: 0 10px 0 0;
+                padding: 0 2px 0 5px;
+            }
+
+            .post .post_info.social {
+                color: #999;
+                margin: 10px 0 -15px 0;
+            }
+            .post_info.social .share {
+                float: none;
+                font-size: 12px;
+                text-transform: lowercase;
+            }
+            .post_info.social .facebook,
+            .post_info.social .twitter {
+                background-color: #ebebeb;
+                line-height: 44px;
+                padding: 0;
+                width: 50%;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            .post_info.social li a {
+                margin: 0;
+                padding: 0;
+                display: block;
+                border-right: 2px solid #fff;
+                color: #6d8ac4;
+            }
+            .post_info.social li a:after {
+                visibility: hidden;
+                display: block;
+                content: "";
+                clear: both;
+                height: 0;
+            }
+            .post_info .facebook span,
+            .post_info .twitter span {
+                background-image: url('data:image/png;base64,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');
+                background-repeat: no-repeat;
+                width: 44px;
+                height: 44px;
+                display: inline-block;
+                margin-right: 10px;
+                float: left;
+            }
+            .post_info .facebook span { background-position: 0 -144px; }
+            .post_info .twitter span { background-position: 0 -96px; }
+            .post_info .facebook a:hover,
+            .post_info .twitter a:hover {
+                opacity: 0.7;
+            }
+
+            .post_info .timestamp-wrap {
+                color: #999;
+            }
+            .post_info .timestamp {
+                padding: 0 2px 0 0;
+                display: block;
+                font-size: 12px;
+                color: #6d8ac4;
+                font-weight: bold;
+                opacity: 0.5;
+            }
+            .post_info .timestamp:hover {
+                color: #bccae5;
+            }
+
+            .post_info .notecount {
+                padding: 0 2px 0 5px;
+                display: inline-block;
+                opacity: .7;
+            }
+
+
+            /* Baselines */
+            .tag {
+                color: #4774cc;
+                display: table;
+            }
+
+            .tag span {
+                color: #4c4c4c;
+                display: table-cell;
+            }
+
+            .tag:hover {
+                background: rgba(71, 116, 204, 0.13);
+            }
+
+            .tag:hover span {
+                color: #4774cc;
+            }
+
+            .tag:active {
+                background: rgba(71, 116, 204, 0.2);
+            }
+
+            .post_notes {
+                clear: both;
+            }
+
+            ol.notes {
+                color: #ccc;
+                font-size: 13px;
+                text-align: left;
+                list-style-type: none;
+                border-top: solid 1px #E6E6E6;
+                -webkit-font-smoothing: subpixel-antialiased !important;
+                margin: 40px auto auto auto;
+            }
+
+            ol.notes li.note {
+                border-bottom: solid 1px #aaa;
+                padding: 9px 0 10px 0;
+            }
+
+            ol.notes li.note img.avatar {
+                width: 16px;
+                height: 16px;
+                border-radius: 3px;
+                vertical-align: -4px;
+                margin-right: 6px;
+            }
+
+            ol.notes a {
+                color: #bbb;
+                text-decoration: underline;
+            }
+            ol.notes a:hover {
+                color: #fff;
+            }
+
+            ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 25px;
+            }
+
+            ol.notes li.note blockquote a {
+                text-decoration: none;
+            }
+
+            ol.notes li.note:last-child {
+                border-width: 0px;
+            }
+
+            #sidebar { margin-top: 20px; display: none; }
+            #sidebar .description {
+                line-height: 21px;
+                border-bottom: 1px solid #E6E6E6;
+                margin: 3px 0 20px 0;
+                padding: 0 0 20px 0;
+            }
+            #sidebar .links {
+                font-size: 12px;
+                letter-spacing: 2px;
+                list-style-type: none;
+                -webkit-font-smoothing: subpixel-antialiased;
+                margin: 0;
+                line-height: 20px;
+            }
+            #sidebar .links:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+            #sidebar .links li {
+                float: left;
+                margin-right: 20px;
+            }
+
+            #sidebar .links a {
+                color: #4c4c4c;
+            }
+            #sidebar .links a:hover {
+                color: #4774cc;
+            }
+
+            .links .icon {
+                width: 12px;
+                height: 12px;
+                background: #383838 url('http://static.tumblr.com/thpaaos/1xRm66voi/icons_sprite.png');
+                margin: 0 8px 0 0;
+                display: inline-block;
+            }
+
+            .links a:hover .icon {
+                background-color: #4774cc;
+            }
+
+            .ask .icon { background-position: 0 0; margin-bottom: -2px; }
+            .submit .icon { background-position: 0 -12px; margin-bottom: -1px; }
+            .rss .icon { background-position: 0 -24px; }
+            .archive .icon { background-position: 0 -36px; }
+
+            .bubble {
+                color: #6f6f6f;
+                font-size: 13px;
+                line-height: 20px;
+                background: #f5f5f5;
+                border: 1px solid #d5d5d5;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                padding: 8px 12px;
+                position: relative;
+                display: none;
+            }
+
+            #footer {
+                -webkit-font-smoothing: subpixel-antialiased;
+                margin: 0 30px 30px 30px;
+            }
+
+            #footer .copyright {
+                width: 50%;
+                float: left;
+            }
+
+            #footer .pagination-index a {
+                display: inline-block;
+                background-color: #ebebeb;
+                font-size: 12px;
+                text-transform: lowercase;
+                font-weight: bold;
+                padding: 0 20px;
+                line-height: 44px;
+            }
+            #footer .pagination-index a:hover {
+                color: #bccae5;
+            }
+
+            #footer .pagination {
+                width: 230px;
+                text-align: right;
+                float: right;
+                position: relative;
+            }
+
+            .pagination .count {
+                float: left;
+            }
+
+            .pagination .buttons {
+                width: 113px;
+                height: 30px;
+                margin: -2px 0 0 30px;
+                float: right;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 10;
+            }
+
+            .pagination .buttons.disabled {
+                z-index: 9;
+            }
+
+            .buttons a,
+            .buttons li {
+                width: 56px;
+                height: 28px;
+                line-height: 999px;
+                text-align: center;
+                border: 1px solid #C8C8C8;
+                -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+                box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+                background: #f1f1f1; /* Old browsers */
+                background: -moz-linear-gradient(top,  #f1f1f1 0%, #e8e8e8 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #f1f1f1 0%,#e8e8e8 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #f1f1f1 0%,#e8e8e8 100%); /* IE10+ */
+                background: linear-gradient(top,  #f1f1f1 0%,#e8e8e8 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#e8e8e8',GradientType=0 );/* IE6-9 */
+                list-style-type: none;
+                overflow: hidden;
+                position: relative;
+                display: block;
+            }
+
+            .buttons.disabled li {
+                background: #f5f5f5;
+            }
+
+            .buttons a:active {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background: #E6E6E6;
+            }
+
+            .buttons .arrow {
+                width: 10px;
+                height: 14px;
+                position: absolute;
+                top: 50%;
+                display: block;
+                background-image: url(http://static.tumblr.com/ogedyaw/xu1m8jxnf/arrow_sprite.png);
+            }
+
+            .buttons .left {
+                -webkit-border-top-left-radius: 2px;
+                -webkit-border-bottom-left-radius: 2px;
+                -moz-border-radius-topleft: 2px;
+                -moz-border-radius-bottomleft: 2px;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                position: absolute;
+                left: 0;
+            }
+
+            .left .arrow {
+                background-position: 0 15px;
+                margin: -7px auto auto 20px;
+            }
+
+            .disabled .left .arrow {
+                background-position: 0 0;
+            }
+
+            .buttons .right {
+                border-left-width: 1px;
+                -webkit-border-top-right-radius: 2px;
+                -webkit-border-bottom-right-radius: 2px;
+                -moz-border-radius-topright: 2px;
+                -moz-border-radius-bottomright: 2px;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                position: absolute;
+                right: 0;
+            }
+
+            .right .arrow {
+                background-position: 10px -71px;
+                margin: -7px auto auto 24px;
+            }
+
+            .disabled .right .arrow {
+                background-position: 10px -56px;
+            }
+
+            /* Protection for parents that have floating children */
+            #header:after,
+            #container:after,
+            .caption_and_post_info:after,
+            #footer:after
+            .buttons:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+            @media (min-width: 980px) {
+                #header #blog_info, #posts .post,
+                #dmp-form .wrap,
+                #footer .pagination-index {
+                    margin-left: auto; margin-right: auto;
+                    width: 80%;
+                    max-width: 1000px;
+                }
+            }
+            @media (max-width: 979px) {
+                #nav .site-links-2 { display: none; }
+            }
+            @media (min-width: 768px) {
+            }
+            @media (max-width: 767px) {
+                #posts .post .media { width: auto; float: none; }
+                #posts .post .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
+                #posts .post .caption_and_post_info.isphoto .cont,
+                #posts .post .caption_and_post_info.isphoto .post_info { margin-left: 0; }
+                #posts .post .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+
+                #nav .site-links { margin-left: 20px; }
+                .post .post_info.social { margin-bottom: 0; }
+                .post_info.social .facebook, .post_info.social .twitter { font-size: 13px; }
+            }
+            @media (max-width: 480px) {
+                #nav .site-links li { display: none; }
+                #nav .site-links .npr { display: block; }
+                #blog_info h1 { font-size: 36px; }
+                #posts { padding-left: 10px; padding-right: 10px; }
+                #posts .post .wrap { padding: 15px; }
+                #dmp-form { padding-left: 10px; padding-right: 10px; }
+                #dmp-form .hdr { height: 64px; }
+                #dmp-form .hdr h3 { font-size: 15px; line-height: 40px; padding-top: 13px; }
+                #dmp-form .hdr h3 span { width: 64px; height: 64px; margin-right: 15px; background-position: 50% 50%; margin-top: -13px; background-image: url('http://apps.npr.org/familymeal/img/btn-share-small.png') }
+                #dmp-form .dmp-iframe { height: 770px; }
+                #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
+            }
+        </style>
+
+        {block:PermalinkPage}
+            <!-- Simplified permalink pages (Hides right column) -->
+            <style type="text/css" media="screen">
+            </style>
+        {block:PermalinkPage}
+
+        <!-- Custom CSS -->
+        <style type="text/css" media="screen">
+            {CustomCSS}
+        </style>
+
+        <!-- GOOGLE ANALYTICS -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5828686-4']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@nprapps">
+        <meta property="og:title" content="{Title}" />
+        <meta property="og:url" content="http://dinnertimeconfessional.tumblr.com/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Dinner is hard. We want to know what's on your family's table, and why. Share yours at NPR's Dinnertime Confessional." />
+        <meta property="og:image" content="http://apps.npr.org/familymeal/img/family-meal.png" />
+        <meta property="og:site_name" content="NPR.org" />
+        <meta property="fb:app_id" content="138837436154588" />
+
+    </head>
+    <body class="{block:IndexPage}index-page{/block:IndexPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}">
+        <div id="nav">
+            <ul class="site-links">
+                <li class="npr"><a href="http://npr.org"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR" /></a></li>
+                <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
+                <li class="arts"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
+                <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
+                <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
+            </ul>
+            <ul class="social-links">
+                <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner%20is%20hard.%20We%20want%20to%20know%20what's%20on%20your%20family's%20table%2C%20and%20why.%20Share%20yours%20at%20NPR's%20Dinnertime%20Confessional.&amp;url=http%3A%2F%2Fdinnertimeconfessional.tumblr.com%2F" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Navbar', 'Dinnertime Confessional']);">Share This Page On Twitter</a></li>
+                <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link=http%3A%2F%2Fdinnertimeconfessional.tumblr.com%2F&picture=http%3A%2F%2Fapps.npr.org%2Ffamilymeal%2Fimg%2Ffamily-meal.png&name={Title}&redirect_uri=http%3A%2F%2Fdinnertimeconfessional.tumblr.com%2F" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Navbar', 'Dinnertime Confessional']);">Like This Page On Facebook</a></li>
+            </ul>
+            <ul class="site-links-2">
+                <li class="stations"><a href="http://www.npr.org/templates/stations/stations/">Stations</a></li>
+                <li class="donate"><a href="http://www.npr.org/stations/donate/index.php">Donate</a></li>
+                <li class="shop"><a href="http://shop.npr.org">Shop</a></li>
+            </ul>
+        </div>
+
+
+        <section id="container" class="group">
+            <header id="header">
+                <section id="blog_info">
+                    {block:IfShowBlogTitle}<h1><a href="/">{Title}</a></h1>{/block:IfShowBlogTitle}
+                    {block:IfShowBlogDescription}
+                        {block:Description}
+                            <div class="cont description group">
+                                {Description}<br />
+                                <span class="more">Full Series: <a href="http://www.npr.org/series/172693794/on-the-run-how-families-struggle-to-eat-well-and-exercise">What The Fridge: How we find stuff in our pantry and then eat it &rsaquo;</a></span>
+                            </div>
+                        {/block:Description}
+                    {/block:IfShowBlogDescription}
+                    {block:IndexPage}
+                    <p class="project-credits">Credits: Annie Adams, Bethany Boswell, Chris Colbert, Davis Duryea, Erica Edison / NPR<br />
+                        Questions? Problems? E-mail <a href="mailto:tumblr@npr.org">tumblr@npr.org</a>.
+                    </p>
+                    {/block:IndexPage}
+                </section>
+
+                <aside id="sidebar">
+                    {block:HasPages}
+                        <ul class="links">
+                            {block:Pages}
+                                <li><a href="{URL}">{Label}</a></li>
+                            {/block:Pages}
+                        </ul>
+                    {/block:HasPages}
+
+                    <ul class="links" style="display:none;{block:AskEnabled} display:block;{/block:AskEnabled}{block:SubmissionsEnabled} display:block;{/block:SubmissionsEnabled}">
+                        {block:AskEnabled}<li><a href="/ask" class="ask"><span class="icon"></span>ask me anything</a></li>{/block:AskEnabled}
+                        {block:SubmissionsEnabled}<li><a href="/submit" class="submit"><span class="icon"></span>submit a post</a></li>{/block:SubmissionsEnabled}
+                    </ul>
+
+                    <ul class="links">
+                        <li><a href="{RSS}" class="rss"><span class="icon"></span>rss</a></li>
+                        <li><a href="/archive" class="archive"><span class="icon"></span>archive</a></li>
+                    </ul>
+                </aside>
+            </header>
+
+            <section id="dmp-form">
+                <div class="wrap">
+                    <div class="hdr">
+                        <h3><span></span>SHARE: What The Fridge?</h3>
+                    </div>
+                    <div class="dmp-iframe-wrapper">
+                        <iframe class="dmp-iframe" src="http://apps.npr.org/what-the-fridge/tumblr-form.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                        <div class="legal">
+                    By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <ul id="posts">
+                <!-- START POSTS -->
+                {block:Posts}
+
+                        <li class="post group" {block:IfShowPostNotes} {block:PostNotes} style="padding:0"{/block:PostNotes} {/block:IfShowPostNotes}>
+                            <div class="wrap">
+
+                        {block:Photo}
+                            <section class="top media" style="display:block;">
+                                 <a href="{Permalink}#posts" class="link"><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a>
+                            </section>
+                        {/block:Photo}
+
+                        {block:Photoset}
+                            <section class="top media photoset">
+                                {Photoset-700}
+                            </section>
+                        {/block:Photoset}
+
+                        {block:Link}
+                            <section class="top link_post">
+                                <a href="{URL}" class="link">{Name}<span class="arrow"></span></a>
+                            </section>
+                        {/block:Link}
+
+                        {block:Audio}
+                            <section class="top audio">
+                            {AudioPlayerBlack}
+                            </section>
+                        {/block:Audio}
+
+                        {block:Video}
+                            <section class="top media">
+                                {Video-700}
+                            </section>
+                        {/block:Video}
+
+                        <section class="group caption_and_post_info
+                            {block:Photo} after_top_part isphoto{/block:Photo}
+                            {block:Photoset} after_top_part isphoto{/block:Photoset}
+                            {block:Link} after_top_part islink{/block:Link}
+                            {block:Audio} after_top_part isaudio{/block:Audio}
+                            {block:Video} after_top_part isvideo{/block:Video}
+                        ">
+                            <ul class="
+                                post_info
+                            ">
+                                <li class="timestamp-wrap">
+                                {block:IndexPage}
+                                <a href="{Permalink}#posts" class="
+                                    timestamp
+                                    {block:Text}has_caption{block:Title} with_title{/block:Title}{/block:Text}
+                                    {block:Photo}{block:Caption}has_caption{/block:Caption}{/block:Photo}
+                                    {block:Photoset}{block:Caption}has_caption{/block:Caption}{/block:Photoset}
+
+                                    {block:Quote}
+                                        {block:Source}
+                                            {Length}_quote
+                                        {/block:Source}
+                                    {/block:Quote}
+
+                                    {block:Link}{block:Description}has_caption{/block:Description}{/block:Link}
+                                    {block:Chat}chat{block:Title} with_title{/block:Title}{/block:Chat}
+                                    {block:Audio}{block:Caption}has_caption{/block:Caption}{/block:Audio}
+                                    {block:Video}{block:Caption}has_caption{/block:Caption}{/block:Video}
+                                ">{TimeAgo}{/block:IndexPage}
+                                {block:PermalinkPage}{block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}{/block:PermalinkPage}
+                                {block:IndexPage}</a>{/block:IndexPage}
+                                </li>
+
+                                {block:IfShowPostNotes}
+                                    {block:NoteCount}
+                                       <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
+                                   {/block:NoteCount}
+                                {/block:IfShowPostNotes}
+
+                                </ul>
+
+
+                            {block:Text}
+                                <section class="caption group">
+                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                    <div class="cont group">{Body}</div>
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
+                            {/block:Text}
+
+                            {block:Answer}
+                                <section class="caption group">
+                                    <div class="cont group">
+
+                                        <div class="question bubble">
+                                            {Question}
+                                            <span class="arrow border"></span>
+                                            <span class="arrow fill"></span>
+                                        </div>
+                                        <div class="asker group">
+                                            <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+                                        </div>
+                                        <div class="answer cont">{Answer}</div>
+                                    </div>
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
+                            {/block:Answer}
+
+                            {block:Photo}
+                                <section class="caption group">
+                                    {block:Caption}
+                                        <div class="cont">{Caption}</div>
+                                    {/block:Caption}
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
+                            {/block:Photo}
+
+                            {block:Photoset}
+                                <section class="caption group">
+                                    {block:Caption}
+                                        <div class="cont">{Caption}</div>
+                                    {/block:Caption}
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
+                            {/block:Photoset}
+
+                            {block:Quote}
+                                    <section class="caption group">
+                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>“</span>{Quote}”</section>
+                                        {block:Source}
+                                            <div class="cont quote_source">&mdash; {Source}</div>
+                                        {/block:Source}
+                                        {block:ContentSource}
+                                            <div class="cont content_source">
+                                                <a href="{SourceURL}">
+                                                    {lang:Source}:
+                                                    {block:SourceLogo}
+                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                    {/block:SourceLogo}
+                                                    {block:NoSourceLogo}
+                                                        {SourceTitle}
+                                                    {/block:NoSourceLogo}
+                                                </a>
+                                            </div>
+                                        {/block:ContentSource}
+                                    </section>
+                            {/block:Quote}
+
+                            {block:Link}
+                                {block:Description}
+                                    <section class="caption group">
+                                        <div class="cont">{Description}</div>
+                                        {block:ContentSource}
+                                            <div class="cont content_source">
+                                                <a href="{SourceURL}">
+                                                    {lang:Source}:
+                                                    {block:SourceLogo}
+                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                    {/block:SourceLogo}
+                                                    {block:NoSourceLogo}
+                                                        {SourceTitle}
+                                                    {/block:NoSourceLogo}
+                                                </a>
+                                            </div>
+                                        {/block:ContentSource}
+                                    </section>
+                                {/block:Description}
+                            {/block:Link}
+
+                            {block:Chat}
+                                <section class="caption group">
+                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                    <ul class="conversation">
+                                        {block:Lines}
+                                            <li class="chat_line user{UserNumber}">
+                                                {block:Label}
+                                                    <strong>{Label}</strong>&nbsp;&nbsp;
+                                                {/block:Label}
+                                                {Line}
+                                            </li>
+                                        {/block:Lines}
+                                    </ul>
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
+                            {/block:Chat}
+
+                            {block:Audio}
+                                {block:Caption}
+                                    <section class="caption group">
+                                        <div class="cont">{Caption}</div>
+                                        {block:ContentSource}
+                                            <div class="cont content_source">
+                                                <a href="{SourceURL}">
+                                                    {lang:Source}:
+                                                    {block:SourceLogo}
+                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                    {/block:SourceLogo}
+                                                    {block:NoSourceLogo}
+                                                        {SourceTitle}
+                                                    {/block:NoSourceLogo}
+                                                </a>
+                                            </div>
+                                        {/block:ContentSource}
+                                    </section>
+                                {/block:Caption}
+                            {/block:Audio}
+
+                            {block:Video}
+                                <section class="caption group">
+                                {block:Caption}
+                                    <div class="cont">{Caption}</div>
+                                {/block:Caption}
+                                {block:ContentSource}
+                                    <div class="cont content_source">
+                                        <a href="{SourceURL}">
+                                            {lang:Source}:
+                                            {block:SourceLogo}
+                                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                            {/block:SourceLogo}
+                                            {block:NoSourceLogo}
+                                                {SourceTitle}
+                                            {/block:NoSourceLogo}
+                                        </a>
+                                    </div>
+                                {/block:ContentSource}
+                                </section>
+                            {/block:Video}
+
+
+                                <ul class="post_info social">
+                                    <li class="share">Share This</li>
+                                    <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
+                                    <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
+                                </ul>
+
+                                </section>
+
+                        </div> <!-- end .wrap -->
+
+                        {block:PostNotes}
+                            <section class="post_notes">
+                                <a name="notes">
+                                    {PostNotes}
+                                </a>
+                            </section>
+                        {/block:PostNotes}
+
+                        {block:IfDisqusShortname}{block:IndexPage}
+                           <section class="caption group">
+                                <a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a>
+                            </section>
+                        {/block:IndexPage}{/block:IfDisqusShortname}
+                        {block:IfDisqusShortname}{block:Permalink}
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                        {/block:Permalink}{/block:IfDisqusShortname}
+
+                    </li>
+
+                {/block:Posts}
+                <!-- END POSTS -->
+            </ul>
+
+            {block:IfDisqusShortname}
+                <script type="text/javascript">
+                //<![CDATA[
+                (function() {
+                    var links = document.getElementsByTagName('a');
+                    var query = '?';
+                    for(var i = 0; i < links.length; i++) {
+                        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                        }
+                    }
+                    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+                })();
+                //]]>
+                </script>
+            {/block:IfDisqusShortname}
+
+            <footer id="footer">
+                {block:PermalinkPage}
+                    <nav class="pagination-index">
+                        <a href="/">See More Dinnertime Confessions&nbsp;&rsaquo;</a>
+                    </nav>
+                {/block:PermalinkPage}
+                {block:Pagination}
+                    <nav class="pagination">
+                        <section class="buttons">
+                            {block:PreviousPage}<a href="{PreviousPage}" class="left">{lang:Previous page}<span class="arrow"></span></a>{/block:PreviousPage}
+                            {block:NextPage}<a href="{NextPage}" class="right">{lang:Next page}<span class="arrow"></span></a>{block:NextPage}
+                        </section>
+                        <section class="disabled buttons">
+                            <li class="left"><span class="arrow"></span></li>
+                            <li class="right"><span class="arrow"></span></li>
+                        </section>
+                        <section class="count">Page  {CurrentPage} / {TotalPages}</section>
+                    </nav>
+                {/block:Pagination}
+
+            </footer>
+        </section>
+
+        <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
+        {block:IfUseEndlessScrolling}
+        <script type="text/javascript">
+            var Tumblelog = {};
+
+            // AJAX
+            Tumblelog.Ajax = (function(url, callbackFunction) {
+                this.bindFunction = function (caller, object) {
+                    return function() {
+                        return caller.apply(object, [object]);
+                    };
+                };
+
+                this.stateChange = function (object) {
+                    if (this.request.readyState==4) this.callbackFunction(this.request.responseText);
+                };
+
+                this.getRequest = function() {
+                    if (window.ActiveXObject)
+                        return new ActiveXObject('Microsoft.XMLHTTP');
+                    else if (window.XMLHttpRequest)
+                        return new XMLHttpRequest();
+                    return false;
+                };
+
+                this.postBody = (arguments[2] || "");
+                this.callbackFunction=callbackFunction;
+                this.url=url;
+                this.request = this.getRequest();
+
+                if(this.request) {
+                    var req = this.request;
+                    req.onreadystatechange = this.bindFunction(this.stateChange, this);
+
+                    if (this.postBody!=="") {
+                        req.open("POST", url, true);
+                        req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                        req.setRequestHeader('Connection', 'close');
+                    } else {
+                        req.open("GET", url, true);
+                    }
+
+                    req.send(this.postBody);
+                }
+            });
+
+            // Infinite Scroll
+            Tumblelog.Infinite = (function() {
+
+                var _$window          = $(window);
+                var _$posts           = $('#posts');
+                var _trigger_post     = null;
+
+                var _current_page     = {CurrentPage};
+                var _total_pages      = {TotalPages};
+                var _url              = document.location.href;
+                var _infinite_timeout = null;
+                var _is_loading       = false;
+                var _posts_loaded     = false;
+
+                var _Ajax = Tumblelog.Ajax;
+
+                function init() {
+                    set_trigger();
+                    enable_scroll();
+                }
+
+                function set_trigger () {
+                    var $all_posts = _$posts.find('li.post');
+
+                    if (!_posts_loaded) {
+                        _posts_loaded = $all_posts.length;
+                    }
+
+                    if (_posts_loaded >= 4) {
+                        _trigger_post = _$posts.find('li.post:eq(' + ($all_posts.length - 4) + ')').get(0);
+                    } else if (_posts_loaded >= 3) {
+                        _trigger_post = _$posts.find('li.post:eq(' + ($all_posts.length - 3) + ')').get(0);
+                    } else {
+                        _trigger_post = _$posts.find('li.post:last').get(0);
+                    }
+                };
+
+                function in_viewport (el) {
+                    if (el == null) return;
+                    var top = el.offsetTop;
+                    var height = el.offsetHeight;
+
+                    while (el.offsetParent) {
+                        el = el.offsetParent;
+                        top += el.offsetTop;
+                    }
+
+                    return (top < (window.pageYOffset + window.innerHeight));
+                };
+
+                function enable_scroll() {
+                    $('#footer .pagination').hide();
+                    _$window.scroll(function(){
+                        clearTimeout(_infinite_timeout);
+                        infinite_timeout = setTimeout(infinite_scroll, 100);
+                    });
+                }
+
+                function disable_scroll() {
+                    clearTimeout(_infinite_timeout);
+                    $(window).unbind('scroll');
+                }
+
+                function infinite_scroll() {
+                    if (_is_loading) return;
+
+                    if (in_viewport(_trigger_post)) {
+                        load_more_posts(); // w00t
+                    }
+                };
+
+                function load_more_posts() {
+                    if (_is_loading) return;
+                    _is_loading = true;
+
+                    // Build URL
+                    if (_url.charAt(_url.length - 1) != '/') _url += '/';
+                    if (_current_page === 1) _url += 'page/1';
+                    _current_page++;
+                    _url = _url.replace('page/' + (_current_page - 1), 'page/' + _current_page);
+
+                    // Fetch
+                    _Ajax(_url, function(data) {
+                        var new_posts_html = data.split('<!-- START' + ' POSTS -->')[1].split('<!-- END' + ' POSTS -->')[0];
+                        var $new_posts = $('#posts', data);
+
+                        // Insert posts and update counters
+                        $('#posts').append(new_posts_html);
+                        _posts_loaded = $new_posts.find('li.post').length;
+
+                        if ((_posts_loaded > 0) && (_current_page < _total_pages)) {
+                            set_trigger();
+                            _is_loading = false;
+                        } else {
+                            disable_scroll();
+                        }
+                    });
+
+                    // Stats
+                    {block:IfGoogleAnalyticsID}
+                        if (typeof window._gaq != 'undefined') {
+                            _gaq.push(['_trackPageview', _url]);
+                        }
+                    {/block:IfGoogleAnalyticsID}
+                }
+
+                return {
+                    init: init
+                };
+            });
+
+            $(function() {
+                {block:IndexPage}
+                if ( !($.browser.msie && (parseInt($.browser.version, 10) < 9) ) ) {
+                    var InfiniteScroll = new Tumblelog.Infinite;
+                    InfiniteScroll.init();
+                }
+                {/block:IndexPage}
+            });
+        </script>
+        {/block:IfUseEndlessScrolling}
+
+        <!-- SHARE DROPDOWN SCRIPT -->
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $dmp_header = $('#dmp-form .hdr');
+            $dmp_frame = $('.dmp-iframe-wrapper');
+            $dmp_header.click(function() {
+                $dmp_frame.slideToggle();
+            });
+            if ($('body').hasClass('index-page')) {
+                $dmp_header.trigger('click');
+            }
+        });
+        </script>
+
+        <!-- CHARTBEAT -->
+        <script type="text/javascript">
+            var _sf_async_config={};
+            /** CONFIGURATION START **/
+            _sf_async_config.uid = 18888;
+            _sf_async_config.domain = "npr.org";
+            /** CONFIGURATION END **/
+            (function(){
+                function loadChartbeat() {
+                    window._sf_endpt=(new Date()).getTime();
+                    var e = document.createElement("script");
+                    e.setAttribute("language", "javascript");
+                    e.setAttribute("type", "text/javascript");
+                    e.setAttribute("src",
+                        (("https:" == document.location.protocol) ?
+                         "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+                         "http://static.chartbeat.com/") +
+                        "js/chartbeat.js");
+                    document.body.appendChild(e);
+                }
+                var oldonload = window.onload;
+                window.onload = (typeof window.onload != "function") ?
+                    loadChartbeat : function() { oldonload(); loadChartbeat(); };
+            })();
+        </script>
+
+
+        {block:IfUseEndlessScrolling}<script type="text/javascript" src="http://assets.tumblr.com/javascript/tumblelog.js"></script>{/block:IfUseEndlessScrolling}
+    </body>
+</html>
