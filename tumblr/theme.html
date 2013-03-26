@@ -134,7 +134,7 @@
                 float: left;
             }
             #dmp-form .dmp-iframe {
-                height: 670px;
+                height: 735px;
                 width: 100%;
             }
 
@@ -204,11 +204,7 @@
             }
 
             #posts .post .caption a.disquscomments {
-                font-size: 12px;
-                font-family: 'Times New Roman', Times, serif;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                -webkit-font-smoothing: subpixel-antialiased;
+                font-size: 14px;
             }
 {/block:IfDisqusShortname}
 
@@ -1315,6 +1311,19 @@
 
                                 </section>
 
+                                <div style="width:100%;clear:both;height:15px;margin:0;padding:0;">&nbsp;</div>
+
+                                {block:IfDisqusShortname}{block:IndexPage}
+                                   <section class="caption group">
+                                        <a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a>
+                                    </section>
+                                {/block:IndexPage}{/block:IfDisqusShortname}
+                                {block:IfDisqusShortname}{block:Permalink}
+                                    <div id="disqus_thread"></div>
+                                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                                {/block:Permalink}{/block:IfDisqusShortname}
+
                         </div> <!-- end .wrap -->
 
                         {block:PostNotes}
@@ -1324,17 +1333,6 @@
                                 </a>
                             </section>
                         {/block:PostNotes}
-
-                        {block:IfDisqusShortname}{block:IndexPage}
-                           <section class="caption group">
-                                <a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a>
-                            </section>
-                        {/block:IndexPage}{/block:IfDisqusShortname}
-                        {block:IfDisqusShortname}{block:Permalink}
-                            <div id="disqus_thread"></div>
-                            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                        {/block:Permalink}{/block:IfDisqusShortname}
 
                     </li>
 
