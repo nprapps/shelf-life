@@ -1,1 +1,1 @@
-* * * * * ubuntu bash /home/ubuntu/apps/app-template/repository/cron.sh fab $DEPLOYMENT_TARGET cron_test 
+*/15 * * * * ubuntu bash /home/ubuntu/apps/app-template/repository/cron.sh fab $DEPLOYMENT_TARGET deploy_json_data
