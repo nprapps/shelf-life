@@ -105,23 +105,23 @@ iframe#tumblr_controls { top: 53px !important; }
 // MAIN CONTENT
 #container { 
     display: table;
-    padding: 0 0 30px 0;
+    height: 100%;
 }
 #header {
     display: table-cell;
-    width: 30%;
-    padding: 30px;
+    width: 25%;
+    background-color: #ebebeb;
 }
 #post-wrap {
     display: table-cell;
-    width: 70%;
-    padding: 30px;
+    width: 75%;
 }
 
 
 // HEADER
-#header { background-color: #ebebeb; }
 #blog_info {
+    padding: 30px;
+
     h1 {
         font: normal 48px Arial, Helvetica, sans-serif;
         color: #555;
@@ -144,7 +144,6 @@ iframe#tumblr_controls { top: 53px !important; }
 #project-form {
     color: #fff;
     margin: 30px 0;
-    padding: 0 30px;
     
     .wrap {
         -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -793,43 +792,48 @@ ol.notes {
 }
 
 
-@media (min-width: 980px) {
-/*
-    #header #blog_info, #posts .post,
-    #project-form .wrap,
-    #footer .pagination-index {
-        margin-left: auto; margin-right: auto;
-        width: 80%;
-        max-width: 1000px;
-    }
-*/
-}
+@media (min-width: 980px) { }
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
+    #header { width: 40%; }
+    #post-wrap { width: 60%; }
 }
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) { }
 @media (max-width: 767px) {
-    #posts .post .media { width: auto; float: none; }
-    #posts .post .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
-    #posts .post .caption_and_post_info.isphoto .cont,
-    #posts .post .caption_and_post_info.isphoto .post_info { margin-left: 0; }
-    #posts .post .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
-
+    #header { width: 50%; }
+    #post-wrap { width: 50%; }
+    #posts .post {
+        .media { width: auto; float: none; }
+        .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
+        .caption_and_post_info.isphoto .cont,
+        .caption_and_post_info.isphoto .post_info { margin-left: 0; }
+        .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+    }
     #nav .site-links { margin-left: 20px; }
-    .post .post_info.social { margin-bottom: 0; }
-    .post_info.social .facebook, .post_info.social .twitter { font-size: 13px; }
+    .post .post_info.social { 
+        margin-bottom: 0;
+        
+        .facebook, .twitter { font-size: 13px; }
+    }
 }
 @media (max-width: 480px) {
-    #nav .site-links li { display: none; }
-    #nav .site-links .npr { display: block; }
+    #nav .site-links {
+        li { display: none; }
+        .npr { display: block; }
+    }
+    
+    #container { display: block; }
+    #header, #post_wrap { display: block; width: auto; }
+    #header { border-bottom: 1px solid #fff; }
     #blog_info h1 { font-size: 36px; }
     #posts { padding-left: 10px; padding-right: 10px; }
     #posts .post .wrap { padding: 15px; }
-    #project-form { padding-left: 10px; padding-right: 10px; }
-    #project-form .hdr { height: 64px; }
-    #project-form .hdr h3 { font-size: 15px; line-height: 40px; padding-top: 13px; }
-    #project-form .hdr h3 span { width: 64px; height: 64px; margin-right: 15px; background-position: 50% 50%; margin-top: -13px; background-image: url('http://apps.npr.org/familymeal/img/btn-share-small.png') }
-    #project-form .project-iframe { height: 770px; }
+    #project-form { 
+        padding-left: 10px; padding-right: 10px;
+        .hdr { height: 64px; }
+        .hdr h3 { font-size: 15px; line-height: 40px; padding-top: 13px; }
+        .hdr h3 span { width: 64px; height: 64px; margin-right: 15px; background-position: 50% 50%; margin-top: -13px; background-image: url('http://apps.npr.org/familymeal/img/btn-share-small.png'); }
+        .project-iframe { height: 770px; }
+    }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
 }

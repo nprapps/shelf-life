@@ -457,48 +457,47 @@
                     {/block:Posts}
                     <!-- END POSTS -->
                 </ul>
-            </section>
 
 
-            {block:IfDisqusShortname}
-                <script type="text/javascript">
-                //<![CDATA[
-                (function() {
-                    var links = document.getElementsByTagName('a');
-                    var query = '?';
-                    for(var i = 0; i < links.length; i++) {
-                        if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                {block:IfDisqusShortname}
+                    <script type="text/javascript">
+                    //<![CDATA[
+                    (function() {
+                        var links = document.getElementsByTagName('a');
+                        var query = '?';
+                        for(var i = 0; i < links.length; i++) {
+                            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                            }
                         }
-                    }
-                    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-                })();
-                //]]>
-                </script>
-            {/block:IfDisqusShortname}
+                        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+                    })();
+                    //]]>
+                    </script>
+                {/block:IfDisqusShortname}
 
-            <footer id="footer">
-                {block:PermalinkPage}
-                    <nav class="pagination-index">
-                        <a href="/">See More Dinnertime Confessions&nbsp;&rsaquo;</a>
-                    </nav>
-                {/block:PermalinkPage}
-                {block:Pagination}
-                    <nav class="pagination">
-                        <section class="buttons">
-                            {block:PreviousPage}<a href="{PreviousPage}" class="left">{lang:Previous page}<span class="arrow"></span></a>{/block:PreviousPage}
-                            {block:NextPage}<a href="{NextPage}" class="right">{lang:Next page}<span class="arrow"></span></a>{block:NextPage}
-                        </section>
-                        <section class="disabled buttons">
-                            <li class="left"><span class="arrow"></span></li>
-                            <li class="right"><span class="arrow"></span></li>
-                        </section>
-                        <section class="count">Page  {CurrentPage} / {TotalPages}</section>
-                    </nav>
-                {/block:Pagination}
-            </footer>
-        </section>
-
+                <footer id="footer">
+                    {block:PermalinkPage}
+                        <nav class="pagination-index">
+                            <a href="/">See More Dinnertime Confessions&nbsp;&rsaquo;</a>
+                        </nav>
+                    {/block:PermalinkPage}
+                    {block:Pagination}
+                        <nav class="pagination">
+                            <section class="buttons">
+                                {block:PreviousPage}<a href="{PreviousPage}" class="left">{lang:Previous page}<span class="arrow"></span></a>{/block:PreviousPage}
+                                {block:NextPage}<a href="{NextPage}" class="right">{lang:Next page}<span class="arrow"></span></a>{block:NextPage}
+                            </section>
+                            <section class="disabled buttons">
+                                <li class="left"><span class="arrow"></span></li>
+                                <li class="right"><span class="arrow"></span></li>
+                            </section>
+                            <section class="count">Page  {CurrentPage} / {TotalPages}</section>
+                        </nav>
+                    {/block:Pagination}
+                </footer>
+            </section> <!-- #post-wrap -->
+        </section> <!-- #container -->
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
@@ -678,9 +677,11 @@
             $dmp_header.click(function() {
                 $dmp_frame.slideToggle();
             });
+            /*
             if ($('body').hasClass('index-page')) {
                 $dmp_header.trigger('click');
             }
+            */
         });
         </script>
 
