@@ -9,9 +9,10 @@ They will be exposed to users. Use environment variables instead.
 
 import os
 
-PROJECT_NAME = 'What the Fridge'
-PROJECT_SLUG = 'what-the-fridge'
-REPOSITORY_NAME = 'what-the-fridge'
+PROJECT_NAME = 'Shelf Life'
+PROJECT_SLUG = 'shelf-life'
+REPOSITORY_NAME = 'shelf-life'
+CONFIG_NAME = PROJECT_SLUG.replace('-', '').upper()
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
 PRODUCTION_SERVERS = ['50.112.9.120']
@@ -47,23 +48,24 @@ NPR_DFP = {
 
 GOOGLE_ANALYTICS_ID = 'UA-5828686-4'
 
-TUMBLR_TAGS = 'food, noms'
+TUMBLR_TAGS = 'food, round1'
 
 def get_secrets():
     """
     A method for accessing our secrets.
     """
     secrets = [
-        'TUMBLR_APP_KEY',
-        'TUMBLR_OAUTH_TOKEN',
-        'TUMBLR_OAUTH_TOKEN_SECRET',
-        'TUMBLR_APP_SECRET',
+        '%s_TUMBLR_APP_KEY' % CONFIG_NAME,
+        '%s_TUMBLR_OAUTH_TOKEN' % CONFIG_NAME,
+        '%s_TUMBLR_OAUTH_TOKEN_SECRET' % CONFIG_NAME,
+        '%s_TUMBLR_APP_SECRET' % CONFIG_NAME,
         'AWS_SECRET_ACCESS_KEY',
         'AWS_ACCESS_KEY_ID'
     ]
     secrets_dict = {}
     for secret in secrets:
-        secrets_dict[secret] = os.environ.get(secret, None)
+        # Saves the secret with the old name.
+        secrets_dict[secret.replace('%s_' % CONFIG_NAME, '')] = os.environ.get(secret, None)
 
     return secrets_dict
 
@@ -86,8 +88,7 @@ def configure_targets(deployment_target):
         # TUMBLR_BLOG_ID = '{{ project_slug }}'
 
         # Hard-coding due to obfuscated tumblr URL
-        TUMBLR_URL = 'what--the--fridge.tumblr.com'
-        TUMBLR_BLOG_ID = 'what--the--fridge'
+        TUMBLR_BLOG_ID = 'npr-shelf-life'
 
     else:
         S3_BUCKETS = STAGING_S3_BUCKETS
@@ -97,8 +98,9 @@ def configure_targets(deployment_target):
         # TUMBLR_BLOG_ID = '{{ project_slug}}-staging'
 
         # Hard-coding due to obfuscated tumblr URL
-        TUMBLR_URL = 'wukkdi.tumblr.com'
-        TUMBLR_BLOG_ID = 'wukkdi'
+        TUMBLR_BLOG_ID = 'nprapps-shelflife'
+
+    TUMBLR_URL = '%s.tumblr.com' % TUMBLR_BLOG_ID
 
 DEPLOYMENT_TARGET = os.environ.get('DEPLOYMENT_TARGET', None)
 

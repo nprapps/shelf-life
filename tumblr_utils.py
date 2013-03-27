@@ -80,8 +80,8 @@ def generate_new_oauth_tokens():
     Script to generate new OAuth tokens.
     Code from this gist: https://gist.github.com/4219558
     """
-    consumer_key = os.environ['TUMBLR_CONSUMER_KEY']
-    consumer_secret = os.environ['TUMBLR_APP_SECRET']
+    consumer_key = os.environ['%s_TUMBLR_APP_KEY' % app_config.CONFIG_NAME]
+    consumer_secret = os.environ['%s_TUMBLR_APP_SECRET' % app_config.CONFIG_NAME]
 
     request_token_url = 'http://www.tumblr.com/oauth/request_token'
     access_token_url = 'http://www.tumblr.com/oauth/access_token'
@@ -145,9 +145,9 @@ def generate_new_oauth_tokens():
 def dump_tumblr_json():
     t = Tumblpy(
             app_key=app_config.TUMBLR_KEY,
-            app_secret=os.environ['TUMBLR_APP_SECRET'],
-            oauth_token=os.environ['TUMBLR_OAUTH_TOKEN'],
-            oauth_token_secret=os.environ['TUMBLR_OAUTH_TOKEN_SECRET'])
+            app_secret=os.environ['%s_TUMBLR_APP_SECRET' % app_config.CONFIG_NAME],
+            oauth_token=os.environ['%s_TUMBLR_OAUTH_TOKEN' % app_config.CONFIG_NAME],
+            oauth_token_secret=os.environ['%s_TUMBLR_OAUTH_TOKEN_SECRET' % app_config.CONFIG_NAME])
 
     limit = 10
     pages = range(0, 20)

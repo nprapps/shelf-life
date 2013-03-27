@@ -267,6 +267,9 @@ def install_scout_plugins():
     """
     run('ln -s %(repo_path)s/scout/*.rb ~/.scout' % env)
 
+def generate_new_oauth_tokens():
+    tumblr_utils.generate_new_oauth_tokens()
+
 """
 Deployment
 """
