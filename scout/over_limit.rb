@@ -3,7 +3,7 @@ require 'date'
 class ShelfLifeNearingLimit < Scout::Plugin
   def build_report
 
-    log_file_path = 'data/test.log'
+    log_file_path = '/var/log/shelf-life.log'
     count = 0
 
     today = Date.today
