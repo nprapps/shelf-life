@@ -363,6 +363,19 @@ def deploy(remote='origin'):
         if env.get('install_crontab', False):
             install_crontab()
 
+def write_json_data():
+    """
+    Writes JSON file to www/live-data/.
+    """
+    tumblr_utils.write_json_data()
+
+def deploy_json_data():
+    """
+    Deploys JSON file to S3.
+    """
+    write_json_data()
+    tumblr_utils.deploy_json_data()
+
 """
 Cron jobs
 """
