@@ -1,4 +1,4 @@
-What the Fridge?
+Shelf Life
 =========================
 
 * [About this app](#about-this-app)
@@ -52,9 +52,9 @@ Copy the app
 -----------------
 
 ```
-git clone git@github.com:nprapps/what-the-fridge.git
+git clone git@github.com:nprapps/shelf-life.git
 
-cd what-the-fridge
+cd shelf-life
 ```
 
 Configure the project
@@ -89,9 +89,9 @@ curl https://npmjs.org/install.sh | sh
 Then install the project requirements:
 
 ```
-cd what-the-fridge
+cd shelf-life
 npm install less universal-jst
-mkvirtualenv what-the-fridge
+mkvirtualenv shelf-life
 pip install -r requirements.txt
 ```
 
@@ -120,7 +120,7 @@ Run the project locally
 A flask app is used to run the project locally. It will automatically recompile templates and assets on demand.
 
 ```
-workon what-the-fridge
+workon shelf-life
 python app.py
 ```
 
