@@ -25,7 +25,7 @@ class ApproachingLimit < Scout::Plugin
       end
     end
 
-    report(:successful_posts => count) if count
+    report(:successful_posts => count)
 
   end
 end
