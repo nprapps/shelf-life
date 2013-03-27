@@ -1,6 +1,6 @@
 require 'date'
 
-class ApproachingLimit < Scout::Plugin
+class ShelfLifeNearingLimit < Scout::Plugin
   def build_report
 
     log_file_path = 'data/test.log'
