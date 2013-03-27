@@ -8,6 +8,7 @@ import time as pytime
 import urlparse
 
 import oauth2 as oauth
+import requests
 from tumblpy import Tumblpy
 
 import app_config
@@ -158,3 +159,134 @@ def dump_tumblr_json():
 
         with open('data/backups/tumblr_prod_%s.json' % page, 'w') as f:
             f.write(json.dumps(posts))
+
+def write_json_data():
+
+    output = {
+        'meta': {
+            'total_posts': 0,
+        },
+        'mostpopular': []
+    }
+
+    """
+    Top posts.
+    """
+
+    TUMBLR_FILENAME = app_config.TUMBLR_FILENAME
+
+    print "Starting."
+    # Set constants
+    base_url = 'http://api.tumblr.com/v2/blog/%s.tumblr.com/posts/photo' % app_config.PROJECT_SLUG
+    key_param = '?api_key=%s' % os.environ.get('%s_TUMBLR_APP_KEY' % app_config.CONFIG_NAME)
+    limit_param = '&limit=20'
+    limit = 20
+    new_limit = limit
+    post_list = []
+
+    # Figure out the total number of posts.
+    r = requests.get(base_url + key_param)
+    total_count = int(json.loads(r.content)['response']['total_posts'])
+    print "%s total posts available." % total_count
+    output['meta']['total_posts'] = total_count
+
+    # Do the pagination math.
+    pages_count = (total_count / limit)
+    pages_remainder = (total_count % limit)
+    if pages_remainder > 0:
+        pages_count += 1
+    pages = range(0, pages_count)
+    print "%s pages required." % len(pages)
+
+    # Start requesting pages.
+    # Note: Maximum of 20 posts per page.
+    print "Requesting pages."
+    for page in pages:
+
+        # Update all of the pagination shenanigans.
+        start_number = new_limit - limit
+        end_number = new_limit
+        if end_number > total_count:
+            end_number = total_count
+        new_limit = new_limit + limit
+        page_param = '&offset=%s' % start_number
+        page_url = base_url + key_param + limit_param + page_param
+
+        # Actually fetch the page URL.
+        r = requests.get(page_url)
+        posts = json.loads(r.content)
+
+        for post in posts['response']['posts']:
+            try:
+                note_count = post['note_count']
+                post_list.append(post)
+            except KeyError:
+                pass
+
+    # Sort the results first.
+    print "Finished requesting pages."
+    print "Sorting list."
+    post_list = sorted(post_list, key=lambda post: post['note_count'], reverse=True)
+
+    # Render the sorted list, but slice to just 24 objects per bb.
+    print "Rendering posts from sorted list."
+    for post in post_list[0:24]:
+        default_photo_url = post['photos'][0]['original_size']['url']
+        simple_post = {
+            'id': post['id'],
+            'url': post['post_url'],
+            'text': post['caption'],
+            'timestamp': post['timestamp'],
+            'note_count': post['note_count'],
+            'photo_url': default_photo_url,
+            'photo_url_250': default_photo_url,
+            'photo_url_500': default_photo_url,
+            'photo_url_1280': default_photo_url
+        }
+
+        # Handle the new photo assignment.
+        for photo in post['photos'][0]['alt_sizes']:
+            if int(photo['width']) == 100:
+                simple_post['photo-url-100'] = photo['url']
+            if int(photo['width']) == 250:
+                simple_post['photo_url_250'] = photo['url']
+            if int(photo['width']) == 500:
+                simple_post['photo_url_500'] = photo['url']
+            if int(photo['width']) == 1280:
+                simple_post['photo_url_1280'] = photo['url']
+        output['mostpopular'].append(simple_post)
+
+    # Ensure the proper sort on our output list.
+    print "Ordering output."
+    output['mostpopular'] = sorted(output['mostpopular'], key=lambda post: post['note_count'], reverse=True)
+
+    # Write the JSON file.
+    print "Producing JSON file at %s" % TUMBLR_FILENAME
+    json_output = json.dumps(output)
+    with open(TUMBLR_FILENAME, 'w') as f:
+        f.write(json_output)
+    print "JSON file written."
+
+def deploy_json_data():
+
+    TUMBLR_FILENAME = app_config.TUMBLR_FILENAME
+
+    if app_config.DEPLOYMENT_TARGET:
+        with gzip.open(TUMBLR_FILENAME + '.gz', 'wb') as f:
+            f.write(json_output)
+
+        for bucket in app_config.S3_BUCKETS:
+            conn = boto.connect_s3()
+            bucket = conn.get_bucket(bucket)
+            key = boto.s3.key.Key(bucket)
+            key.key = '%s/live-data/misterpresident.json' % app_config.DEPLOYED_NAME
+            key.set_contents_from_filename(
+                TUMBLR_FILENAME + '.gz',
+                policy='public-read',
+                headers={
+                    'Cache-Control': 'max-age=5 no-cache no-store must-revalidate',
+                    'Content-Encoding': 'gzip'
+                }
+            )
+
+        os.remove(TUMBLR_FILENAME + '.gz')
