@@ -20,7 +20,7 @@ os.environ['TZ'] = 'US/Eastern'
 time.tzset()
 
 logger = logging.getLogger('tumblr')
-file_handler = logging.FileHandler('/var/log/what-the-fridge.log')
+file_handler = logging.FileHandler('/var/log/%s.log' % app_config.PROJECT_SLUG)
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
