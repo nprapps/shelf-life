@@ -16,7 +16,11 @@ body {
     background-color: #888;
 }
 *:active, *:focus { outline-width: 0px; }
-iframe { display: block; }
+iframe { 
+    display: block;
+    
+    &#tumblr_controls { top: 48px !important; }
+}
 img { max-width: 100% }
 .post .top.media img { width: 100%; }
 a { text-decoration: none; color: #4774cc; }
@@ -26,7 +30,6 @@ em { font-style: italic; }
 .group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
 * html .group             { zoom: 1; } /* IE6 */
 *:first-child+html .group { zoom: 1; } /* IE7 */
-iframe#tumblr_controls { top: 53px !important; }
 
 
 // NPR TOP NAV
@@ -596,12 +599,22 @@ ol.notes {
 }
 
 
+// INDEX PAGE
+.index-page {
+    #posts .post {
+        width: 44%;
+        margin: 3%;
+        float: left;
+
+        .wrap { padding: 5px; }
+        .media { width: auto; float: none; }
+        .caption_and_post_info { display: none; }
+    }
+}
+
+
 /* Protection for parents that have floating children */
-#header:after,
-#container:after,
-.caption_and_post_info:after,
-#footer:after
-.buttons:after { 
+#header:after, #container:after, .caption_and_post_info:after, #footer:after .buttons:after { 
     content: "."; display: block; height: 0; clear: both; visibility: hidden;
 }
 
