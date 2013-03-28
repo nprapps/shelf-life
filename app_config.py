@@ -9,8 +9,8 @@ They will be exposed to users. Use environment variables instead.
 
 import os
 
-PROJECT_NAME = 'Shelf Life'
-PROJECT_SLUG = 'shelf-life'
+PROJECT_NAME = 'Cook Your Cupboard'
+PROJECT_SLUG = 'cook-your-cupboard'
 REPOSITORY_NAME = 'shelf-life'
 CONFIG_NAME = PROJECT_SLUG.replace('-', '').upper()
 
