@@ -304,6 +304,7 @@ def render_confs():
     context = app_config.get_secrets()
     context['PROJECT_SLUG'] = app_config.PROJECT_SLUG
     context['PROJECT_NAME'] = app_config.PROJECT_NAME
+    context['REPOSITORY_NAME'] = app_config.REPOSITORY_NAME
     context['DEPLOYMENT_TARGET'] = env.settings
 
     for service, remote_path in SERVICES:

@@ -89,7 +89,7 @@ def configure_targets(deployment_target):
         # TUMBLR_BLOG_ID = '{{ project_slug }}'
 
         # Hard-coding due to obfuscated tumblr URL
-        TUMBLR_BLOG_ID = 'npr-shelf-life'
+        TUMBLR_BLOG_ID = 'cook-your-cupboard'
 
     else:
         S3_BUCKETS = STAGING_S3_BUCKETS
@@ -99,7 +99,7 @@ def configure_targets(deployment_target):
         # TUMBLR_BLOG_ID = '{{ project_slug}}-staging'
 
         # Hard-coding due to obfuscated tumblr URL
-        TUMBLR_BLOG_ID = 'nprapps-shelflife'
+        TUMBLR_BLOG_ID = 'cook-your-cupboard'
 
     TUMBLR_URL = '%s.tumblr.com' % TUMBLR_BLOG_ID
 
