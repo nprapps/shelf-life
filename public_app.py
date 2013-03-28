@@ -24,7 +24,7 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-@app.route('/what-the-fridge/', methods=['POST'])
+@app.route('/%s/' % app_config.PROJECT_SLUG, methods=['POST'])
 def _post_to_tumblr():
     """
     Handles the POST to Tumblr.
