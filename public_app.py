@@ -16,6 +16,9 @@ import app_config
 app = Flask(app_config.PROJECT_NAME)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
+os.environ['TZ'] = 'US/Eastern'
+time.tzset()
+
 logger = logging.getLogger('tumblr')
 file_handler = logging.FileHandler('/var/log/what-the-fridge.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
