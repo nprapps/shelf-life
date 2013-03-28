@@ -111,10 +111,12 @@ iframe#tumblr_controls { top: 53px !important; }
     display: table-cell;
     width: 25%;
     background-color: #ebebeb;
+    vertical-align: top;
 }
 #post-wrap {
     display: table-cell;
     width: 75%;
+    vertical-align: top;
 }
 
 
@@ -177,7 +179,7 @@ iframe#tumblr_controls { top: 53px !important; }
         }
     }
     .project-iframe {
-        height: 735px;
+        height: 900px;
         width: 100%;
     }
     .project-iframe-wrapper {
@@ -238,60 +240,8 @@ iframe#tumblr_controls { top: 53px !important; }
     }
     &.media {
         line-height: 0;
-        -webkit-box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, .27);
-        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, .27);
         position: relative;
         display: inline-block;
-
-        img {
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-        }
-    }
-    &.media.photoset {
-        line-height: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        position: relative;
-        display: inline-block;
-    }
-}
-
-.link_post {
-    .link {
-        color: #4774cc;
-        font-size: 21px;
-        font-weight: bold;
-        border: 1px solid rgba(71, 116, 204, 0.13);
-        background: rgba(71, 116, 204, 0.13);
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        padding: 15px 53px 15px 20px;
-        position: relative;
-        display: block;
-        
-        &:hover {
-            border: 1px solid rgba(71, 116, 204, 0.2);
-            background: rgba(71, 116, 204, 0.2);
-        }
-        &:active {
-            position: relative;
-            top: 1px;
-        }
-        .arrow {
-            width: 0;
-            height: 0;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-left: 12px solid #4774cc;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            margin-top: -8px;
-            display: block;
-        }
     }
 }
 
@@ -396,82 +346,8 @@ iframe#tumblr_controls { top: 53px !important; }
         display: none;
     }
     ul, ol { margin-left: 18px; }
-
-    .answer { margin-top: 20px; }
-    .asker {
-        line-height: 24px;
-        margin: 25px 20px 0 23px;
-
-        img {
-            float: left;
-            margin: 0 7px 0 0;
-        }
-        a { margin-left: 0; }
-    }
-    .question {
-        display: block;
-        padding: 15px;
-        font-size: 15px;
-    }
-    .conversation {
-        margin-left: 0 !important;
-        margin-bottom: 30px;
-        list-style-type: none;
-    }
 }
 
-
-.quote {
-    color: #333;
-    font-weight: bold;
-
-    span { display: inline-block; }
-    
-    &.short_text {
-        font-size: 50px;
-        letter-spacing: -2px;
-        line-height: 48px;
-        margin: 0 0 18px 0;
-
-        span { margin: 0 0 0 -22px; }
-    }
-    &.medium_text {
-        font-size: 36px;
-        letter-spacing: -1px;
-        line-height: 36px;
-        margin: 0 0 20px 0;
-
-        span { margin: 0 0 0 -13px; }
-    }
-    &.long_text,
-    &.text {
-        font-size: 24px;
-        line-height: 27px;
-        margin: 0 0 20px 0;
-    }
-    &.long_text span { margin: 0 0 0 -9px; }
-    &.larger_text {
-        font-size: 50px !important;
-        letter-spacing: -2px !important;
-        line-height: 48px !important;
-        margin: 0 0 18px 0 !important;
-
-        span { margin: 0 0 0 -22px !important; }
-    }
-}
-.quote_source { margin: 0 0 20px 0 !important; }
-
-
-.conversation {
-    .chat_line { 
-        padding: 10px 16px;
-
-        &.user1 { background: #f5f5f5; }
-        &.user2 { background: #fff; }
-        &.user3 { background: #ddd; }
-        &.user4 { background: #ccc; }
-    }
-}
 
 .post_info {
     li {
@@ -601,68 +477,6 @@ ol.notes {
         &:hover { color: #fff; }
     }
 }
-
-#sidebar { 
-    margin-top: 20px; 
-    display: none;
-
-    .description {
-        line-height: 21px;
-        border-bottom: 1px solid #E6E6E6;
-        margin: 3px 0 20px 0;
-        padding: 0 0 20px 0;
-    }
-    .links {
-        font-size: 12px;
-        letter-spacing: 2px;
-        list-style-type: none;
-        -webkit-font-smoothing: subpixel-antialiased;
-        margin: 0;
-        line-height: 20px;
-        
-        &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
-        li {
-            float: left;
-            margin-right: 20px;
-        }
-        a { 
-            color: #4c4c4c;
-
-            &:hover { 
-                color: #4774cc; 
-
-                .icon { background-color: #4774cc; }
-            }
-        }
-        .icon {
-            width: 12px;
-            height: 12px;
-            background: #383838 url('http://static.tumblr.com/thpaaos/1xRm66voi/icons_sprite.png');
-            margin: 0 8px 0 0;
-            display: inline-block;
-        }
-    }
-}
-.ask .icon { background-position: 0 0; margin-bottom: -2px; }
-.submit .icon { background-position: 0 -12px; margin-bottom: -1px; }
-.rss .icon { background-position: 0 -24px; }
-.archive .icon { background-position: 0 -36px; }
-
-
-.bubble {
-    color: #6f6f6f;
-    font-size: 13px;
-    line-height: 20px;
-    background: #f5f5f5;
-    border: 1px solid #d5d5d5;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    padding: 8px 12px;
-    position: relative;
-    display: none;
-}
-
 
 #footer {
     -webkit-font-smoothing: subpixel-antialiased;
