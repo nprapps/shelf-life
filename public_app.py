@@ -88,12 +88,12 @@ def _post_to_tumblr():
     try:
         tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
-        logger.info('200 %s' % tumblr_url)
+        logger.info('200 %s  (times in EST)' % tumblr_url)
 
         return redirect('%s#posts' % tumblr_url, code=301)
 
     except TumblpyError, e:
-        logger.error('%s %s' % (e.error_code, e.msg))
+        logger.error('%s %s (times in EST)' % (e.error_code, e.msg))
         return 'TUMBLR ERROR'
 
     return redirect('%s#posts' % tumblr_url, code=301)
