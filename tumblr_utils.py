@@ -177,7 +177,7 @@ def write_json_data():
 
     print "Starting."
     # Set constants
-    base_url = 'http://api.tumblr.com/v2/blog/%s.tumblr.com/posts/photo' % app_config.PROJECT_SLUG
+    base_url = 'http://api.tumblr.com/v2/blog/%s.tumblr.com/posts/photo' % app_config.TUMBLR_BLOG_ID
     key_param = '?api_key=%s' % os.environ.get('%s_TUMBLR_APP_KEY' % app_config.CONFIG_NAME)
     limit_param = '&limit=20'
     limit = 20
