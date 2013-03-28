@@ -112,13 +112,13 @@ em { font-style: italic; }
 }
 #header {
     display: table-cell;
-    width: 25%;
+    width: 20%;
     background-color: #ebebeb;
     vertical-align: top;
 }
 #post-wrap {
     display: table-cell;
-    width: 75%;
+    width: 85%;
     vertical-align: top;
 }
 
@@ -601,9 +601,12 @@ ol.notes {
 
 // INDEX PAGE
 .index-page {
+    #posts {
+        margin-top: 22px;
+    }
     #posts .post {
-        width: 44%;
-        margin: 3%;
+        width: 48%;
+        margin: 1%;
         float: left;
 
         .wrap { padding: 5px; }
@@ -619,6 +622,14 @@ ol.notes {
 }
 
 
+@media (min-width: 1200px) { 
+    .index-page {
+        #posts .post {
+            width: 30%;
+            margin: 1%;
+        }
+    }
+}
 @media (min-width: 980px) { }
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
