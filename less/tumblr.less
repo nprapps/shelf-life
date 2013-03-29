@@ -741,6 +741,7 @@ ol.notes {
 }
 
 
+// MEDIA QUERIES
 @media (min-width: 1200px) { 
     .index-page {
         #posts .post {
@@ -749,16 +750,34 @@ ol.notes {
         }
     }
 }
+@media (min-width: 1400px) { 
+    #header { width: 15%; }
+    #post-wrap { width: 85%; }
+    .index-page {
+        #posts .post {
+            width: 23%;
+            margin: 1%;
+        }
+    }
+}
+@media (min-width: 1600px) { 
+    .index-page {
+        #posts .post {
+            width: 18%;
+            margin: 1%;
+        }
+    }
+}
 @media (min-width: 980px) { }
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
-    #header { width: 40%; }
-    #post-wrap { width: 60%; }
+    #header { width: 30%; }
+    #post-wrap { width: 70%; }
 }
 @media (min-width: 768px) { }
 @media (max-width: 767px) {
-    #header { width: 50%; }
-    #post-wrap { width: 50%; }
+//    #header { width: 50%; }
+//    #post-wrap { width: 50%; }
     #posts .post {
         .media { width: auto; float: none; }
         .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
@@ -772,6 +791,23 @@ ol.notes {
         
         .facebook, .twitter { font-size: 13px; }
     }
+    #blog_info { padding: 33px 20px 20px 20px; }
+}
+@media (max-width: 640px) {
+    #container { display: block; }
+    #header, #post-wrap { display: block; width: auto; }
+    #header { border-bottom: 1px solid #fff; }
+    #blog_info {
+        padding: 55px 20px 20px 20px;
+
+        h1 {
+            display: block;
+            text-indent: -9999px;
+            height: 31px;
+            background: url('http://localhost:8000/img/cook-your-cupboard-hd-sm.png') no-repeat;
+        }
+        .header-img { display: none; }
+    }
 }
 @media (max-width: 480px) {
     #nav .site-links {
@@ -779,9 +815,6 @@ ol.notes {
         .npr { display: block; }
     }
     
-    #container { display: block; }
-    #header, #post-wrap { display: block; width: auto; }
-    #header { border-bottom: 1px solid #fff; }
     #blog_info h1 { font-size: 36px; }
     #posts { padding-left: 10px; padding-right: 10px; }
     #posts .post .wrap { padding: 15px; }
@@ -798,16 +831,5 @@ ol.notes {
             margin: 0 0 20px 0;
             float: none;
         }
-    }
-    #blog_info {
-        padding: 55px 20px 20px 20px;
-
-        h1 {
-            display: block;
-            text-indent: -9999px;
-            width: height: 31px;
-            background: url('http://localhost:8000/img/cook-your-cupboard-hd-sm.png') no-repeat;
-        }
-        .header-img { display: none; }
     }
 }
