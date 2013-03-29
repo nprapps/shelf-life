@@ -600,14 +600,6 @@ ol.notes {
 
 
 // INDEX PAGE
-@-webkit-keyframes caption-slide {
-   from { bottom: -200px }
-   to   { bottom: 0; }
-}
-@-moz-keyframes caption-slide {
-   from { bottom: -200px }
-   to   { bottom: 0; }
-}
 .index-page {
     #posts {
         margin-top: 22px;
@@ -638,26 +630,46 @@ ol.notes {
             .caption.excerpt {
                 padding: 0;
                 margin: 6px;
-                background: #000;
-                background: rgba(0,0,0,.7);
-                position: absolute;
-                bottom: -200px; left: 0;
 
                 p { 
                     margin: 5px;
                     font-size: 12px;
                     line-height: 1.4;
-                    color: #fff;
                 }
                 .signature-name, .footnote { display: none; }
             }
-            &:hover .caption.excerpt {
-                -webkit-animation-name: caption-slide;
-                -webkit-animation-duration: .25s;
-                -moz-animation-name: caption-slide;
-                -moz-animation-duration: .25s;
-                bottom: 0;
+        }
+    }
+}
+.touch .index-page {
+}
+@-webkit-keyframes caption-slide {
+   from { bottom: -200px }
+   to   { bottom: 0; }
+}
+@-moz-keyframes caption-slide {
+   from { bottom: -200px }
+   to   { bottom: 0; }
+}
+.no-touch .index-page {
+    #posts .post {
+        .caption.excerpt {
+            background: #000;
+            background: rgba(0,0,0,.7);
+            position: absolute;
+            bottom: -200px; left: 0;
+            
+            p {
+                color: #fff;
             }
+        }
+        .post_info { display: none; }
+        &:hover .caption.excerpt {
+            -webkit-animation-name: caption-slide;
+            -webkit-animation-duration: .25s;
+            -moz-animation-name: caption-slide;
+            -moz-animation-duration: .25s;
+            bottom: 0;
         }
     }
 }
@@ -708,7 +720,7 @@ ol.notes {
     }
     
     #container { display: block; }
-    #header, #post_wrap { display: block; width: auto; }
+    #header, #post-wrap { display: block; width: auto; }
     #header { border-bottom: 1px solid #fff; }
     #blog_info h1 { font-size: 36px; }
     #posts { padding-left: 10px; padding-right: 10px; }
@@ -721,4 +733,11 @@ ol.notes {
         .project-iframe { height: 770px; }
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
+    .index-page {
+        #posts .post {
+            width: auto;
+            margin: 0 0 20px 0;
+            float: none;
+        }
+    }
 }

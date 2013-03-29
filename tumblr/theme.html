@@ -123,6 +123,13 @@
                     {block:IndexPage}
                     <li class="post group">
                         <div class="wrap">
+
+                            <ul class="post_info timestamp">
+                                <li class="timestamp-wrap">
+                                {TimeAgo}
+                                </li>
+                            </ul>
+
                             {block:Photo}
                             <section class="media">
                                  <a href="{Permalink}#posts" class="link">
@@ -134,6 +141,23 @@
                                 <a href="{Permalink}#posts" class="link">
                                 {Caption}
                                 </a>
+
+                                <ul class="post_info comments">
+                                {block:IfShowPostNotes}
+                                    {block:NoteCount}
+                                       <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
+                                   {/block:NoteCount}
+                                {/block:IfShowPostNotes}
+                                {block:IfDisqusShortname}
+                                    <li><a href="{Permalink}#disqus_thread">{NoteCount} Comments</a></li>
+                                {/block:IfDisqusShortname}
+                                </ul>
+
+                                <ul class="post_info social">
+                                    <li class="share">Share This</li>
+                                    <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
+                                    <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
+                                </ul>
                             </section>
                             {/block:Caption}
                             {/block:Photo}
