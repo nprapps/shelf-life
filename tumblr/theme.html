@@ -81,26 +81,27 @@
         <section id="container" class="group">
             <header>
                 <div id="blog_info">
+
                     {block:IfShowBlogTitle}
-                        <h1><a href="/">{Title}</a></h1>
-                        <div class="hdr-img">
-                            <a href="/"><img src="http://localhost:8000/img/cook-your-cupboard-hd.png" alt="{Title}" /></a>
-                        </div>
+                    <h1><a href="/">{Title}</a></h1>
+                    <div class="hdr-img">
+                        <a href="/"><img src="http://localhost:8000/img/cook-your-cupboard-hd.png" alt="{Title}" /></a>
+                    </div>
                     {/block:IfShowBlogTitle}
-                    {block:IfShowBlogDescription}
-                        {block:Description}
-                        <div class="cont description group">
-                            {Description}<br />
-                            <span class="more">Full Series: <a href="http://www.npr.org/series/172693794/on-the-run-how-families-struggle-to-eat-well-and-exercise">What The Fridge: How we find stuff in our pantry and then eat it &rsaquo;</a></span>
-                        </div>
-                        {/block:Description}
-                    {/block:IfShowBlogDescription}
-                    
+
                     <div class="project-prompt">
                         <h2>Round One: Take Three</h2>
-                        <p>Gather together and take a photo of no more than three food things in your kitchen that you need some help with.</p>
+                        <p>Take a photo of no more than three food things in your kitchen that you need some help with.</p>
+                        <p class="deadline">Deadline: Sunday, April 14</p>
                         <h3 id="modal-btn" class="btn"><span></span>Share</h3>
                     </div>
+                    
+                    {block:IfShowBlogDescription}
+                        {block:Description}
+                        <p class="description"><strong>About This Project:</strong> {Description}</p>
+                        <p class="more"><strong>Full Series:</strong> <a href="http://www.npr.org/series/172693794/on-the-run-how-families-struggle-to-eat-well-and-exercise">What The Fridge: How we find stuff in our pantry and then eat it &rsaquo;</a></p>
+                        {/block:Description}
+                    {/block:IfShowBlogDescription}
                     
                     {block:IndexPage}
                     <p class="project-credits">

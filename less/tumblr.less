@@ -110,6 +110,7 @@ em { font-style: italic; }
     display: table;
     width: 100%;
     height: 100%;
+    min-height: 800px;
 }
 header {
     display: table-cell;
@@ -126,6 +127,8 @@ header {
 // HEADER
 #blog_info {
     padding: 30px;
+    position: fixed;
+    width: 190px;
 
     h1 {
         font: normal 48px Arial, Helvetica, sans-serif;
@@ -145,6 +148,14 @@ header {
             max-width: 100%;
         }
     }
+    p.description, p.more { 
+        color: #787878;
+        margin-bottom: 11px;
+        font-size: 13px;
+
+        strong { color: #555; }
+    }
+    p.more { margin-bottom: 22px; }
     p.project-credits {
         color: #999;
         margin-top: 15px;
@@ -152,24 +163,28 @@ header {
         font-size: 11px;
         font-style: italic;
     }
-    .description { 
-        color: #787878;
-        margin-bottom: 22px;
-    }
     .project-prompt {
-        margin-bottom: 33px;
+        border: 1px solid #c6d5ea;
+        border-radius: 4px;
+        background-color: #e6ebf2;
+        margin: 0 -15px 22px -15px;
+        padding: 10px 15px;
 
         h2 {
             font-weight: bold;
             color: #333;
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 5px;
         }
         p {
             color: #666;
-            font-size: 13px;
-            margin-bottom: 11px;
-            font-style: italic;
+            font-size: 12px;
+            margin-bottom: 5px;
+            
+            &.deadline {
+                font-weight: bold;
+                margin-bottom: 11px;
+            }
         }
     }
     #modal-btn {
@@ -265,8 +280,8 @@ header {
 #posts {
     color: #4C4C4C;
     position: relative;
-    padding: 0 30px;
     z-index: 1;
+    padding: 0 30px;
 
     .post {
         list-style-type: none;
@@ -284,6 +299,7 @@ header {
             &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
         }
     }
+    &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
 }
 
 #posts .post #disqus_thread {
@@ -744,6 +760,7 @@ ol.notes {
 // MEDIA QUERIES
 @media (min-width: 1600px) { 
     .index-page #posts .post { width: 19%; margin: .5%; }
+    #container { min-height: 1100px; }
 }
 @media (min-width: 1400px) and (max-width: 1599px) { 
     .index-page #posts .post { width: 23%; margin: 1%; }
@@ -752,8 +769,7 @@ ol.notes {
     .index-page #posts .post { width: 31%; margin: 1%; }
 }
 @media (min-width: 1200px) { }
-@media (min-width: 980px) { 
-}
+@media (min-width: 980px) { }
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
 }
@@ -773,7 +789,7 @@ ol.notes {
         
         .facebook, .twitter { font-size: 13px; }
     }
-    #blog_info { padding: 33px 20px 20px 20px; }
+    #blog_info { padding: 33px 20px 20px 20px; width: 160px; }
 }
 @media (max-width: 640px) {
     #container { display: block; }
@@ -781,11 +797,14 @@ ol.notes {
     header { border-bottom: 1px solid #fff; }
     #blog_info {
         padding: 55px 20px 20px 20px;
+        position: static;
+        width: auto;
 
         h1 {
             display: block;
             text-indent: -9999px;
             height: 31px;
+            margin-bottom: 22px;
             background: url('http://localhost:8000/img/cook-your-cupboard-hd-sm.png') no-repeat;
         }
         .hdr-img { display: none; }
