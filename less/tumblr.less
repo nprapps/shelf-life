@@ -131,8 +131,19 @@ em { font-style: italic; }
         font: normal 48px Arial, Helvetica, sans-serif;
         color: #555;
         margin-bottom: 10px;
+        display: none;
         
         a { color: #555; }
+    }
+    .header-img {
+        display: block;
+        margin-bottom: 22px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
     }
     p.project-credits {
         color: #999;
@@ -739,5 +750,16 @@ ol.notes {
             margin: 0 0 20px 0;
             float: none;
         }
+    }
+    #blog_info {
+        padding: 55px 20px 20px 20px;
+
+        h1 {
+            display: block;
+            text-indent: -9999px;
+            width: height: 31px;
+            background: url('http://localhost:8000/img/cook-your-cupboard-hd-sm.png') no-repeat;
+        }
+        .header-img { display: none; }
     }
 }

@@ -84,7 +84,12 @@
         <section id="container" class="group">
             <header id="header">
                 <div id="blog_info">
-                    {block:IfShowBlogTitle}<h1><a href="/">{Title}</a></h1>{/block:IfShowBlogTitle}
+                    {block:IfShowBlogTitle}
+                        <h1><a href="/">{Title}</a></h1>
+                        <div class="header-img">
+                            <a href="/"><img src="http://localhost:8000/img/cook-your-cupboard-hd.png" alt="{Title}" class="header-img" /></a>
+                        </div>
+                    {/block:IfShowBlogTitle}
                     {block:IfShowBlogDescription}
                         {block:Description}
                         <div class="cont description group">
