@@ -26,6 +26,9 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
+@app.route('/%s/test/' % app_config.PROJECT_SLUG, methods=['GET'])
+def _test_route():
+    return datetime.datetime.now()
 
 @app.route('/%s/' % app_config.PROJECT_SLUG, methods=['POST'])
 def _post_to_tumblr():
