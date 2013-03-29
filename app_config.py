@@ -15,11 +15,10 @@ REPOSITORY_NAME = 'shelf-life'
 CONFIG_NAME = PROJECT_SLUG.replace('-', '').upper()
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
-PRODUCTION_SERVERS = ['50.112.9.120']
-# PRODUCTION_SERVERS = ['cron.nprapps.org']
+PRODUCTION_SERVERS = ['54.244.84.250']
 
 STAGING_S3_BUCKETS = ['tumblr-stage.npr.org']
-STAGING_SERVERS = ['54.245.114.14']
+STAGING_SERVERS = ['54.244.84.250']
 
 S3_BUCKETS = []
 SERVERS = []
