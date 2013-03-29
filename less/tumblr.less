@@ -118,7 +118,7 @@ em { font-style: italic; }
 }
 #post-wrap {
     display: table-cell;
-    width: 85%;
+    width: 80%;
     vertical-align: top;
 }
 
@@ -152,21 +152,71 @@ em { font-style: italic; }
         font-size: 11px;
         font-style: italic;
     }
-    .description { color: #787878; }
+    .description { 
+        color: #787878;
+        margin-bottom: 22px;
+    }
+    .project-prompt {
+        margin-bottom: 33px;
+
+        h2 {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 11px;
+            font-style: italic;
+        }
+    }
+    #modal-btn {
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #7598c9;
+        height: 44px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 44px;
+        padding-right: 10px;
+        color: #fff;
+
+        &:hover { background-color: #9eb7dd; }
+        &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+        span {
+            background: url('http://localhost:8000/img/btn-post-photo-44.png') no-repeat 50% 50%;
+            width: 44px; height: 44px;
+            border-right: 1px solid #fff;
+            margin-right: 11px;
+            display: inline-block;
+            float: left;
+        }
+    }
 }
 
 
 // SUBMISSION FORM
 #project-form {
     color: #fff;
-    margin: 30px 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: #666;
+    background: rgba(0,0,0,.8);
+    display: none;
     
     .wrap {
+        margin: 5%;
+        width: 90%;
+        height: 90%;
+        overflow: scroll;
         -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-        width: 100%;
-        overflow: hidden;
     }
     .hdr {
         cursor: pointer;
@@ -197,7 +247,6 @@ em { font-style: italic; }
         width: 100%;
     }
     .project-iframe-wrapper {
-        display: none;
         color: #111;
         background-color: #f1f1f1;
         padding-bottom:35px;
@@ -737,7 +786,6 @@ ol.notes {
     #posts { padding-left: 10px; padding-right: 10px; }
     #posts .post .wrap { padding: 15px; }
     #project-form { 
-        padding-left: 10px; padding-right: 10px;
         .hdr { height: 64px; }
         .hdr h3 { font-size: 15px; line-height: 40px; padding-top: 13px; }
         .hdr h3 span { width: 64px; height: 64px; margin-right: 15px; background-position: 50% 50%; margin-top: -13px; background-image: url('http://apps.npr.org/familymeal/img/btn-share-small.png'); }

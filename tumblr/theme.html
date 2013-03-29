@@ -28,13 +28,11 @@
                 <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
         <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/lib/modernizr.custom.js"></script>
-<!--        <script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script> -->
 
         <!-- Reset CSS -->
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-<!--        <link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" /> -->
         <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" />
 
         <!-- GOOGLE ANALYTICS -->
@@ -80,7 +78,6 @@
             </ul>
         </div>
 
-
         <section id="container" class="group">
             <header id="header">
                 <div id="blog_info">
@@ -99,24 +96,18 @@
                         {/block:Description}
                     {/block:IfShowBlogDescription}
                     
+                    <div class="project-prompt">
+                        <h2>Round One: Take Three</h2>
+                        <p>Gather together and take a photo of no more than three food things in your kitchen that you need some help with.</p>
+                        <h3 id="modal-btn" class="btn"><span></span>Share</h3>
+                    </div>
+                    
                     {block:IndexPage}
                     <p class="project-credits">
                         Credits: Annie Adams, Bethany Boswell, Chris Colbert, Davis Duryea, Erica Edison / NPR<br />
                         Questions? Problems? E-mail <a href="mailto:tumblr@npr.org">tumblr@npr.org</a>.
                     </p>
                     {/block:IndexPage}
-                </div>
-
-                <div id="project-form">
-                    <div class="wrap">
-                        <div class="hdr">
-                            <h3><span></span>SHARE: Cook Your Cupboard?</h3>
-                        </div>
-                        <div class="project-iframe-wrapper">
-                            <iframe class="project-iframe" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/tumblr-form.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-                            <div class="legal">By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.</div>
-                        </div>
-                    </div>
                 </div>
             </header>
 
@@ -309,8 +300,21 @@
         </section> <!-- #container -->
 
 
+        <div id="project-form">
+            <div class="wrap">
+                <div class="hdr">
+                    <h3><span></span>SHARE: Cook Your Cupboard?</h3>
+                </div>
+                <div class="project-iframe-wrapper">
+                    <iframe class="project-iframe" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/tumblr-form.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                    <div class="legal">By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.</div>
+                </div>
+            </div>
+        </div>
+
+
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="http://localhost:8000/js/tumblr.js"></script>
+        <script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script>
 
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
