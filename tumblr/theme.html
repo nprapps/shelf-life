@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-<!--        <link rel="stylesheet" href="http://stage-apps.npr.org/shelf-life/css/tumblr.css" /> -->
+<!--        <link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" /> -->
         <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" />
 
         <!-- GOOGLE ANALYTICS -->
@@ -92,7 +92,8 @@
                         {/block:Description}
                     {/block:IfShowBlogDescription}
                     {block:IndexPage}
-                    <p class="project-credits">Credits: Annie Adams, Bethany Boswell, Chris Colbert, Davis Duryea, Erica Edison / NPR<br />
+                    <p class="project-credits">
+                        Credits: Annie Adams, Bethany Boswell, Chris Colbert, Davis Duryea, Erica Edison / NPR<br />
                         Questions? Problems? E-mail <a href="mailto:tumblr@npr.org">tumblr@npr.org</a>.
                     </p>
                     {/block:IndexPage}
@@ -192,28 +193,27 @@
                                     </section>
                                 {/block:Photo}
 
-                                    <ul class="post_info social">
-                                        <li class="share">Share This</li>
-                                        <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
-                                        <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
+                                {block:IfDisqusShortname}{block:IndexPage}
+                                   <ul class="post_info">
+                                        <li><a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a></li>
                                     </ul>
+                                {/block:IndexPage}{/block:IfDisqusShortname}
 
-                                    </section>
+                                <ul class="post_info social">
+                                    <li class="share">Share This</li>
+                                    <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
+                                    <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
+                                </ul>
 
-                                    <div style="width:100%;clear:both;height:15px;margin:0;padding:0;">&nbsp;</div>
+                                </section>
 
-                                    {block:IfDisqusShortname}{block:IndexPage}
-                                       <section class="caption group">
-                                            <a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a>
-                                        </section>
-                                    {/block:IndexPage}{/block:IfDisqusShortname}
+                            </div> <!-- end .wrap -->
+
                                     {block:IfDisqusShortname}{block:Permalink}
                                         <div id="disqus_thread"></div>
                                         <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
                                         <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
                                     {/block:Permalink}{/block:IfDisqusShortname}
-
-                            </div> <!-- end .wrap -->
 
                             {block:PostNotes}
                                 <section class="post_notes">
