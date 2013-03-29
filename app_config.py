@@ -19,7 +19,7 @@ PRODUCTION_SERVERS = ['50.112.9.120']
 # PRODUCTION_SERVERS = ['cron.nprapps.org']
 
 STAGING_S3_BUCKETS = ['tumblr-stage.npr.org']
-STAGING_SERVERS = ['cron.nprapps.org']
+STAGING_SERVERS = ['54.245.114.14']
 
 S3_BUCKETS = []
 SERVERS = []
