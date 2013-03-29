@@ -1,4 +1,4 @@
-<html>
+<html class="no-js">
     <head>
         <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage} : NPR</title>
 
@@ -27,6 +27,8 @@
         <!--[if lt IE 9]>
                 <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
+        <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/lib/modernizr.custom.js"></script>
+<!--        <script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script> -->
 
         <!-- Reset CSS -->
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
@@ -82,7 +84,12 @@
         <section id="container" class="group">
             <header id="header">
                 <div id="blog_info">
-                    {block:IfShowBlogTitle}<h1><a href="/">{Title}</a></h1>{/block:IfShowBlogTitle}
+                    {block:IfShowBlogTitle}
+                        <h1><a href="/">{Title}</a></h1>
+                        <div class="header-img">
+                            <a href="/"><img src="http://localhost:8000/img/cook-your-cupboard-hd.png" alt="{Title}" class="header-img" /></a>
+                        </div>
+                    {/block:IfShowBlogTitle}
                     {block:IfShowBlogDescription}
                         {block:Description}
                         <div class="cont description group">
@@ -114,33 +121,72 @@
 
             <section id="post-wrap">
                 <ul id="posts">
-                    <!-- START POSTS -->
-                    {block:Posts}
+                <!-- START POSTS -->
+                {block:Posts}
+                    
 
-                            <li class="post group" {block:IfShowPostNotes} {block:PostNotes} style="padding:0"{/block:PostNotes} {/block:IfShowPostNotes}>
-                                <div class="wrap">
+                    {block:IndexPage}
+                    <li class="post group">
+                        <div class="wrap">
+
+                            <ul class="post_info timestamp">
+                                <li class="timestamp-wrap">
+                                {TimeAgo}
+                                </li>
+                            </ul>
 
                             {block:Photo}
-                                <section class="top media" style="display:block;">
-                                     <a href="{Permalink}#posts" class="link"><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a>
-                                </section>
+                            <section class="media">
+                                 <a href="{Permalink}#posts" class="link">
+                                    <span class="img-holder" style="background-image: url('{PhotoURL-250}');"></span>
+                                 </a>
+                            </section>
+                            {block:Caption}
+                            <section class="caption excerpt">
+                                <a href="{Permalink}#posts" class="link">
+                                {Caption}
+                                </a>
+
+                                <ul class="post_info comments">
+                                {block:IfShowPostNotes}
+                                    {block:NoteCount}
+                                       <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
+                                   {/block:NoteCount}
+                                {/block:IfShowPostNotes}
+                                {block:IfDisqusShortname}
+                                    <li><a href="{Permalink}#disqus_thread">{NoteCount} Comments</a></li>
+                                {/block:IfDisqusShortname}
+                                </ul>
+
+                                <ul class="post_info social">
+                                    <li class="share">Share This</li>
+                                    <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
+                                    <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
+                                </ul>
+                            </section>
+                            {/block:Caption}
+                            {/block:Photo}
+                        </div>
+                    </li>
+                    {/block:IndexPage}
+
+                    
+                    {block:PermalinkPage}
+                    <li class="post group">
+                        <div class="wrap">
+
+                            {block:Photo}
+                            <section class="top media" style="display:block;">
+                                 <a href="{Permalink}#posts" class="link"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
+                            </section>
                             {/block:Photo}
 
                             <section class="group caption_and_post_info
                                 {block:Photo} after_top_part isphoto{/block:Photo}
                             ">
-                                <ul class="
-                                    post_info
-                                ">
+                                <ul class="post_info">
                                     <li class="timestamp-wrap">
-                                    {block:IndexPage}
-                                    <a href="{Permalink}#posts" class="
-                                        timestamp
-                                        {block:Text}has_caption{block:Title} with_title{/block:Title}{/block:Text}
-                                        {block:Photo}{block:Caption}has_caption{/block:Caption}{/block:Photo}
-                                    ">{TimeAgo}{/block:IndexPage}
-                                    {block:PermalinkPage}{block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}{/block:PermalinkPage}
-                                    {block:IndexPage}</a>{/block:IndexPage}
+                                    {block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}
                                     </li>
 
                                     {block:IfShowPostNotes}
@@ -148,82 +194,73 @@
                                            <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
                                        {/block:NoteCount}
                                     {/block:IfShowPostNotes}
-
-                                    </ul>
-
+                                </ul>
 
                                 {block:Text}
-                                    <section class="caption group">
-                                        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                        <div class="cont group">{Body}</div>
-                                        {block:ContentSource}
-                                            <div class="cont content_source">
-                                                <a href="{SourceURL}">
-                                                    {lang:Source}:
-                                                    {block:SourceLogo}
-                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                    {/block:SourceLogo}
-                                                    {block:NoSourceLogo}
-                                                        {SourceTitle}
-                                                    {/block:NoSourceLogo}
-                                                </a>
-                                            </div>
-                                        {/block:ContentSource}
-                                    </section>
+                                <section class="caption group">
+                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                    <div class="cont group">{Body}</div>
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
                                 {/block:Text}
 
                                 {block:Photo}
-                                    <section class="caption group">
-                                        {block:Caption}
-                                            <div class="cont">{Caption}</div>
-                                        {/block:Caption}
-                                        {block:ContentSource}
-                                            <div class="cont content_source">
-                                                <a href="{SourceURL}">
-                                                    {lang:Source}:
-                                                    {block:SourceLogo}
-                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                    {/block:SourceLogo}
-                                                    {block:NoSourceLogo}
-                                                        {SourceTitle}
-                                                    {/block:NoSourceLogo}
-                                                </a>
-                                            </div>
-                                        {/block:ContentSource}
-                                    </section>
+                                <section class="caption group">
+                                    {block:Caption}
+                                        <div class="cont">{Caption}</div>
+                                    {/block:Caption}
+                                    {block:ContentSource}
+                                        <div class="cont content_source">
+                                            <a href="{SourceURL}">
+                                                {lang:Source}:
+                                                {block:SourceLogo}
+                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                                {/block:SourceLogo}
+                                                {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                                {/block:NoSourceLogo}
+                                            </a>
+                                        </div>
+                                    {/block:ContentSource}
+                                </section>
                                 {/block:Photo}
-
-                                {block:IfDisqusShortname}{block:IndexPage}
-                                   <ul class="post_info">
-                                        <li><a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a></li>
-                                    </ul>
-                                {/block:IndexPage}{/block:IfDisqusShortname}
 
                                 <ul class="post_info social">
                                     <li class="share">Share This</li>
                                     <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id=138837436154588&amp;link={Permalink}&picture={PhotoURL-500}&name={Title}&redirect_uri={Permalink}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Post', 'Dinnertime Confessional']);" title="Like This Page On Facebook"><span></span>Facebook</a></li>
                                     <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
                                 </ul>
+                            </section>
+                        </div> <!-- end .wrap -->
 
-                                </section>
+                        {block:IfDisqusShortname}
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                        {/block:IfDisqusShortname}
 
-                            </div> <!-- end .wrap -->
+                        {block:PostNotes}
+                        <section class="post_notes">
+                            <a name="notes">
+                                {PostNotes}
+                            </a>
+                        </section>
+                        {/block:PostNotes}
 
-                                    {block:IfDisqusShortname}{block:Permalink}
-                                        <div id="disqus_thread"></div>
-                                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                                    {/block:Permalink}{/block:IfDisqusShortname}
-
-                            {block:PostNotes}
-                                <section class="post_notes">
-                                    <a name="notes">
-                                        {PostNotes}
-                                    </a>
-                                </section>
-                            {/block:PostNotes}
-
-                        </li>
+                    </li>
+                    {/block:PermalinkPage}
 
                     {/block:Posts}
                     <!-- END POSTS -->
@@ -272,6 +309,7 @@
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
+
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
             var Tumblelog = {};

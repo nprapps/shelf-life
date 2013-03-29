@@ -131,8 +131,19 @@ em { font-style: italic; }
         font: normal 48px Arial, Helvetica, sans-serif;
         color: #555;
         margin-bottom: 10px;
+        display: none;
         
         a { color: #555; }
+    }
+    .header-img {
+        display: block;
+        margin-bottom: 22px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
     }
     p.project-credits {
         color: #999;
@@ -603,20 +614,79 @@ ol.notes {
 .index-page {
     #posts {
         margin-top: 22px;
-    }
-    #posts .post {
-        width: 48%;
-        margin: 1%;
-        float: left;
 
-        .wrap { padding: 5px; }
-        .media { width: auto; float: none; }
-        .caption_and_post_info { display: none; }
+        .post {
+            width: 48%;
+            margin: 1%;
+            float: left;
+            position: relative;
+            overflow: hidden;
+
+            .wrap { padding: 0; }
+            .media { 
+                width: auto;
+                float: none;
+                display: block;
+                margin: 3px;
+            
+                a { display: block; }
+                .img-holder { 
+                    display: block;
+                    width: 100%;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                }
+            }
+            .caption.excerpt {
+                padding: 0;
+                margin: 6px;
+
+                p { 
+                    margin: 5px;
+                    font-size: 12px;
+                    line-height: 1.4;
+                }
+                .signature-name, .footnote { display: none; }
+            }
+        }
+    }
+}
+.touch .index-page {
+}
+@-webkit-keyframes caption-slide {
+   from { bottom: -200px }
+   to   { bottom: 0; }
+}
+@-moz-keyframes caption-slide {
+   from { bottom: -200px }
+   to   { bottom: 0; }
+}
+.no-touch .index-page {
+    #posts .post {
+        .caption.excerpt {
+            background: #000;
+            background: rgba(0,0,0,.7);
+            position: absolute;
+            bottom: -200px; left: 0;
+            
+            p {
+                color: #fff;
+            }
+        }
+        .post_info { display: none; }
+        &:hover .caption.excerpt {
+            -webkit-animation-name: caption-slide;
+            -webkit-animation-duration: .25s;
+            -moz-animation-name: caption-slide;
+            -moz-animation-duration: .25s;
+            bottom: 0;
+        }
     }
 }
 
 
-/* Protection for parents that have floating children */
+// CLEARING FLOATS
 #header:after, #container:after, .caption_and_post_info:after, #footer:after .buttons:after { 
     content: "."; display: block; height: 0; clear: both; visibility: hidden;
 }
@@ -625,7 +695,7 @@ ol.notes {
 @media (min-width: 1200px) { 
     .index-page {
         #posts .post {
-            width: 30%;
+            width: 31%;
             margin: 1%;
         }
     }
@@ -661,7 +731,7 @@ ol.notes {
     }
     
     #container { display: block; }
-    #header, #post_wrap { display: block; width: auto; }
+    #header, #post-wrap { display: block; width: auto; }
     #header { border-bottom: 1px solid #fff; }
     #blog_info h1 { font-size: 36px; }
     #posts { padding-left: 10px; padding-right: 10px; }
@@ -674,4 +744,22 @@ ol.notes {
         .project-iframe { height: 770px; }
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
+    .index-page {
+        #posts .post {
+            width: auto;
+            margin: 0 0 20px 0;
+            float: none;
+        }
+    }
+    #blog_info {
+        padding: 55px 20px 20px 20px;
+
+        h1 {
+            display: block;
+            text-indent: -9999px;
+            width: height: 31px;
+            background: url('http://localhost:8000/img/cook-your-cupboard-hd-sm.png') no-repeat;
+        }
+        .header-img { display: none; }
+    }
 }
