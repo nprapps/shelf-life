@@ -604,6 +604,10 @@ ol.notes {
    from { bottom: -200px }
    to   { bottom: 0; }
 }
+@-moz-keyframes caption-slide {
+   from { bottom: -200px }
+   to   { bottom: 0; }
+}
 .index-page {
     #posts {
         margin-top: 22px;
@@ -650,6 +654,8 @@ ol.notes {
             &:hover .caption.excerpt {
                 -webkit-animation-name: caption-slide;
                 -webkit-animation-duration: .25s;
+                -moz-animation-name: caption-slide;
+                -moz-animation-duration: .25s;
                 bottom: 0;
             }
         }

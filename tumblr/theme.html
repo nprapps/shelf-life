@@ -1,4 +1,4 @@
-<html>
+<html class="no-js">
     <head>
         <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage} : NPR</title>
 
@@ -27,6 +27,8 @@
         <!--[if lt IE 9]>
                 <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
+        <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/lib/modernizr.custom.js"></script>
+<!--        <script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script> -->
 
         <!-- Reset CSS -->
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
@@ -278,6 +280,7 @@
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
+
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
             var Tumblelog = {};
