@@ -26,6 +26,9 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
+@app.route('/%s/test/' % app_config.PROJECT_SLUG, methods=['GET'])
+def _test_route():
+    return '%s' % datetime.datetime.now()
 
 @app.route('/%s/' % app_config.PROJECT_SLUG, methods=['POST'])
 def _post_to_tumblr():
@@ -85,6 +88,8 @@ def _post_to_tumblr():
         "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
     }
 
+    print params
+
     try:
         tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
@@ -93,7 +98,7 @@ def _post_to_tumblr():
         return redirect('%s#posts' % tumblr_url, code=301)
 
     except TumblpyError, e:
-        logger.error('%s %s %s "http://%s%s" (times in EST)' % (e.error_code, e.msg, app_config.SERVERS[0], file_path))
+        logger.error('%s %s http://%s%s (times in EST)' % (e.error_code, e.msg, app_config.SERVERS[0], file_path))
         return 'TUMBLR ERROR'
 
     return redirect('%s#posts' % tumblr_url, code=301)
