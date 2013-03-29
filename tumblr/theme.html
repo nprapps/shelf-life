@@ -98,6 +98,7 @@
                         </div>
                         {/block:Description}
                     {/block:IfShowBlogDescription}
+                    
                     {block:IndexPage}
                     <p class="project-credits">
                         Credits: Annie Adams, Bethany Boswell, Chris Colbert, Davis Duryea, Erica Edison / NPR<br />
@@ -309,6 +310,7 @@
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="http://localhost:8000/js/tumblr.js"></script>
 
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
@@ -477,20 +479,6 @@
             });
         </script>
         {/block:IfUseEndlessScrolling}
-
-        <!-- SHARE DROPDOWN SCRIPT -->
-        <script type="text/javascript">
-        $(document).ready(function(){
-            $project_header = $('#project-form .hdr');
-            $project_frame = $('.project-iframe-wrapper');
-            $project_header.click(function() {
-                $project_frame.slideToggle();
-            });
-            if ($('body').hasClass('index-page')) {
-                $project_header.trigger('click');
-            }
-        });
-        </script>
 
         <!-- CHARTBEAT -->
         <script type="text/javascript">
