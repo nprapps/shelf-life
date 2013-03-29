@@ -85,6 +85,8 @@ def _post_to_tumblr():
         "source": "http://%s%s" % (app_config.SERVERS[0], file_path)
     }
 
+    print params
+
     try:
         tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
