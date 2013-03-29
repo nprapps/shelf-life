@@ -32,8 +32,9 @@ env.virtualenv_path = '%(path)s/virtualenv' % env
 env.forward_agent = True
 
 SERVICES = [
-    ('nginx', '/etc/nginx/locations-enabled/'),
-    ('uwsgi', '/etc/init/')
+    ('app', '%(repo_path)s' % env , 'ini'),
+    ('nginx', '/etc/nginx/locations-enabled/', 'conf'),
+    ('uwsgi', '/etc/init/', 'conf'),
 ]
 
 """
@@ -309,10 +310,10 @@ def render_confs():
     context['REPOSITORY_NAME'] = app_config.REPOSITORY_NAME
     context['DEPLOYMENT_TARGET'] = env.settings
 
-    for service, remote_path in SERVICES:
-        file_path = 'confs/rendered/%s.%s.conf' % (app_config.PROJECT_SLUG, service)
+    for service, remote_path, extension in SERVICES:
+        file_path = 'confs/rendered/%s.%s.%s' % (app_config.PROJECT_SLUG, service, extension)
 
-        with open('confs/%s.conf' % service, 'r') as read_template:
+        with open('confs/%s.%s' % (service, extension),  'r') as read_template:
 
             with open(file_path, 'wb') as write_template:
                 payload = Template(read_template.read())
@@ -332,16 +333,16 @@ def deploy_confs():
         run('touch /tmp/%s.sock' % app_config.PROJECT_SLUG)
         sudo('chmod 777 /tmp/%s.sock' % app_config.PROJECT_SLUG)
 
-        for service, remote_path in SERVICES:
+        for service, remote_path, extension in SERVICES:
             service_name = '%s.%s' % (app_config.PROJECT_SLUG, service)
-            file_name = '%s.conf' % service_name
+            file_name = '%s.%s' % (service_name, extension)
             local_path = 'confs/rendered/%s' % file_name
             put(local_path, remote_path, use_sudo=True)
 
             if service == 'nginx':
                 sudo('service nginx reload')
 
-            else:
+            if service == 'uwsgi':
                 sudo('initctl reload-configuration')
                 sudo('service %s restart' % service_name)
 
