@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 
 import datetime
+import gzip
 import json
 import os
 from sets import *
 import time as pytime
 import urlparse
 
+import boto
+from boto.s3.key import Key
 import oauth2 as oauth
 import requests
 from tumblpy import Tumblpy
@@ -267,26 +270,26 @@ def write_json_data():
         f.write(json_output)
     print "JSON file written."
 
-def deploy_json_data():
+def deploy_json_data(s3_buckets):
 
     TUMBLR_FILENAME = app_config.TUMBLR_FILENAME
 
-    if app_config.DEPLOYMENT_TARGET:
+    with open(TUMBLR_FILENAME, 'r') as json_output:
         with gzip.open(TUMBLR_FILENAME + '.gz', 'wb') as f:
-            f.write(json_output)
+            f.write(json_output.read())
 
-        for bucket in app_config.S3_BUCKETS:
-            conn = boto.connect_s3()
-            bucket = conn.get_bucket(bucket)
-            key = boto.s3.key.Key(bucket)
-            key.key = '%s/live-data/misterpresident.json' % app_config.DEPLOYED_NAME
-            key.set_contents_from_filename(
-                TUMBLR_FILENAME + '.gz',
-                policy='public-read',
-                headers={
-                    'Cache-Control': 'max-age=5 no-cache no-store must-revalidate',
-                    'Content-Encoding': 'gzip'
-                }
-            )
+    for bucket in s3_buckets:
+        conn = boto.connect_s3()
+        bucket = conn.get_bucket(bucket)
+        key = boto.s3.key.Key(bucket)
+        key.key = '%s/live-data/%s-data.json' % (app_config.PROJECT_SLUG, app_config.PROJECT_SLUG)
+        key.set_contents_from_filename(
+            TUMBLR_FILENAME + '.gz',
+            policy='public-read',
+            headers={
+                'Cache-Control': 'max-age=5 no-cache no-store must-revalidate',
+                'Content-Encoding': 'gzip'
+            }
+        )
 
-        os.remove(TUMBLR_FILENAME + '.gz')
+    os.remove(TUMBLR_FILENAME + '.gz')

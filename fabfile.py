@@ -377,7 +377,7 @@ def deploy_json_data():
     Deploys JSON file to S3.
     """
     write_json_data()
-    tumblr_utils.deploy_json_data()
+    tumblr_utils.deploy_json_data(env.s3_buckets)
 
 """
 Cron jobs
