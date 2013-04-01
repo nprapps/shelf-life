@@ -232,22 +232,21 @@
                                     <li class="twitter"><a rel="external" href="http://twitter.com/share?text=Dinner+is+hard.&amp;url={Permalink}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Post', 'Dinnertime Confessional']);" title="Share This Page On Twitter"><span></span>Twitter</a></li>
                                 </ul>
                             </section>
-                        </div> <!-- end .wrap -->
 
-                        {block:IfDisqusShortname}
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                        {/block:IfDisqusShortname}
+                            {block:IfDisqusShortname}
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                            {/block:IfDisqusShortname}
 
-                        {block:PostNotes}
-                        <section class="post_notes">
-                            <a name="notes">
+                            {block:PostNotes}
+                            <section class="post_notes" name="notes">
+                                <h4>Notes ({NoteCount})</h4>
                                 {PostNotes}
-                            </a>
-                        </section>
-                        {/block:PostNotes}
+                            </section>
+                            {/block:PostNotes}
 
+                        </div> <!-- end .wrap -->
                     </li>
                     {/block:PermalinkPage}
 

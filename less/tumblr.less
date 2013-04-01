@@ -522,10 +522,16 @@ header {
     }
 }
 
-
-.post_notes { clear: both; }
-
-
+.post_notes { 
+    clear: both;
+    margin-top: 22px;
+    
+    h4 {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 11px;
+    }
+}
 ol.notes {
     color: #ccc;
     font-size: 13px;
@@ -533,7 +539,7 @@ ol.notes {
     list-style-type: none;
     border-top: solid 1px #E6E6E6;
     -webkit-font-smoothing: subpixel-antialiased !important;
-    margin: 40px auto auto auto;
+    margin: auto;
 
     li.note {
         border-bottom: solid 1px #aaa;
