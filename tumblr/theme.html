@@ -127,15 +127,17 @@
                                 {Caption}
                                 </a>
 
+                                
                                 <ul class="post_info comments">
-                                {block:IfShowPostNotes}
-                                    {block:NoteCount}
-                                       <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
-                                   {/block:NoteCount}
-                                {/block:IfShowPostNotes}
-                                {block:IfDisqusShortname}
-                                    <li><a href="{Permalink}#disqus_thread">{NoteCount} Comments</a></li>
-                                {/block:IfDisqusShortname}
+                                    <li class="more"><a href="{Permalink}#posts">Read More and Share Your Advice &rsaquo;</a></li>
+                                    {block:IfDisqusShortname}
+                                        <li class="comment-count dsq-comment-count"><a href="{Permalink}#disqus_thread">Comments</a></li>
+                                    {/block:IfDisqusShortname}
+                                    {block:IfShowPostNotes}
+                                        {block:NoteCount}
+                                        <li class="note-count"><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
+                                        {/block:NoteCount}
+                                    {/block:IfShowPostNotes}
                                 </ul>
 
                                 <ul class="post_info social">
@@ -168,12 +170,6 @@
                                     <li class="timestamp-wrap">
                                     {block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}
                                     </li>
-
-                                    {block:IfShowPostNotes}
-                                        {block:NoteCount}
-                                           <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
-                                       {/block:NoteCount}
-                                    {/block:IfShowPostNotes}
                                 </ul>
 
                                 {block:Text}
