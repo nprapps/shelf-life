@@ -800,47 +800,49 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
 }
-@media (min-width: 768px) {
-}
 @media (max-width: 767px) {
-    iframe#tumblr_controls { top: 377px !important; left: -4px; }
-    .index-page iframe#tumblr_controls { top: 7px !important; right: 20px !important; left: auto; }
+    iframe#tumblr_controls { top: 355px !important; left: -14px; }
     #nav .site-links { margin-left: 20px; }
     #container { display: block; }
     #blog_info { padding: 33px 20px 20px 20px; }
     header, #post-wrap { display: block; width: auto; }
-    header { 
-        border-bottom: 1px solid #fff;
-        background-color: #ebebeb;
-    }
+    header { height: 270px; overflow: hidden; }
     #blog_info {
-        padding: 33px 20px 20px 20px;
+        padding: 33px 20px 0 20px;
         position: static;
         width: auto;
 
         h1 {
             display: block;
             text-indent: -9999px;
-            height: 29px;
+            height: 33px;
             margin-bottom: 22px;
             background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
             
             a { display: block; }
         }
         .hdr-img { display: none; }
+        .project-prompt { margin-bottom: 0; }
     }
-    #posts { padding: 0 20px; }
+    #posts { padding: 0 10px; }
     .post .post_info.social {
         .facebook, .twitter { font-size: 13px; }
     }
+    .index-page {
+        iframe#tumblr_controls { top: 7px !important; right: 20px !important; left: auto; }
+        header { height: auto; margin-bottom: 11px; }
+        #blog_info { padding-bottom: 11px; }
+        #blog_info .project-prompt { margin-bottom: 11px; }
+        #posts { margin: 0 10px 0 10px; }
+    }
 }
 @media (max-width: 480px) {
-    iframe#tumblr_controls { top: 413px !important; left: -20px; }
-    .index-page iframe#tumblr_controls { top: 7px !important; right: 20px !important; left: auto; }
+    iframe#tumblr_controls { top: 377px !important; left: -20px; }
     #nav .site-links {
         li { display: none; }
         .npr { display: block; }
     }
+    header { height: 290px; }
     #blog_info h1 { font-size: 36px; }
     #posts { 
         padding-left: 10px; padding-right: 10px;
@@ -854,6 +856,8 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
     .index-page {
+        iframe#tumblr_controls { top: 7px !important; right: 20px !important; left: auto; }
+        header { height: auto; }
         #posts .post {
             width: auto;
             margin: 0 0 20px 0;
