@@ -115,10 +115,7 @@ em { font-style: italic; }
 }
 header {
     display: table-cell;
-    width: 250px;
-    background-color: #888;
-    border-right: 1px solid #ddd;
-//    background-color: #ebebeb;
+    width: 220px;
     vertical-align: top;
 }
 #post-wrap {
@@ -129,7 +126,7 @@ header {
 
 // HEADER
 #blog_info {
-    padding: 30px;
+    padding: 30px 0 30px 30px;
     position: fixed;
     width: 190px;
 
@@ -143,7 +140,7 @@ header {
     }
     .hdr-img {
         display: block;
-        margin-bottom: 22px;
+        margin-bottom: 15px;
 
         img {
             width: 100%;
@@ -152,26 +149,30 @@ header {
         }
     }
     p.description, p.more {
-        color: #787878;
+        color: #ccc;
         margin-bottom: 11px;
         font-size: 13px;
 
-        strong { color: #555; }
+        strong { color: #ededed; }
     }
     p.more { margin-bottom: 22px; }
     p.project-credits {
-        color: #999;
+        color: #ccc;
         margin-top: 15px;
         margin-bottom: 0;
         font-size: 11px;
         font-style: italic;
     }
+    a { 
+        color: #bbc9e5;
+        font-weight: bold;
+    }
     .project-prompt {
-        border: 1px solid #c6d5ea;
-        border-radius: 4px;
-        background-color: #e6ebf2;
-        margin: 0 -15px 22px -15px;
-        padding: 10px 15px;
+        border: 1px solid #999;
+        background-color: #eee;
+        margin: 0 -11px 22px -11px;
+        margin-bottom: 22px;
+        padding: 11px;
 
         h2 {
             font-weight: bold;
@@ -204,7 +205,7 @@ header {
         &:hover { background-color: #9eb7dd; }
         &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
         span {
-            background: url('@img-root/btn-post-photo-44.png') no-repeat 50% 50%;
+            background: url('@{img-root}/btn-post-photo-44.png') no-repeat 50% 50%;
             width: 44px; height: 44px;
             border-right: 1px solid #fff;
             margin-right: 11px;
@@ -681,7 +682,8 @@ ol.notes {
 // INDEX PAGE
 .index-page {
     #posts {
-        margin-top: 22px;
+        padding: 0;
+        margin: 22px 20px 0 20px;
 
         .post {
             width: 48%;
@@ -777,7 +779,7 @@ ol.notes {
 }
 @media (min-width: 768px) { }
 @media (max-width: 767px) {
-    header { width: 200px; }
+    header { width: 180px; }
     #posts .post {
         .media { width: auto; float: none; }
         .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
@@ -796,7 +798,10 @@ ol.notes {
 @media (max-width: 640px) {
     #container { display: block; }
     header, #post-wrap { display: block; width: auto; }
-    header { border-bottom: 1px solid #fff; }
+    header { 
+        border-bottom: 1px solid #fff;
+        background-color: #ebebeb;
+    }
     #blog_info {
         padding: 55px 20px 20px 20px;
         position: static;
@@ -807,7 +812,7 @@ ol.notes {
             text-indent: -9999px;
             height: 31px;
             margin-bottom: 22px;
-            background: url('@img-root/cook-your-cupboard-hd-sm.png') no-repeat;
+            background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
         }
         .hdr-img { display: none; }
     }
