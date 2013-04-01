@@ -178,6 +178,7 @@ header {
             font-weight: bold;
             color: #333;
             font-size: 14px;
+            line-height: 1.4;
             margin-bottom: 5px;
         }
         p {
@@ -285,14 +286,14 @@ header {
     color: #4C4C4C;
     position: relative;
     z-index: 1;
-    padding: 0 30px;
+    padding: 0 30px 0 40px;
 
     .post {
         list-style-type: none;
         margin: 30px 0;
 
         .wrap {
-            padding: 30px;
+            padding: 22px;
             border: 3px solid #f7f7f7;
             background-color: #fff;
             -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.04) inset;
@@ -304,16 +305,6 @@ header {
         }
     }
     &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
-}
-
-#posts .post #disqus_thread {
-    border-top: 1px solid #E6E6E6;
-    margin: 20px 0 0 0;
-    padding: 25px 0 0 0;
-}
-
-#posts .post .caption a.disquscomments {
-    font-size: 14px;
 }
 
 .top {
@@ -328,22 +319,33 @@ header {
     }
 }
 
-#posts .post .media {
-    width: 50%;
-    float: left;
-}
-#posts .post .caption_and_post_info.isphoto {
-    width: 50%;
-    float: right;
-    margin-top: 0;
-}
-#posts .post .caption_and_post_info.isphoto .cont,
-#posts .post .caption_and_post_info.isphoto .post_info {
-    margin-left: 30px;
-}
-#posts .post .caption_and_post_info.after_top_part {
-    border-top: 0;
-    padding-top: 0;
+#posts .post {
+    max-width: 1000px;
+
+    .media {
+        background-color: #ebebeb;
+        
+        img { 
+            max-height: 500px; 
+            width: auto; 
+            margin: 0 auto; 
+            display: block;
+        }
+    }
+    .caption_and_post_info {
+        &.isphoto {
+            margin-top: 30px;
+        }
+    }
+    .caption a.disquscomments {
+        font-size: 14px;
+    }
+    #disqus_thread {
+        border-top: 1px solid #E6E6E6;
+        margin: 20px 0 0 0;
+        padding: 25px 0 0 0;
+    }
+    .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
 }
 
 .post {
@@ -723,6 +725,17 @@ ol.notes {
     }
 }
 .touch .index-page {
+    ul.timestamp {
+        margin: 3px 6px 6px 6px;
+        
+        li { margin: 0; }
+    }
+    #posts .post {
+        p.message {
+            height: 100px;
+            overflow: hidden;
+        }
+    }
 }
 @-webkit-keyframes caption-slide {
    from { bottom: -200px }
@@ -738,7 +751,7 @@ ol.notes {
             background: #000;
             background: rgba(0,0,0,.7);
             position: absolute;
-            bottom: -200px; left: 0;
+//            bottom: -200px; left: 0;
 
             p { color: #fff; }
             a { display: block; }
@@ -777,26 +790,12 @@ ol.notes {
 @media (max-width: 979px) {
     #nav .site-links-2 { display: none; }
 }
-@media (min-width: 768px) { }
-@media (max-width: 767px) {
-    header { width: 180px; }
-    #posts .post {
-        .media { width: auto; float: none; }
-        .caption_and_post_info.isphoto { width: auto; float: none; margin-top: 30px; }
-        .caption_and_post_info.isphoto .cont,
-        .caption_and_post_info.isphoto .post_info { margin-left: 0; }
-        .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
-    }
-    #nav .site-links { margin-left: 20px; }
-    .post .post_info.social {
-        margin-bottom: 0;
-
-        .facebook, .twitter { font-size: 13px; }
-    }
-    #blog_info { padding: 33px 20px 20px 20px; width: 160px; }
+@media (min-width: 768px) {
 }
-@media (max-width: 640px) {
+@media (max-width: 767px) {
+    #nav .site-links { margin-left: 20px; }
     #container { display: block; }
+    #blog_info { padding: 33px 20px 20px 20px; }
     header, #post-wrap { display: block; width: auto; }
     header { 
         border-bottom: 1px solid #fff;
@@ -810,11 +809,15 @@ ol.notes {
         h1 {
             display: block;
             text-indent: -9999px;
-            height: 31px;
+            height: 29px;
             margin-bottom: 22px;
             background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
         }
         .hdr-img { display: none; }
+    }
+    #posts { padding: 0 20px; }
+    .post .post_info.social {
+        .facebook, .twitter { font-size: 13px; }
     }
 }
 @media (max-width: 480px) {
