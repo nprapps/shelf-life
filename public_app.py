@@ -61,6 +61,8 @@ def _post_to_tumblr():
         'app_config': app_config
     }
 
+    print message
+
     caption = render_template('caption.html', **context)
 
     t = Tumblpy(
