@@ -44,7 +44,7 @@ def _post_to_tumblr():
         Converts newlines, returns and other breaks to <br/>.
         """
         value = re.sub(r'\r\n|\r|\n', '\n', value)
-        return value.replace('\n', u'<br/>')
+        return value.replace('\n', do_mark_safe('<br/>'))
 
     # Request is a global. Import it down here where we need it.
     from flask import request
@@ -55,10 +55,6 @@ def _post_to_tumblr():
 
     message = escape(message)
     print 'escaped'
-    print message
-
-    message = do_mark_safe(message)
-    print 'marked safe'
     print message
 
     message = strip_breaks(message)
