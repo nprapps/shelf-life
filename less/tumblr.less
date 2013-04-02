@@ -15,9 +15,7 @@ body {
     background-color: #888;
     
     &.modal-open { 
-        overflow: hidden;
-        height: 100%;
-        
+        position:fixed;
         iframe#tumblr_controls { top: -9999px !important; }
     }
 }
@@ -893,8 +891,8 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         width: auto;
 
         h1 {
-            margin-bottom: 5px;
-            a {
+            margin-bottom: 11px;
+            a { 
                 background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
                 height: 33px;
             }
