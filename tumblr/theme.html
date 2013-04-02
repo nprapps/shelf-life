@@ -33,8 +33,8 @@
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-        <link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" />
-<!--        <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" /> -->
+        <!--<link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" />-->
+        <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" />
 
         <!-- GOOGLE ANALYTICS -->
         <script type="text/javascript">
@@ -76,18 +76,19 @@
 
                     {block:IfShowBlogTitle}
                     <h1><a href="/">{Title}</a></h1>
-                    <div class="hdr-img">
-                        <a href="/"><img src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/img/cook-your-cupboard-hd.png" alt="{Title}" /></a>
-<!--                        <a href="/"><img src="http://localhost:8000/img/cook-your-cupboard-hd.png" alt="{Title}" /></a> -->
-                        <p>Help your fellow diner</p>
-                    </div>
                     {/block:IfShowBlogTitle}
+                    <h2>Help Your Fellow Diner</h2>
 
                     <div class="project-prompt">
-                        <h2>Rice vinegar, dried mushrooms and wheat berries? Sounds like dinner!</h2>
                         <p>What's collecting dust in the back of your pantry? NPR's Morning Edition wants to know! We'll call a chef to help solve your cupboard conundrums.</p>
                         <p class="deadline">Round one deadline: Sunday, April 14</p>
                         <h3 id="modal-btn" class="btn"><span></span>Submit: What's in your pantry?</h3>
+                    </div>
+
+                    <div class="mobile-prompt">
+                        <span></span>
+                        <h3>Use your smartphone.</h3>
+                        <p>Visit <strong>npr.org/cupboard</strong>.</p>
                     </div>
 
                     {block:IndexPage}
@@ -127,7 +128,7 @@
                                 {Caption}
                                 </a>
 
-                                
+
                                 <ul class="post_info comments">
                                     <li class="more"><a href="{Permalink}#posts">Read More and Share Your Advice &rsaquo;</a></li>
                                     {block:IfDisqusShortname}
@@ -241,24 +242,6 @@
                     <!-- END POSTS -->
                 </ul>
 
-
-                {block:IfDisqusShortname}
-                    <script type="text/javascript">
-                    //<![CDATA[
-                    (function() {
-                        var links = document.getElementsByTagName('a');
-                        var query = '?';
-                        for(var i = 0; i < links.length; i++) {
-                            if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                            }
-                        }
-                        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-                    })();
-                    //]]>
-                    </script>
-                {/block:IfDisqusShortname}
-
                 <footer id="footer">
                     {block:PermalinkPage}
                         <nav class="pagination-index">
@@ -297,8 +280,16 @@
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script>
-<!--        <script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script> -->
+<!--         // <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script> -->
+        <script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script>
+
+        {block:IfDisqusShortname}
+            <script type="text/javascript">
+            //<![CDATA[
+
+            //]]>
+            </script>
+        {/block:IfDisqusShortname}
 
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
@@ -313,7 +304,9 @@
                 };
 
                 this.stateChange = function (object) {
-                    if (this.request.readyState==4) this.callbackFunction(this.request.responseText);
+                    if (this.request.readyState==4) {
+                        this.callbackFunction(this.request.responseText);
+                    }
                 };
 
                 this.getRequest = function() {
@@ -381,6 +374,7 @@
                     } else {
                         _trigger_post = _$posts.find('li.post:last').get(0);
                     }
+
                 };
 
                 function in_viewport (el) {
@@ -434,6 +428,7 @@
 
                         // Insert posts and update counters
                         $('#posts').append(new_posts_html);
+
                         _posts_loaded = $new_posts.find('li.post').length;
 
                         if ((_posts_loaded > 0) && (_current_page < _total_pages)) {

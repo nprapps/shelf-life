@@ -89,7 +89,7 @@ def _post_to_tumblr():
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
         logger.info('200 %s  (times in EST)' % tumblr_url)
 
-        return redirect('%s#posts' % tumblr_url, code=301)
+        return redirect(tumblr_url, code=301)
 
     except TumblpyError, e:
         logger.error('%s %s http://%s%s (times in EST)' % (e.error_code, e.msg, app_config.SERVERS[0], file_path))

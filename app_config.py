@@ -18,7 +18,7 @@ PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
 PRODUCTION_SERVERS = ['54.244.84.250']
 
 STAGING_S3_BUCKETS = ['tumblr-stage.npr.org']
-STAGING_SERVERS = ['54.244.84.250']
+STAGING_SERVERS = ['54.244.169.197']
 
 S3_BUCKETS = []
 SERVERS = []
