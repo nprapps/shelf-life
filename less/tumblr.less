@@ -242,17 +242,19 @@ header {
 
 // SUBMISSION FORM
 #project-form {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
     display: none;
 
     .wrap {
-        margin: 5% auto;
+        margin: 55px auto;
         width: 90%;
+        height: 90%;
         max-width: 600px;
-//        height: 90%;
         overflow: scroll;
         -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -263,6 +265,7 @@ header {
         overflow: hidden;
         background-color: #7598c9;
         height: 44px;
+        position: relative;
 
         &:hover { background-color: #9eb7dd; }
         &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
@@ -271,6 +274,7 @@ header {
             font-size: 14px;
             line-height: 44px;
             padding-right: 10px;
+            color: #fff;
 
             span {
                 background: url('@{img-root}/btn-post-photo-44.png') no-repeat 50% 50%;
@@ -282,9 +286,22 @@ header {
                 float: left;
             }
         }
+        .close {
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: bold;
+            padding: 5px 7px;
+            border: 1px solid #fff;
+            opacity: .5;
+        }
     }
     .project-iframe {
-        height: 615px;
+        height: 520px;
         width: 100%;
     }
     .project-iframe-wrapper {
@@ -301,11 +318,11 @@ header {
     }
 }
 .modal-bg {
-    position: absolute;
-    top: 0; left: 0;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2000;
+    z-index: 1040;
     background: #666;
     background: rgba(0,0,0,.8);
     display: none;
@@ -917,7 +934,7 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         .post .wrap { padding: 43px 15px 15px 15px; }
     }
     #project-form {
-        .project-iframe { height: 690px; }
+        .project-iframe { height: 545px; }
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
     .index-page {
