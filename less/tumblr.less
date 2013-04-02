@@ -16,7 +16,10 @@ body {
     height: 100%;
     background-color: #888;
     
-    &.modal-open { overflow: hidden; }
+    &.modal-open { 
+        overflow: hidden;
+        height: 100%;
+    }
 }
 *:active, *:focus { outline-width: 0px; }
 iframe {
@@ -253,11 +256,12 @@ header {
     display: none;
 
     .wrap {
-        margin: 55px auto;
-        width: 90%;
+        margin: 5% auto;
+        width: 600px;
         height: 90%;
         max-width: 600px;
         overflow: scroll;
+        background-color: #f1f1f1;
         -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -924,6 +928,7 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         #blog_info .project-prompt { margin-bottom: 11px; }
         #posts { margin: 0 10px 0 10px; }
     }
+    #project-form .wrap { width: 90%; }
 }
 @media (max-width: 480px) {
     #nav .site-links {
