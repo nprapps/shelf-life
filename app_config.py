@@ -98,7 +98,7 @@ def configure_targets(deployment_target):
         # TUMBLR_BLOG_ID = '{{ project_slug}}-staging'
 
         # Hard-coding due to obfuscated tumblr URL
-        TUMBLR_BLOG_ID = 'cookyourcupboard'
+        TUMBLR_BLOG_ID = 'nprapps-shelflife'
 
     TUMBLR_URL = '%s.tumblr.com' % TUMBLR_BLOG_ID
 
