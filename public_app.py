@@ -7,6 +7,7 @@ import re
 import time
 
 from flask import Flask, redirect, render_template
+from jinja2.filters import escape, do_mark_safe
 from tumblpy import Tumblpy
 from tumblpy import TumblpyError
 from werkzeug import secure_filename
@@ -31,11 +32,6 @@ def _post_to_tumblr():
     """
     Handles the POST to Tumblr.
     """
-    def clean(string):
-        """
-        Formats a string all pretty.
-        """
-        return string.replace('-', ' ').replace("id ", "I'd ").replace("didnt", "didn't").replace('i ', 'I ')
 
     def strip_html(value):
         """
@@ -48,13 +44,17 @@ def _post_to_tumblr():
         Converts newlines, returns and other breaks to <br/>.
         """
         value = re.sub(r'\r\n|\r|\n', '\n', value)
-        return value.replace('\n', '<br />')
+        return value.replace('\n', do_mark_safe('<br/>'))
 
     # Request is a global. Import it down here where we need it.
     from flask import request
 
+    message = strip_html(request.form['message'])
+    message = escape(message)
+    message = strip_breaks(message)
+
     context = {
-        'message': strip_breaks(strip_html(request.form['message'])),
+        'message': message,
         'name': strip_html(request.form['signed_name']),
         'email': strip_html(request.form['email']),
         'app_config': app_config
