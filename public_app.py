@@ -7,7 +7,7 @@ import re
 import time
 
 from flask import Flask, redirect, render_template
-from jinja2.filters import escape
+from jinja2.filters import escape, safe
 from tumblpy import Tumblpy
 from tumblpy import TumblpyError
 from werkzeug import secure_filename
@@ -51,6 +51,7 @@ def _post_to_tumblr():
 
     message = strip_html(request.form['message'])
     message = escape(message)
+    message = safe(message)
     message = strip_breaks(message)
 
     context = {
