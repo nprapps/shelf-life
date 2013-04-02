@@ -149,7 +149,7 @@
 
                             {block:Photo}
                             <section class="top media" style="display:block;">
-                                 <a href="{Permalink}" class="link"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
+                                 <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
                             </section>
                             {/block:Photo}
 
@@ -164,7 +164,7 @@
 
                                 {block:Text}
                                 <section class="caption group">
-                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                    {block:Title}<h2>{Title}</h2>{/block:Title}
                                     <div class="cont group">{Body}</div>
                                     {block:ContentSource}
                                         <div class="cont content_source">

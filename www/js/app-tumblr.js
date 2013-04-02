@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $b = $('body');
     $form = $('#project-form');
     $modal_bg = $('.modal-bg');
     $modal_btn = $('#modal-btn');
@@ -7,6 +8,7 @@ $(document).ready(function(){
     function toggle_header() {
         $form.toggle();
         $modal_bg.toggle();
+        $b.toggleClass('modal-open');
     }
     
     $modal_btn.click(function() {
