@@ -117,18 +117,18 @@
 
                             {block:Photo}
                             <section class="media">
-                                 <a href="{Permalink}#posts" class="link">
+                                 <a href="{Permalink}" class="link">
                                     <span class="img-holder" style="background-image: url('{PhotoURL-400}');"></span>
                                  </a>
                             </section>
                             {block:Caption}
                             <section class="caption excerpt">
-                                <a href="{Permalink}#posts" class="link">
+                                <a href="{Permalink}" class="link">
                                 {Caption}
                                 </a>
 
                                 <ul class="post_info comments">
-                                    <li class="more"><a href="{Permalink}#posts">Read More And Share Your Advice &rsaquo;</a></li>
+                                    <li class="more"><a href="{Permalink}">Read More And Share Your Advice &rsaquo;</a></li>
                                     {block:IfDisqusShortname}
                                         <li class="comment-count dsq-comment-count"><a href="{Permalink}#disqus_thread">Comments</a></li>
                                     {/block:IfDisqusShortname}
@@ -152,7 +152,7 @@
 
                             {block:Photo}
                             <section class="top media" style="display:block;">
-                                 <a href="{Permalink}#posts" class="link"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
+                                 <a href="{Permalink}" class="link"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
                             </section>
                             {/block:Photo}
 
