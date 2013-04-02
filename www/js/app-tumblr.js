@@ -1,3 +1,7 @@
+function trimMessages(){
+    $(".post .message").each(function(i,message){message.innerText = message.innerText.substring(0,75) + "..."})
+}
+
 $(document).ready(function(){
     $b = $('body');
     $form = $('#project-form');
@@ -20,5 +24,7 @@ $(document).ready(function(){
     $modal_bg.click(function() {
         toggle_header();
     });
+    
+    trimMessages();
     
 });
