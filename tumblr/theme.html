@@ -236,25 +236,6 @@
                     <!-- END POSTS -->
                 </ul>
 
-
-                {block:IfDisqusShortname}
-                    <script type="text/javascript">
-                    //<![CDATA[
-                    loadDisqusCommentCount = function() {
-                        var links = document.getElementsByTagName('a');
-                        var query = '?';
-                        for(var i = 0; i < links.length; i++) {
-                            if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                            }
-                        }
-                        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-                    };
-                    loadDisqusCommentCount();
-                    //]]>
-                    </script>
-                {/block:IfDisqusShortname}
-
                 <footer id="footer">
                     {block:PermalinkPage}
                         <nav class="pagination-index">
@@ -293,8 +274,16 @@
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script>
-<!--        <script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script> -->
+<!--         // <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script> -->
+        <script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script>
+
+        {block:IfDisqusShortname}
+            <script type="text/javascript">
+            //<![CDATA[
+            window.loadDisqusCommentCount();
+            //]]>
+            </script>
+        {/block:IfDisqusShortname}
 
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
@@ -435,7 +424,7 @@
                         if ((_posts_loaded > 0) && (_current_page < _total_pages)) {
                             set_trigger();
                             _is_loading = false;
-                            loadDisqusCommentCount();
+                            window.loadDisqusCommentCount();
                         } else {
                             disable_scroll();
                         }
