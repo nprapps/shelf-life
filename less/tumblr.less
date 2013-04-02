@@ -324,6 +324,20 @@ header {
 #posts .post {
     max-width: 1000px;
 
+    .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+}
+
+.post {
+    .caption_and_post_info {
+        &.isphoto {
+            margin-top: 30px;
+        }
+    }
+    #disqus_thread {
+        border-top: 1px solid #E6E6E6;
+        margin: 20px 0 0 0;
+        padding: 25px 0 0 0;
+    }
     .media {
         background-color: #ebebeb;
         
@@ -332,49 +346,6 @@ header {
             width: auto; 
             margin: 0 auto; 
             display: block;
-        }
-    }
-    .caption_and_post_info {
-        &.isphoto {
-            margin-top: 30px;
-        }
-    }
-    .caption a.disquscomments {
-        font-size: 14px;
-    }
-    #disqus_thread {
-        border-top: 1px solid #E6E6E6;
-        margin: 20px 0 0 0;
-        padding: 25px 0 0 0;
-    }
-    .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
-}
-
-.post {
-    .caption {
-        width: auto;
-        float: none;
-        padding-bottom: 15px;
-        overflow: hidden;
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-
-            &.signature-name {
-                margin-bottom: 0;
-            }
-            &.told-to-npr {
-                font-style: italic;
-                color: #666;
-                font-size: 14px;
-            }
-            &.footnote {
-                font-style: italic;
-                color: #666;
-                font-size: 12px;
-                display: none;
-            }
         }
     }
 }
@@ -389,8 +360,12 @@ header {
     }
 }
 
-
 .caption {
+    width: auto;
+    float: none;
+    padding-bottom: 15px;
+    overflow: hidden;
+
     h2 {
         font: normal 30px/1.14 Georgia, serif;
         margin: 0 0 18px 0;
@@ -415,13 +390,32 @@ header {
         margin: 0 0 20px 0;
         color: #111;
     }
-    p:empty {
-        display: none;
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+
+        &.signature-name {
+            margin-bottom: 0;
+        }
+        &.told-to-npr {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        &.footnote {
+            font-style: italic;
+            color: #666;
+            font-size: 12px;
+            display: none;
+        }
+        &:empty { display: none; }
     }
     ul, ol { margin-left: 18px; }
     a { 
         color: #4774cc;
         padding: 0 1px;
+        
+        &.disquscomments { font-size: 14px; }
     }
 }
 
@@ -767,7 +761,8 @@ ol.notes {
         }
     }
 }
-.touch .index-page {
+//.touch .index-page {
+.index-page {
     ul.timestamp {
         margin: 3px 6px 6px 6px;
         
@@ -780,6 +775,7 @@ ol.notes {
         }
     }
 }
+/*
 @-webkit-keyframes caption-slide {
    from { bottom: -200px }
    to   { bottom: 0; }
@@ -809,6 +805,7 @@ ol.notes {
         }
     }
 }
+*/
 
 
 // CLEARING FLOATS
