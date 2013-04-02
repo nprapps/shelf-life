@@ -50,16 +50,8 @@ def _post_to_tumblr():
     from flask import request
 
     message = strip_html(request.form['message'])
-    print 'stripped'
-    print message
-
     message = escape(message)
-    print 'escaped'
-    print message
-
     message = strip_breaks(message)
-    print 'breaks added'
-    print message
 
     context = {
         'message': message,
