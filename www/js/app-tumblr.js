@@ -11,12 +11,4 @@ $(document).ready(function(){
         $form.hide();
     });
 
-    $('.post').disqusCommentCount();
 });
-
-$.fn.disqusCommentCount = function() {
-    var scriptURL = 'http://disqus.com/forums/whatthefridge/count.js';
-    $.getScript(scriptURL);
-
-    return this;
-};
