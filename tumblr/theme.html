@@ -280,7 +280,7 @@
         {block:IfDisqusShortname}
             <script type="text/javascript">
             //<![CDATA[
-            window.loadDisqusCommentCount();
+
             //]]>
             </script>
         {/block:IfDisqusShortname}
@@ -298,7 +298,9 @@
                 };
 
                 this.stateChange = function (object) {
-                    if (this.request.readyState==4) this.callbackFunction(this.request.responseText);
+                    if (this.request.readyState==4) {
+                        this.callbackFunction(this.request.responseText);
+                    }
                 };
 
                 this.getRequest = function() {
@@ -366,6 +368,7 @@
                     } else {
                         _trigger_post = _$posts.find('li.post:last').get(0);
                     }
+
                 };
 
                 function in_viewport (el) {
@@ -419,12 +422,14 @@
 
                         // Insert posts and update counters
                         $('#posts').append(new_posts_html);
+
+                        $('.post').disqusCommentCount();
+
                         _posts_loaded = $new_posts.find('li.post').length;
 
                         if ((_posts_loaded > 0) && (_current_page < _total_pages)) {
                             set_trigger();
                             _is_loading = false;
-                            window.loadDisqusCommentCount();
                         } else {
                             disable_scroll();
                         }
