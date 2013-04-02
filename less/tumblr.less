@@ -130,23 +130,22 @@ header {
     width: 190px;
 
     h1 {
-        font: normal 48px Arial, Helvetica, sans-serif;
-        color: #555;
-        margin-bottom: 10px;
+        font: normal 36px/1.1 Arial, Helvetica, sans-serif;
+        color: #fff;
+        margin-bottom: 11px;
         margin-left: -3px;
-        display: none;
 
-        a { color: #555; }
-    }
-    .hdr-img {
-        display: block;
-        margin-bottom: 15px;
-
-        img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
+        a { 
+            color: #fff;
+            display: block;
+            height: 90px;
+            text-indent: -9999px;
+            background: url('@{img-root}/cook-your-cupboard-hd.png') no-repeat;
         }
+    }
+    h2 {
+        margin-bottom: 15px;
+        color: #ccc;
     }
     p.description, p.more {
         color: #ccc;
@@ -845,15 +844,12 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         width: auto;
 
         h1 {
-            display: block;
-            text-indent: -9999px;
-            height: 33px;
-            margin-bottom: 22px;
-            background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
-            
-            a { display: block; }
+            margin-bottom: 5px;
+            a { 
+                background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
+                height: 33px;
+            }
         }
-        .hdr-img { display: none; }
         .project-prompt { margin-bottom: 0; }
         #modal-btn {
             height: 44px;
@@ -863,8 +859,6 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
 
             span { margin-top: 0; }
         }
-
-
     }
     #posts { padding: 0 10px; }
     .post .post_info.social {
