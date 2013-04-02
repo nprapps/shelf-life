@@ -270,21 +270,22 @@ header {
         cursor: pointer;
         overflow: hidden;
         background-color: #7598c9;
-        height: 88px;
+        height: 44px;
 
         &:hover { background-color: #9eb7dd; }
         &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
         h3 {
             font-weight: bold;
-            font-size: 20px;
-            line-height: 88px;
+            font-size: 14px;
+            line-height: 44px;
             padding-right: 10px;
 
             span {
-                background: url('http://apps.npr.org/familymeal/img/btn-share-large.png') no-repeat 50% 50%;
-                width: 88px; height: 88px;
+                background: url('@{img-root}/btn-post-photo-44.png') no-repeat 50% 50%;
+                width: 44px; 
+                height: 44px;
                 border-right: 1px solid #fff;
-                margin-right: 22px;
+                margin-right: 11px;
                 display: inline-block;
                 float: left;
             }
@@ -843,7 +844,7 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
 // MEDIA QUERIES
 @media (min-width: 1600px) {
     .index-page #posts .post { width: 19%; margin: .5%; }
-    #container { min-height: 1100px; }
+    #container { min-height: 1600px; }
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
     .index-page #posts .post { width: 23%; margin: 1%; }
@@ -913,9 +914,6 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         .post .wrap { padding: 43px 15px 15px 15px; }
     }
     #project-form {
-        .hdr { height: 64px; }
-        .hdr h3 { font-size: 15px; line-height: 40px; padding-top: 13px; }
-        .hdr h3 span { width: 64px; height: 64px; margin-right: 15px; background-position: 50% 50%; margin-top: -13px; background-image: url('http://apps.npr.org/familymeal/img/btn-share-small.png'); }
         .project-iframe { height: 690px; }
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
