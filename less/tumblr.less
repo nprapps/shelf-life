@@ -435,7 +435,6 @@ header {
     ul, ol { margin-left: 18px; }
     a { 
         color: #4774cc;
-        padding: 0 1px;
         
         &.disquscomments { font-size: 14px; }
     }
@@ -731,7 +730,7 @@ ol.notes {
     }
     #posts .post {
         p.message {
-            height: 100px;
+            height: 50px;
             overflow: hidden;
         }
     }
@@ -853,7 +852,11 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
     }
     #footer { padding-left: 10px; margin-left: 0; margin-right: 0; }
     .index-page {
-        #posts .post { width: auto; margin: 0 0 20px 0; float: none; }
+        #posts .post { 
+            width: auto; margin: 0 0 20px 0; float: none;
+            
+            p.message { height: auto; overflow: visible; }
+        }
     }
     #project-form .project-iframe { height: 800px; }
 }
