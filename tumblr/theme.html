@@ -62,6 +62,10 @@
         <meta property="og:site_name" content="NPR.org" />
         <meta property="fb:app_id" content="138837436154588" />
 
+        <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="http://apps.npr.org/cook-your-cupboard/js/app-tumblr.js"></script>
+
+
     </head>
     <body class="{block:IndexPage}index-page{/block:IndexPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}">
         <div id="nav">
@@ -83,9 +87,10 @@
                     {/block:IfShowBlogTitle}
 
                     <div class="project-prompt">
-                        <p>With a little help, your strange and surplus food could be dinner.</p>
-                        <p>Please submit a photo or make suggestions. Each round, we'll ask a chef about our favorites on NPR's Morning Edition.</p>
-                        <p class="deadline">Round one ends Sunday, April 14!</p>
+                        <p>Confounded in the kitchen? With a little help, your strange and surplus food could be dinner!</p>
+                        <p>Submit a photo of what's stumping you &mdash; or leave comments to help someone else out.</p>
+                        <p>We'll ask chefs about our favorites on NPR's <em>Morning Edition</em>.</p>
+                        <p class="deadline">Round 1 ends Sunday, April 14!</p>
                         <h3 id="modal-btn" class="btn"><span></span>Submit: What's in your pantry?</h3>
                     </div>
 
@@ -104,11 +109,10 @@
             </header>
 
             <section id="post-wrap">
+
                 <ul id="posts">
                 <!-- START POSTS -->
                 {block:Posts}
-
-
                     {block:IndexPage}
                     <li class="post group">
                         <div class="wrap">
@@ -145,6 +149,14 @@
                     {block:PermalinkPage}
                     <li class="post group">
                         <div class="wrap">
+
+                            <!-- BACK/NEXT PAGINATION FOR PERMALINK PAGES -->
+                            {block:PermalinkPagination}
+                            <section class="post-pagination">
+                                {block:PreviousPost}<a href="{PreviousPost}" class="previous-post">&#171; Previous Post</a>{/block:PreviousPost}
+                                {block:NextPost}<a href="{NextPost}" class="next-post">Next Post &#187;</a>{/block:NextPost}
+                            </section>
+                            {/block:PermalinkPagination}
 
                             {block:Photo}
                             <section class="top media" style="display:block;">
@@ -230,6 +242,7 @@
                             <a href="/">See More Cook Your Cupboard Entries&nbsp;&rsaquo;</a>
                         </nav>
                     {/block:PermalinkPage}
+
                     {block:Pagination}
                         <nav class="pagination">
                             <section class="buttons">
@@ -252,12 +265,12 @@
                 <h3><span></span>Submit: What's in your pantry?</h3>
                 <div class="close">X</div>
             </div>
-                
+
             <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://54.244.84.250/cook-your-cupboard/">
                 <ol>
                     <li class="form-photo">
                         <label for="image" class="instructions">
-                            <strong>Take a photo of up to three food items.</strong><!--<br/>(<a href="">Here's our guide for taking a nice shot.</a>)-->
+                            <strong>Take a photo of up to three food items.</strong><br/>(<a href="http://www.npr.org/blogs/pictureshow/2013/04/03/176035027/npr-s-handy-guide-to-not-taking-terrible-food-photographs">Here's our guide for taking a nice shot.</a>)
                         </label>
                         <input type="file" name="image" width="90" accept="image/*">
                     </li>
@@ -328,11 +341,6 @@
 
         </div>
         <div class="modal-bg"></div>
-
-        <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="http://apps.npr.org/cook-your-cupboard/js/app-tumblr.js"></script>
-
-
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
             var Tumblelog = {};
