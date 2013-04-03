@@ -8,6 +8,8 @@ $(document).ready(function(){
     $modal_bg = $('.modal-bg');
     $modal_btn = $('#modal-btn');
     $project_hdr = $form.find('.hdr');
+    $project_wrap = $form.find('.project-iframe-wrapper');
+    $project_iframe = $form.find('iframe');
     
     function toggle_header() {
         $form.toggle();
@@ -27,4 +29,10 @@ $(document).ready(function(){
     
     trimMessages();
     
+    function resize_window() {
+        var new_height = $form.height() - $project_hdr.height();
+        $project_wrap.height(new_height);
+    }
+    $(window).resize(resize_window);
+    resize_window();
 });
