@@ -33,9 +33,10 @@
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-        <link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" />
+        <!--<link rel="stylesheet" href="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/css/tumblr.less.css" />-->
         <!-- <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" /> -->
         <!--<link rel="stylesheet" href="http://10.0.12.242:8000/less/tumblr.less" /> -->
+        <link rel="stylesheet" href="http://10.0.12.30:8000/less/tumblr.less" />
 
         <!--[if lt IE 9]>
             <style type="text/css">
@@ -256,17 +257,89 @@
                 <h3><span></span>Submit: What's in your pantry?</h3>
                 <div class="close">X</div>
             </div>
-            <div class="project-iframe-wrapper">
-                <iframe class="project-iframe" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/tumblr-form.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-            </div>
+                
+            <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://54.244.84.250/cook-your-cupboard/">
+                <ol>
+                    <li class="form-photo">
+                        <label for="image" class="instructions">
+                            <strong>Take a photo of up to three food items.</strong><!--<br/>(<a href="">Here's our guide for taking a nice shot.</a>)-->
+                        </label>
+                        <input type="file" name="image" width="90" accept="image/*">
+                    </li>
+                    <li class="form-message">
+                        <label for="message" class="instructions">
+                            <strong>How'd this stuff end up in your pantry?</strong><br/>(Storm stockpiling? Gift basket? What do you think they're for?)
+                        </label>
+                        <textarea name="message"></textarea>
+                    </li>
+                    <li class="form-signature">
+                        <label for="signed_name">Signed,</label>
+                        <input type="text" name="signed_name" placeholder="Your Name" class="signed-name"></input>
+                    </li>
+                    <li class="form-email">
+                        <label for="email">Let us know how to reach you. We might put you on the radio! (This won't be published.)</label>
+                        <input type="text" name="email" placeholder="you@email.com / 312-555-1234" class="signed-email"></input>
+                    </li>
+                    <li class="form-submit">
+                        <span class="gentle-reminder" style="display: none;">A photo, explanation and name are required. Thanks!<br/></span>
+                        <button type="submit" class="btn">Post!</button>
+                    </li>
+                </ol>
+                <div class="legal">By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.</div>
+            </form>
+            <!--[if IE]>
+            <script type="text/javascript">
+                /*
+                * Handle simple form validation for browsers that do not support
+                * the HTML5 "required" attribute on form elements.
+                */
+                $('#tumblr-form').submit(function(event){
+                   var $this = $(this);
+                   var inputs = [];
+                   inputs.push($this.find('textarea').text());
+                   inputs.push($this.find("input[type='file']").attr('value'));
+                   inputs.push($this.find("input[name='signed_name']").attr('value'));
+                   inputs.push($this.find("input[name='location']").attr('value'));
+                   _.each(inputs, function(input){
+                       if (input === '') {
+                           event.preventDefault();
+                           $this.find('span.gentle-reminder').show();
+                       }
+                   });
+                });
+            </script>
+            <![endif]-->
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#tumblr-form').submit(function(e) {
+                        var btn = $('.form-submit button');
+
+                        btn.text('Sending, please wait...');
+
+                        return true;
+                    });
+
+                    if (/iP(hone|od|ad)/.test(navigator.platform)) {
+                        var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+                        var version = parseInt(v[1]);
+
+                        if (version < 6) {
+                            $('.tumblr-form').html('<p>Sorry, iOS versions older than 6 are not supported.');
+                        }
+                    }
+                });
+            </script>
+
         </div>
         <div class="modal-bg"></div>
 
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script>
+        <!--<script type="text/javascript" src="http://tumblr-stage.npr.org.s3.amazonaws.com/cook-your-cupboard/js/app-tumblr.js"></script>-->
         <!--<script type="text/javascript" src="http://localhost:8000/js/app-tumblr.js"></script> -->
         <!--<script type="text/javascript" src="http://10.0.12.242:8000/js/app-tumblr.js"></script>-->
+        <script type="text/javascript" src="http://10.0.12.30:8000/js/app-tumblr.js"></script>
 
 
         {block:IfUseEndlessScrolling}
