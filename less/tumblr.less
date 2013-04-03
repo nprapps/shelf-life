@@ -247,25 +247,16 @@ header {
 
 // SUBMISSION FORM
 #project-form {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1050;
     display: none;
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    overflow-y: auto;
+    top: 5%;
+    left: 5%;
+    z-index: 1050;
+    background-color: #f1f1f1;
 
-    .wrap {
-        margin: 5% auto;
-        width: 600px;
-        height: 90%;
-        max-width: 600px;
-        overflow: scroll;
-        background-color: #f1f1f1;
-        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    }
     .hdr {
         cursor: pointer;
         overflow: hidden;
@@ -307,13 +298,14 @@ header {
         }
     }
     .project-iframe {
-        height: 520px;
+        height: 100%;
         width: 100%;
     }
     .project-iframe-wrapper {
         color: #111;
         background-color: #f1f1f1;
-        padding-bottom:35px;
+        max-width: 600px;
+        margin: 0 auto 35px auto;
     }
     .legal {
         margin: 0 auto;
