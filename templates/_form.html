@@ -4,19 +4,15 @@
     -->
     <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://{{ SERVERS[0] }}/{{ PROJECT_SLUG }}/">
         <ol>
-            <li class="form-intro">
-                <!-- <h2>This project has now concluded. Thank you for your submissions.</h2> -->
-                <p>Show us what you got and spare the humblebrags! We want real mysteries.</p>
-                </li>
             <li class="form-photo">
                 <label for="image" class="instructions">
-                    <strong>Take a photo of no more than three pantry items</strong><br/>(<a href="tktk">Here's our guide for taking a nice shot.</a>)
+                    <strong>Take a photo of up to three food items.</strong><!--<br/>(<a href="">Here's our guide for taking a nice shot.</a>)-->
                 </label>
                 <input type="file" name="image" width="90" accept="image/*">
             </li>
             <li class="form-message">
                 <label for="message" class="instructions">
-                    <strong>How'd this stuff end up in your pantry?</strong><br/>(Storm stockpiling? Gift basket? Also, what do you think they're for?)
+                    <strong>How'd this stuff end up in your pantry?</strong><br/>(Storm stockpiling? Gift basket? What do you think they're for?)
                 </label>
                 <textarea name="message"></textarea>
             </li>
@@ -25,15 +21,17 @@
                 <input type="text" name="signed_name" placeholder="Your Name" class="signed-name"></input>
             </li>
             <li class="form-email">
-                <label for="email">Please leave your email so that we can contact you? (We promise not to publish it or do anything untowards.)</label>
-                <input type="text" name="email" placeholder="you@domain.com" class="signed-email"></input>
+                <label for="email">Let us know how to reach you. We might put you on the radio! (This won't be published.)</label>
+                <input type="text" name="email" placeholder="you@email.com / 312-555-1234" class="signed-email"></input>
             </li>
             <li class="form-submit">
-                <span class="gentle-reminder" style="display: none;">Please add a photo, an explanation, your initials and where you're from. Thanks!<br/></span>
-                <button type="submit" class="btn">Send</button>
+                <span class="gentle-reminder" style="display: none;">A photo, explanation and name are required. Thanks!<br/></span>
+                <button type="submit" class="btn">Post!</button>
             </li>
         </ol>
     </form>
+    <div class="legal">By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.</div>
+
     <!--[if IE]>
     <script type="text/javascript">
         /*
