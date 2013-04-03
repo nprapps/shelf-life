@@ -1,5 +1,8 @@
 function trimMessages(){
-    $("body.index-page .post .message").each(function(i,message){message.innerText = message.innerText.substring(0,75) + "..."})
+    $("body.index-page .post .message").each(function(i,v){
+        var message = $(v);
+        message.text(message.text().substring(0,80) + "...");
+    });
 }
 
 $(document).ready(function(){
