@@ -33,7 +33,8 @@
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-        <link rel="stylesheet" href="http://apps.npr.org/cook-your-cupboard/css/tumblr.less.css" />
+<!--        <link rel="stylesheet" href="http://apps.npr.org/cook-your-cupboard/css/tumblr.less.css" /> -->
+        <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" />
 
         <!--[if lt IE 9]>
             <style type="text/css">
@@ -110,11 +111,10 @@
             </header>
 
             <section id="post-wrap">
+
                 <ul id="posts">
                 <!-- START POSTS -->
                 {block:Posts}
-
-
                     {block:IndexPage}
                     <li class="post group">
                         <div class="wrap">
@@ -151,6 +151,14 @@
                     {block:PermalinkPage}
                     <li class="post group">
                         <div class="wrap">
+
+                            <!-- BACK/NEXT PAGINATION FOR PERMALINK PAGES -->
+                            {block:PermalinkPagination}
+                            <section class="post-pagination">
+                                {block:PreviousPost}<a href="{PreviousPost}" class="previous-post">&#171; Previous Post</a>{/block:PreviousPost}
+                                {block:NextPost}<a href="{NextPost}" class="next-post">Next Post &#187;</a>{/block:NextPost}
+                            </section>
+                            {/block:PermalinkPagination}
 
                             {block:Photo}
                             <section class="top media" style="display:block;">
@@ -236,6 +244,7 @@
                             <a href="/">See More Cook Your Cupboard Entries&nbsp;&rsaquo;</a>
                         </nav>
                     {/block:PermalinkPage}
+
                     {block:Pagination}
                         <nav class="pagination">
                             <section class="buttons">
@@ -264,7 +273,7 @@
                 <ol>
                     <li class="form-photo">
                         <label for="image" class="instructions">
-                            <strong>Take a photo of up to three food items.</strong><!--<br/>(<a href="">Here's our guide for taking a nice shot.</a>)-->
+                            <strong>Take a photo of up to three food items.</strong><br/>(<a href="http://www.npr.org/blogs/pictureshow/2013/04/03/176035027/npr-s-handy-guide-to-not-taking-terrible-food-photographs">Here's our guide for taking a nice shot.</a>)
                         </label>
                         <input type="file" name="image" width="90" accept="image/*">
                     </li>
