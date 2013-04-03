@@ -27,6 +27,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
+
 @app.route('/%s/' % app_config.PROJECT_SLUG, methods=['POST'])
 def _post_to_tumblr():
     """
@@ -49,14 +50,17 @@ def _post_to_tumblr():
     # Request is a global. Import it down here where we need it.
     from flask import request
 
-    message = strip_html(request.form['message'])
+    message = strip_html(request.form.get('message', None))
     message = escape(message)
     message = strip_breaks(message)
 
+    name = strip_html(request.form.get('signed_name', None))
+    email = strip_html(request.form.get('email', None))
+
     context = {
         'message': message,
-        'name': strip_html(request.form['signed_name']),
-        'email': strip_html(request.form['email']),
+        'name': name,
+        'email': email,
         'app_config': app_config
     }
 
@@ -87,12 +91,13 @@ def _post_to_tumblr():
     try:
         tumblr_post = t.post('post', blog_url=app_config.TUMBLR_URL, params=params)
         tumblr_url = u"http://%s/%s" % (app_config.TUMBLR_URL, tumblr_post['id'])
-        logger.info('200 %s  (times in EST)' % tumblr_url)
+        logger.info('200 %s reader(%s %s) (times in EST)' % (tumblr_url, name, email))
 
         return redirect(tumblr_url, code=301)
 
     except TumblpyError, e:
-        logger.error('%s %s http://%s%s (times in EST)' % (e.error_code, e.msg, app_config.SERVERS[0], file_path))
+        logger.error('%s %s http://%s%s reader(%s %s) (times in EST)' % (
+            e.error_code, e.msg, app_config.SERVERS[0], file_path, name, email))
         return 'TUMBLR ERROR'
 
     return redirect('%s#posts' % tumblr_url, code=301)
