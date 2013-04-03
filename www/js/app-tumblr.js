@@ -12,8 +12,6 @@ $(document).ready(function(){
     $project_iframe = $form.find('iframe');
     
     function toggle_header() {
-        $form.toggle();
-        $modal_bg.toggle();
         $b.toggleClass('modal-open');
     }
     
