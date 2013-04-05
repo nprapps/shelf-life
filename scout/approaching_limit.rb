@@ -13,13 +13,12 @@ class NearingLimit < Scout::Plugin
     # This also sucks.
     today = today - Rational(4, 24)
 
+    today = DateTime.parse(today.to_s.split('T')[0])
+
     File.open(log_file_path) do |file|
       file.each do |line|
 
-        file_date = line.split(' ')[0]
-        file_time = line.split(' ')[1]
-
-        this_date = DateTime.parse(file_date)
+        this_date = DateTime.parse(line.split(' ')[0])
 
         if this_date == today
           if line.split(' ')[2] == 'INFO'
