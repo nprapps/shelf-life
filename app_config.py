@@ -14,8 +14,8 @@ PROJECT_SLUG = 'cook-your-cupboard'
 REPOSITORY_NAME = 'shelf-life'
 CONFIG_NAME = PROJECT_SLUG.replace('-', '').upper()
 
-PROJECT_CREDITS = 'Jeremy Bowers, Brian Boyer, Alyson Hurt and Matt Stiles / NPR'
-PROJECT_SHORTLINK = 'npr.org/foo'
+PROJECT_CREDITS = 'Jeremy Bowers, Selena Simmons-Duffin, Kate Myers, Alyson Hurt, Claire O\'Neill and Rachel Ward / NPR'
+PROJECT_SHORTLINK = 'npr.org/cupboard'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
 PRODUCTION_SERVERS = ['54.244.84.250']
