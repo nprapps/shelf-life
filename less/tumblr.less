@@ -236,7 +236,19 @@ header {
             padding: 2px;
         }
     }
+    .round-list {
+        padding: 11px 0;
+        border-bottom: 1px solid #999;
+        
+        ul {
+            list-style-type: none;
+        }
+        li {
+            font-size: 12px;
+        }
+    }
 }
+.touch .round-list { display: none; }
 
 
 // SUBMISSION FORM
@@ -940,6 +952,7 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
             p { padding-top: 8px; }
             strong { display: inline; }
         }
+        .round-list { display: none; }
     }
     #project-form {
         top: 2%;
