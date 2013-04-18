@@ -399,6 +399,7 @@ header {
     .post {
         list-style-type: none;
         margin: 15px 0 30px 0;
+        max-width: 1000px;
 
         .wrap {
             padding: 11px 22px 22px 22px;
@@ -425,12 +426,6 @@ header {
         position: relative;
         display: inline-block;
     }
-}
-
-#posts .post {
-    max-width: 1000px;
-
-    .wrap:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
 }
 
 .post {
@@ -823,6 +818,14 @@ ol.notes {
                 .signature-name, .footnote { display: none; }
             }
         }
+        
+        &> .round1 {
+            clear: left;
+        }
+        &> .round1 ~ .round1 {
+            clear: none;
+        }
+
     }
 }
 .touch .index-page {
