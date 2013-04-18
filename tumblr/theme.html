@@ -136,7 +136,7 @@
 
 
                     {block:PermalinkPage}
-                    <li class="post group">
+                    <li class="post group {block:Tags}{URLSafeTag} {/block:Tags}">
                         <div class="wrap">
 
                             <!-- BACK/NEXT PAGINATION FOR PERMALINK PAGES -->
@@ -157,6 +157,10 @@
                                 {block:Photo} after_top_part isphoto{/block:Photo}
                             ">
                                 <ul class="post_info">
+                                    <li class="round-wrap">
+                                        <span class="round round1"><a href="http://nprapps-shelflife.tumblr.com/tagged/round1">Round 1: Pantry Open Call</a></span>
+                                        <span class="round round2"><a href="http://nprapps-shelflife.tumblr.com/tagged/round2">Round 2: The Spice Rack</a></span>
+                                    </li>
                                     <li class="timestamp-wrap">
                                     {block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}
                                     </li>

@@ -132,10 +132,15 @@ header {
     }
     h2 {
         margin-bottom: 22px;
+        margin-left: -6px;
         color: #bbb;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 16px;
+        
+        text-indent: -999px;
+        background: url('@{img-root}/hed-round-2.png') no-repeat;
+        height: 23px;
     }
     p.description, p.more {
         color: #ccc;
@@ -551,10 +556,15 @@ header {
         line-height: 14px;
         margin-bottom: 10px;
         float: left;
+        color: #6d8ac4;
 
-        a {
-            margin: 0 10px 0 0;
-            padding: 0 2px 0 5px;
+        &.round-wrap .round {
+            display: none;
+            border-right: 1px solid #ccc;
+            margin-right: 11px;
+            padding-right: 11px;
+            
+            a:hover { opacity: .7; }
         }
     }
     &.comments {
@@ -585,13 +595,14 @@ header {
         padding: 0 2px 0 0;
         display: block;
         font-size: 12px;
-        color: #6d8ac4;
         font-weight: bold;
         opacity: 0.5;
 
         &:hover { color: #bccae5; }
     }
 }
+.round1 .post_info li.round-wrap .round1 { display: inline-block; }
+.round2 .post_info li.round-wrap .round2 { display: inline-block; }
 
 
 /* Baselines */
@@ -906,7 +917,7 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         width: auto;
 
         h1 {
-            margin-bottom: 11px;
+            margin-bottom: 2px;
             a { 
                 background: url('@{img-root}/cook-your-cupboard-hd-sm.png') no-repeat;
                 height: 33px;
