@@ -78,6 +78,7 @@
 
                     {block:IfShowBlogTitle}
                     <h1><a href="/">{Title}</a></h1>
+                    <h2>Round 2: Spices</h2>
                     {/block:IfShowBlogTitle}
 
                     <div class="project-prompt">{{ PROMPT_HTML }}</div>
@@ -102,7 +103,7 @@
                 <!-- START POSTS -->
                 {block:Posts}
                     {block:IndexPage}
-                    <li class="post group">
+                    <li class="post group {block:Tags}{URLSafeTag} {/block:Tags}">
                         <div class="wrap">
 
                             <ul class="post_info timestamp">
