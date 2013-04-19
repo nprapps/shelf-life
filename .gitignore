@@ -40,3 +40,4 @@ www/js/app_config.js
 www/live-data/*.json
 confs/rendered/*
 data/copy.xls
+tumblr/rendered-theme.html

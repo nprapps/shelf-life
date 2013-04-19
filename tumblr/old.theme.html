@@ -1,6 +1,6 @@
 <html class="no-js">
     <head>
-        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary}  {PostSummary}{/block:PostSummary}{/block:PermalinkPage} : NPR</title>
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage} : NPR</title>
 
         <meta charset="utf-8">
         <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
@@ -27,20 +27,21 @@
         <!--[if lt IE 9]>
                 <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="{{ STATIC_URL }}js/lib/modernizr.custom.js"></script>
+        <script type="text/javascript" src="http://apps.npr.org/cook-your-cupboard/js/lib/modernizr.custom.js"></script>
 
         <!-- Reset CSS -->
         <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
 
         <!-- Project CSS -->
-        <link rel="stylesheet" href="{{ STATIC_CSS }}" />
+<!--        <link rel="stylesheet" href="http://apps.npr.org/cook-your-cupboard/css/tumblr.less.css" /> -->
+        <link rel="stylesheet" href="http://localhost:8000/less/tumblr.less" />
 
         <!--[if lt IE 9]>
             <style type="text/css">
                 #container { width: 980px; }
             </style>
         <![endif]-->
-
+        
 
         <!-- GOOGLE ANALYTICS -->
         <script type="text/javascript">
@@ -54,10 +55,17 @@
             })();
         </script>
 
-        {{ SOCIAL_HTML }}
+        <meta name="twitter:card" content="summary">
+        <meta property="og:title" content="{Title}" />
+        <meta property="og:url" content="http://cookyourcupboard.tumblr.com/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Confounded in the kitchen? With a little help, your strange and surplus food could be dinner! Please submit a photo or make suggestions. We'll ask chefs about our favorites on NPR's Morning Edition." />
+        <meta property="og:image" content="http://apps.npr.org/cook-your-cupboard/img/casa-fiesta.jpg" />
+        <meta property="og:site_name" content="NPR.org" />
+        <meta property="fb:app_id" content="138837436154588" />
 
         <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="{{ STATIC_URL }}js/app-tumblr.js"></script>
+        <script type="text/javascript" src="http://apps.npr.org/cook-your-cupboard/js/app-tumblr.js"></script>
 
 
     </head>
@@ -78,26 +86,24 @@
 
                     {block:IfShowBlogTitle}
                     <h1><a href="/">{Title}</a></h1>
-                    <h2><a href="/tagged/round2">Round 2: Spices</a></h2>
                     {/block:IfShowBlogTitle}
 
-                    <div class="project-prompt">{{ PROMPT_HTML }}</div>
+                    <div class="project-prompt">
+                        <p>Confounded in the kitchen? With a little help, your strange and surplus food could be dinner!</p>
+                        <p>Submit a photo of what's stumping you &mdash; or leave comments to help someone else out.</p>
+                        <p>We'll ask chefs about our favorites on NPR's <em>Morning Edition</em>.</p>
+                        <p class="deadline">Round 1 ends Sunday, April 14!</p>
+                        <h3 id="modal-btn" class="btn"><span></span>Submit: What's in your pantry?</h3>
+                    </div>
 
                     <div class="mobile-prompt">
                         <span></span>
-                        <p><strong>Use your smartphone.</strong> Visit <b>{{ PROJECT_SHORTLINK }}</b>.</p>
-                    </div>
-                    
-                    <div class="round-list">
-                        <ul>
-                            <li class="round1"><a href="/tagged/round1">Round 1: Pantry Open Call</a></li>
-                            <li class="round2"><a href="/tagged/round2">Round 2: The Spice Rack</a></li>
-                        </ul>
+                        <p><strong>Use your smartphone.</strong> Visit <b>npr.org/cupboard</b>.</p>
                     </div>
 
                     {block:IndexPage}
                     <p class="project-credits">
-                        Credits: {{ PROJECT_CREDITS }}<br />
+                        Credits: Jeremy Bowers, Selena Simmons-Duffin, Kate Myers, Alyson Hurt, Claire O'Neill and Rachel Ward / NPR<br />
                         Questions? Problems? E-mail <a href="mailto:tumblr@npr.org">tumblr@npr.org</a>.
                     </p>
                     {/block:IndexPage}
@@ -105,18 +111,12 @@
             </header>
 
             <section id="post-wrap">
-                {block:TagPage}
-                    <h2 class="tag-header {URLSafeTag}">
-                        <span class="round round1">Round 1: Pantry Open Call</span>
-                        <span class="round round2">Round 2: The Spice Rack</span>
-                    </h2>
-                {/block:TagPage}
 
                 <ul id="posts">
                 <!-- START POSTS -->
                 {block:Posts}
                     {block:IndexPage}
-                    <li class="post group {block:Tags}{URLSafeTag} {/block:Tags}">
+                    <li class="post group">
                         <div class="wrap">
 
                             <ul class="post_info timestamp">
@@ -149,7 +149,7 @@
 
 
                     {block:PermalinkPage}
-                    <li class="post group {block:Tags}{URLSafeTag} {/block:Tags}">
+                    <li class="post group">
                         <div class="wrap">
 
                             <!-- BACK/NEXT PAGINATION FOR PERMALINK PAGES -->
@@ -170,10 +170,6 @@
                                 {block:Photo} after_top_part isphoto{/block:Photo}
                             ">
                                 <ul class="post_info">
-                                    <li class="round-wrap">
-                                        <span class="round round1"><a href="/tagged/round1">Round 1: Pantry Open Call</a></span>
-                                        <span class="round round2"><a href="/tagged/round2">Round 2: The Spice Rack</a></span>
-                                    </li>
                                     <li class="timestamp-wrap">
                                     {block:Date}{Month} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}{/block:Date}
                                     </li>
@@ -245,7 +241,7 @@
                 <footer id="footer">
                     {block:PermalinkPage}
                         <nav class="pagination-index">
-                            <a href="/">See More {{ PROJECT_NAME }} Entries&nbsp;&rsaquo;</a>
+                            <a href="/">See More Cook Your Cupboard Entries&nbsp;&rsaquo;</a>
                         </nav>
                     {/block:PermalinkPage}
 
@@ -267,9 +263,88 @@
         </section> <!-- #container -->
 
 
-        <div id="project-form" class="modal">{{ FORM_HTML }}</div>
+        <div id="project-form" class="modal">
+            <div class="hdr">
+                <h3><span></span>Submit: What's in your pantry?</h3>
+                <div class="close">X</div>
+            </div>
+                
+            <form id="tumblr-form" method="post" enctype="multipart/form-data" action="http://54.244.84.250/cook-your-cupboard/">
+                <ol>
+                    <li class="form-photo">
+                        <label for="image" class="instructions">
+                            <strong>Take a photo of up to three food items.</strong><br/>(<a href="http://www.npr.org/blogs/pictureshow/2013/04/03/176035027/npr-s-handy-guide-to-not-taking-terrible-food-photographs">Here's our guide for taking a nice shot.</a>)
+                        </label>
+                        <input type="file" name="image" width="90" accept="image/*">
+                    </li>
+                    <li class="form-message">
+                        <label for="message" class="instructions">
+                            <strong>How'd this stuff end up in your pantry?</strong><br/>(Storm stockpiling? Gift basket? What do you think they're for?)
+                        </label>
+                        <textarea name="message"></textarea>
+                    </li>
+                    <li class="form-signature">
+                        <label for="signed_name">Signed,</label>
+                        <input type="text" name="signed_name" placeholder="Your Name" class="signed-name"></input>
+                    </li>
+                    <li class="form-email">
+                        <label for="email">Let us know how to reach you. We might put you on the radio! (This won't be published.)</label>
+                        <input type="text" name="email" placeholder="you@email.com / 312-555-1234" class="signed-email"></input>
+                    </li>
+                    <li class="form-submit">
+                        <span class="gentle-reminder" style="display: none;">A photo, explanation and name are required. Thanks!<br/></span>
+                        <button type="submit" class="btn">Post!</button>
+                    </li>
+                </ol>
+                <div class="legal">By submitting an image, you certify that you created, or have ownership of the work. You retain the copyright in the image, but grant to NPR a non-exclusive, perpetual right to use the image, without payment and without further notice, on NPR's website, and in any other current or future NPR services (including websites, mobile services, applications and publications, anywhere in the world that NPR  may offer these services). This right includes the right to copy, transmit, display, distribute, create derivative works of, and/or adapt the image. NPR also has the right to distribute and/or sublicense the image to its Member Stations, end users and other third parties in connection with NPR's distribution and/or sublicensing of related content. You grant NPR the right to use your name in a credit for the image and you agree that you have provided NPR accurate credit information.</div>
+            </form>
+            <!--[if IE]>
+            <script type="text/javascript">
+                /*
+                * Handle simple form validation for browsers that do not support
+                * the HTML5 "required" attribute on form elements.
+                */
+                $('#tumblr-form').submit(function(event){
+                   var $this = $(this);
+                   var inputs = [];
+                   inputs.push($this.find('textarea').text());
+                   inputs.push($this.find("input[type='file']").attr('value'));
+                   inputs.push($this.find("input[name='signed_name']").attr('value'));
+                   inputs.push($this.find("input[name='location']").attr('value'));
+                   _.each(inputs, function(input){
+                       if (input === '') {
+                           event.preventDefault();
+                           $this.find('span.gentle-reminder').show();
+                       }
+                   });
+                });
+            </script>
+            <![endif]-->
 
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#tumblr-form').submit(function(e) {
+                        var btn = $('.form-submit button');
+
+                        btn.text('Sending, please wait...');
+
+                        return true;
+                    });
+
+                    if (/iP(hone|od|ad)/.test(navigator.platform)) {
+                        var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+                        var version = parseInt(v[1]);
+
+                        if (version < 6) {
+                            $('.tumblr-form').html('<p>Sorry, iOS versions older than 6 are not supported.');
+                        }
+                    }
+                });
+            </script>
+
+        </div>
         <div class="modal-bg"></div>
+
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
             var Tumblelog = {};
