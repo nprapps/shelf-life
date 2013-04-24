@@ -18,7 +18,7 @@ PROJECT_CREDITS = 'Jeremy Bowers, Selena Simmons-Duffin, Kate Myers, Alyson Hurt
 PROJECT_SHORTLINK = 'npr.org/cupboard'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
-PRODUCTION_SERVERS = ['54.244.84.250']
+PRODUCTION_SERVERS = ['54.214.20.225']
 
 STAGING_S3_BUCKETS = ['stage-apps.npr.org']
 STAGING_SERVERS = ['54.244.169.197']
