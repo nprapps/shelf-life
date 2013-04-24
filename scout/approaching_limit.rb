@@ -9,21 +9,16 @@ class NearingLimit < Scout::Plugin
     # Get today's date.
     today = DateTime.now
 
-    # Modify this to be the UTC date.
-    # This totally sucks.
-    today = today.new_offset(Rational(0, 24))
-
     # Now, add four hours to that date.
     # This also sucks.
-    today = today - Rational(60 * 60 * 4, 86400)
+    today = today - Rational(4, 24)
+
+    today = DateTime.parse(today.to_s.split('T')[0])
 
     File.open(log_file_path) do |file|
       file.each do |line|
 
-        file_date = line.split(' ')[0]
-        file_time = line.split(' ')[1]
-
-        this_date = DateTime.parse(file_date)
+        this_date = DateTime.parse(line.split(' ')[0])
 
         if this_date == today
           if line.split(' ')[2] == 'INFO'
@@ -38,3 +33,4 @@ class NearingLimit < Scout::Plugin
 
   end
 end
+

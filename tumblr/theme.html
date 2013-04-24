@@ -90,6 +90,7 @@
                     
                     <div class="round-list">
                         <ul>
+                            <li class="chefs"><a href="/tagged/chef">Famous Chefs Offer Advice</a></li>
                             <li class="round1"><a href="/tagged/round1">Round 1: Pantry Open Call</a></li>
                             <li class="round2"><a href="/tagged/round2">Round 2: The Spice Rack</a></li>
                         </ul>
@@ -107,6 +108,7 @@
             <section id="post-wrap">
                 {block:TagPage}
                     <h2 class="tag-header {URLSafeTag}">
+                        <span class="round chef">Famous Chefs Offer Advice</span>
                         <span class="round round1">Round 1: Pantry Open Call</span>
                         <span class="round round2">Round 2: The Spice Rack</span>
                     </h2>
@@ -270,7 +272,6 @@
         <div id="project-form" class="modal">{{ FORM_HTML }}</div>
 
         <div class="modal-bg"></div>
-
         {block:IfUseEndlessScrolling}
         <script type="text/javascript">
             var Tumblelog = {};
