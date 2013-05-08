@@ -406,9 +406,14 @@ def deploy(remote='origin'):
 
     if env.get('deploy_to_servers', False):
         checkout_latest(remote)
+        touch_wsgi()
 
         if env.get('install_crontab', False):
             install_crontab()
+
+def touch_wsgi():
+    require('settings', provided_by=[production, staging])
+    run('touch %(repo_path)s/public_app.py' % env)
 
 def write_json_data():
     """
