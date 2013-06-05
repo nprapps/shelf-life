@@ -670,8 +670,8 @@ header {
     }
 }
 ol.notes {
-    color: #ccc;
-    font-size: 13px;
+    color: #404040;
+    font-size: 15px;
     text-align: left;
     list-style-type: none;
     border-top: solid 1px #E6E6E6;
@@ -679,8 +679,12 @@ ol.notes {
     margin: auto;
 
     li.note {
-        border-bottom: solid 1px #aaa;
-        padding: 9px 0 10px 0;
+        padding: 9px 0 0 0;
+
+        .action a {
+            font-size: 13px;
+            font-weight: bold;
+        }
 
         &:last-child { border-width: 0px; }
         img.avatar {
@@ -691,18 +695,17 @@ ol.notes {
             margin-right: 6px;
         }
         blockquote {
-            border-color: #eee;
-            padding: 4px 10px;
-            margin: 10px 0px 0px 25px;
+            padding: 4px 0;
+            margin: 10px 0px 0px 23px;
 
-            a { text-decoration: none; }
+            a { text-decoration: none; color: #404040; }
         }
     }
     a {
-        color: #bbb;
-        text-decoration: underline;
+        color: #4774CC;
+        text-decoration: none;
 
-        &:hover { color: #fff; }
+        &:hover { text-decoration: underline; }
     }
 }
 
