@@ -193,20 +193,21 @@ header {
         cursor: pointer;
         overflow: hidden;
         background-color: #7598c9;
-        height: 38px; /* 44px - padding-top */
+
         padding-top: 6px;
         font-weight: bold;
-        font-size: 13px;
-        line-height: 16px;
+        font-size: 15px;
+        line-height: 18px;
         padding-right: 10px;
         color: #fff;
+        margin-top: 10px;
 
         &:hover { background-color: #9eb7dd; }
         &:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
         span {
             background: url('@{img-root}/btn-post-photo-44.png') no-repeat 50% 50%;
             width: 44px;
-            height: 44px;
+            height: 66px;
             border-right: 1px solid #fff;
             margin-right: 11px;
             margin-top: -6px; /* the negative of the padding-top on #modal-btn */
@@ -214,8 +215,11 @@ header {
             float: left;
         }
         i {
-            white-space: nowrap;
             font-style: normal;
+            font-size: 12px;
+            line-height: 15px;
+            display: block;
+            margin-top: 4px;
         }
     }
     .mobile-prompt {
@@ -958,12 +962,8 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
         }
         .project-prompt { margin-bottom: 0; }
         #modal-btn {
-            height: 44px;
-            padding-top: 0;
-            font-size: 14px;
-            line-height: 44px;
-
-            span { margin-top: 0; }
+            line-height: 30px;
+            i { margin-top:0px; }
         }
         .mobile-prompt {
             margin-top: 0;
@@ -1026,4 +1026,12 @@ header:after, #container:after, .caption_and_post_info:after, footer:after .butt
     #project-form {
         font-size:12px;
     }
+    
+    #blog_info {
+        
+        #modal-btn {
+            line-height:22px;
+        }
+    }
+    
 }
