@@ -14,7 +14,7 @@ PROJECT_SLUG = 'cook-your-cupboard'
 REPOSITORY_NAME = 'shelf-life'
 CONFIG_NAME = PROJECT_SLUG.replace('-', '').upper()
 
-PROJECT_CREDITS = 'Jeremy Bowers, Selena Simmons-Duffin, Kate Myers, Alyson Hurt, Claire O\'Neill and Rachel Ward / NPR'
+PROJECT_CREDITS = 'Jeremy Bowers, Danny DeBelius, Selena Simmons-Duffin, Kate Myers, Alyson Hurt, Claire O\'Neill and Rachel Ward / NPR'
 PROJECT_SHORTLINK = 'npr.org/cupboard'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
@@ -50,7 +50,7 @@ NPR_DFP = {
 
 GOOGLE_ANALYTICS_ID = 'UA-5828686-4'
 
-TUMBLR_TAGS = 'booze, round4'
+TUMBLR_TAGS = 'booze, round5'
 TUMBLR_FILENAME = 'www/live-data/%s-data.json' % PROJECT_SLUG
 
 def get_secrets():
