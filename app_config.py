@@ -50,7 +50,7 @@ NPR_DFP = {
 
 GOOGLE_ANALYTICS_ID = 'UA-5828686-4'
 
-TUMBLR_TAGS = 'booze, round5'
+TUMBLR_TAGS = 'freezerfinds, round5'
 TUMBLR_FILENAME = 'www/live-data/%s-data.json' % PROJECT_SLUG
 
 def get_secrets():
