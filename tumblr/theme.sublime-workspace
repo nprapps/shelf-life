@@ -1,0 +1,1705 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"screen-",
+				"screen-xs-max"
+			],
+			[
+				"tablc",
+				"table-cell"
+			],
+			[
+				"grid",
+				"grid-gutter-width"
+			],
+			[
+				"line-he",
+				"line-height-computed"
+			],
+			[
+				"make-md",
+				"make-md-column-offset"
+			],
+			[
+				"font-si",
+				"font-size-base"
+			],
+			[
+				"line-h",
+				"line-height-computed"
+			],
+			[
+				"font-fa",
+				"font-family-headline"
+			],
+			[
+				"make",
+				"make-lg-column"
+			],
+			[
+				"TU",
+				"TUMBLR_APP_SECRET"
+			],
+			[
+				"TUMBLR",
+				"TUMBLR_APP_KEY"
+			],
+			[
+				"tumblr",
+				"tumblr_utils"
+			],
+			[
+				"border",
+				"border-radius	border-radius"
+			],
+			[
+				"ob",
+				"object"
+			],
+			[
+				"fe",
+				"featuredstories"
+			],
+			[
+				"bar",
+				"barHeight"
+			],
+			[
+				"xml",
+				"XMLHttpRequest"
+			],
+			[
+				"preve",
+				"preventDefault"
+			],
+			[
+				"story",
+				"storyEcommerce"
+			],
+			[
+				"blog_re",
+				"blogs_responsive_featured"
+			],
+			[
+				"commentBlo",
+				"commentBlockDiv"
+			],
+			[
+				"render",
+				"renderMobileDisqus"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"cls",
+				"closeCommentDrawer"
+			],
+			[
+				"email",
+				"emailFormContent"
+			],
+			[
+				"carousel",
+				"carousel-caption"
+			],
+			[
+				"carouse",
+				"carousel-caption"
+			],
+			[
+				"gray",
+				"grayLighter"
+			],
+			[
+				"gra",
+				"grayLighter"
+			],
+			[
+				"car",
+				"carousel-caption"
+			],
+			[
+				"sig-",
+				"sig-graphic-nav"
+			],
+			[
+				"vertic",
+				"vertical-align"
+			],
+			[
+				"getCounty",
+				"getCountyMonths"
+			],
+			[
+				"getC",
+				"getCountyMonths"
+			],
+			[
+				"line",
+				"lineColor"
+			],
+			[
+				"lin",
+				"lineWidth"
+			],
+			[
+				"up",
+				"uppercase  (value)"
+			],
+			[
+				"nor",
+				"nobr"
+			],
+			[
+				"p",
+				"p"
+			],
+			[
+				"article",
+				"article"
+			],
+			[
+				"solid",
+				"solid  (value)"
+			],
+			[
+				"uppercase",
+				"uppercase  (value)"
+			],
+			[
+				"600",
+				"600  (value)"
+			],
+			[
+				"h1",
+				"h1  (element)"
+			],
+			[
+				"class",
+				"class=  (attribute)"
+			],
+			[
+				"the_ID",
+				"the_syndication_feed_id  (function)"
+			],
+			[
+				"font",
+				"font: font-family: family"
+			],
+			[
+				"bod",
+				"body"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"git chec",
+				"Git: Checkout Current File"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"can",
+				"Can I Switch To Sublime Text 3?"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git check",
+				"Git: Checkout Current File"
+			],
+			[
+				"lor",
+				"Snippet: lorem - Medium paragraph"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"pack re",
+				"Package Control: Remove Package"
+			],
+			[
+				"lore",
+				"Snippet: lorem - Medium paragraph <p>"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"cthu",
+				"CthulhuDolorem: (30) one whole mess of terror"
+			],
+			[
+				"comb",
+				"Sort via CSScomb"
+			],
+			[
+				"css",
+				"Sort via CSScomb"
+			],
+			[
+				"css ",
+				"Tidy CSS"
+			],
+			[
+				"finder",
+				"Finder: Open here"
+			],
+			[
+				"find",
+				"Finder: Open here"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"git che",
+				"Git: Checkout Current File"
+			],
+			[
+				" git comt",
+				"Git: Commit"
+			],
+			[
+				"git file",
+				"Git: Checkout Current File"
+			],
+			[
+				"git commit ",
+				"Git: Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"media",
+				"Snippet: CSS - @media {}"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"java",
+				"Format: Javascript"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"git",
+				"Git: Add Current File"
+			],
+			[
+				"gis",
+				"GitHub: Private Gist from Selection"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git p",
+				"Git: Pull"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"git file ",
+				"Git: Checkout Current File"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"svn file com",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn file bla",
+				"SVN: (File) Blame"
+			],
+			[
+				"svn file log",
+				"SVN: (File) Log"
+			],
+			[
+				"svn file l",
+				"SVN: (File) Log"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"gist",
+				"GitHub: Update Gist"
+			],
+			[
+				"svn co",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn ",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn c",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn file di",
+				"SVN: (File) Diff"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"svn reve",
+				"SVN: (Folder) Revert"
+			],
+			[
+				"svn file c",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn file bl",
+				"SVN: (File) Blame"
+			],
+			[
+				"svn file blam",
+				"SVN: (File) Blame"
+			],
+			[
+				"svn rever",
+				"SVN: (Folder) Revert"
+			],
+			[
+				"svn filec",
+				"SVN: (File) Commit"
+			],
+			[
+				"svn file d",
+				"SVN: (File) Diff"
+			],
+			[
+				"svn file re",
+				"SVN: (File) Revert"
+			],
+			[
+				"svn file dif",
+				"SVN: (File) Diff"
+			],
+			[
+				"svn dif",
+				"SVN: Diff"
+			],
+			[
+				"svn lo",
+				"SVN: (File) Log"
+			],
+			[
+				"svn",
+				"SVN: (File) Commit"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"svn update",
+				"SVN: (File) Update"
+			],
+			[
+				"svn rev",
+				"SVN: (File) Revert"
+			],
+			[
+				"svn d",
+				"SVN: Diff"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"dif",
+				"FileDiffs: Menu"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"dele",
+				"SVN: (File) Delete"
+			],
+			[
+				"svn revert ",
+				"SVN: (File) Revert"
+			],
+			[
+				"svn revert",
+				"SVN: (Folder) Revert"
+			],
+			[
+				"rever",
+				"File: Revert"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git stash",
+				"Git: Stash Apply"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git log",
+				"Git: Log Current File"
+			],
+			[
+				"git checkt",
+				"Git: Checkout Current File"
+			],
+			[
+				" git push",
+				"Git: Push"
+			],
+			[
+				"stash",
+				"Git: Stash Changes"
+			],
+			[
+				"git  un",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git ",
+				"Git: Add Current File"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git blame",
+				"Git: Blame"
+			],
+			[
+				"chek",
+				"Git: Checkout Current File"
+			],
+			[
+				"gitdi",
+				"Git: Diff Current File"
+			],
+			[
+				"git dif",
+				"Git: Diff Current File"
+			],
+			[
+				"mini",
+				"Minify Javascript to file"
+			],
+			[
+				"min",
+				"Minify Javascript to file"
+			],
+			[
+				"ja",
+				"Format: Javascript"
+			],
+			[
+				"svn filebl",
+				"SVN: (File) Blame"
+			],
+			[
+				"svn file revert",
+				"SVN: (File) Revert"
+			],
+			[
+				"svn file rever",
+				"SVN: (File) Revert"
+			],
+			[
+				"svn status",
+				"SVN: Status"
+			],
+			[
+				"svn file",
+				"SVN: (File) Commit"
+			],
+			[
+				"blam",
+				"SVN: (File) Blame"
+			],
+			[
+				"box",
+				"Snippet: box-shadow"
+			],
+			[
+				"tran",
+				"Snippet: transition"
+			],
+			[
+				"tra",
+				"Snippet: transition"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"wr",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"wra",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"ent",
+				"StringEncode: HTML Entitize"
+			],
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"lint",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"javas",
+				"Format: Javascript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ips",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Snippet: lo",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"gradi",
+				"Snippet: Vertical gradient"
+			],
+			[
+				"bord",
+				"Snippet: border-radius"
+			],
+			[
+				"js",
+				"Format: Javascript"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint Current File"
+			],
+			[
+				"gi",
+				"Git: Status"
+			],
+			[
+				"bor",
+				"Snippet: border-radius"
+			],
+			[
+				"rad",
+				"Snippet: border-radius"
+			],
+			[
+				"te",
+				"Snippet: text-shadow"
+			],
+			[
+				"text",
+				"Snippet: text-shadow"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 522.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ddebelius/Projects/tumble/tumblrs/seedtoshirt/theme.html.tpl",
+		"/Users/ddebelius/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/ddebelius/working/tumble/etc/github.py",
+		"/Users/ddebelius/working/tumble/tumblrs/nprplays/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/fabfile.py",
+		"/Users/ddebelius/working/tumble/tumblrs/nprplays/variables.less",
+		"/Users/ddebelius/working/tumble/tumblrs/nprplays/app.less",
+		"/Users/ddebelius/working/tumble/tumblrs/nprplays/app.js",
+		"/Users/ddebelius/working/tumble/app.py",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/app.js",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/app.js",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/app.less",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/tumblrs/returntoiowa/app.js",
+		"/Users/ddebelius/working/tumble/tumblrs/returntoiowa/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/tumblrs/returntoiowa/app.less",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/jquery.lazyload.js",
+		"/Users/ddebelius/working/tumble/.gitignore",
+		"/Users/ddebelius/working/tumble/app_config.py",
+		"/Users/ddebelius/working/tumble/gzip_types.txt",
+		"/Users/ddebelius/working/tumble/gzip_assets.py",
+		"/Users/ddebelius/working/tumble/tumblrs/consideringbrazil/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/templates/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/theme.html",
+		"/Users/ddebelius/working/tumble/tumblrs/skunkbear/variables.less",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/app.less",
+		"/Users/ddebelius/working/tumble/tumblrs/returntoiowa/theme.html",
+		"/Users/ddebelius/.virtualenvs/postactivate",
+		"/Users/ddebelius/working/tumble/less/bootstrap-3/type.less",
+		"/Users/ddebelius/working/tumble/tumblrs/socialmediadesk/app.less",
+		"/Users/ddebelius/working/tumble/tumblrs/socialmediadesk/theme.html.tpl",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/theme.html",
+		"/Users/ddebelius/working/tumble/less/bootstrap/type.less",
+		"/Users/ddebelius/working/tumble/tumblrs/socialmediadesk/variables.less",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/variables.less",
+		"/Users/ddebelius/working/tumble/less/bootstrap-3/variables.less",
+		"/Users/ddebelius/working/tumble/less/bootstrap/variables.less",
+		"/Users/ddebelius/working/tumble/less/bootstrap-3/bootstrap.less",
+		"/Users/ddebelius/working/tumble/tumblrs/ari-whitehouse/app.less.css",
+		"/Users/ddebelius/working/tumble/render_utils.py",
+		"/Users/ddebelius/working/tumble/less/bootstrap-3/variables.css",
+		"/Users/ddebelius/working/tumble/less/bootstrap/bootstrap.less",
+		"/Users/ddebelius/working/tumble/less/bootstrap-3/mixins.less",
+		"/Users/ddebelius/working/tumble/less/bootstrap/mixins.less",
+		"/Users/ddebelius/working/Chartbuilder/www/bower_components/really-simple-color-picker/jquery.colorPicker.js",
+		"/Users/ddebelius/working/Chartbuilder/.git/MERGE_MSG",
+		"/Users/ddebelius/working/Chartbuilder/www/js/custom_components/sugar-1.3.9-custom.min.js",
+		"/Users/ddebelius/working/totebot2/.git/MERGE_MSG",
+		"/Users/ddebelius/working/totebot2/scripts/raisetheroof.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/cafeteria.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/cafeteria.js",
+		"/Users/ddebelius/working/totebot2/scripts/rules.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/do-it-live.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/advice.coffee",
+		"/Users/ddebelius/working/totebot2/package.json",
+		"/Users/ddebelius/working/totebot2/scripts/coffee.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/mitch-hedberg.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/rdio.coffee",
+		"/Users/ddebelius/working/totebot2/totebot2.conf",
+		"/Users/ddebelius/working/totebot2/scripts/inigo-montoya.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/applause.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/hangout.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/github-issue-link.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/github-issues.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/riker.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/15ft_killer_cat.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/github-commit-link.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/boweret.coffee",
+		"/Users/ddebelius/working/totebot2/scripts/iggy.coffee",
+		"/Users/ddebelius/working/shelf-life/less/app.less",
+		"/Users/ddebelius/working/dotfiles/custom/debelius.bash",
+		"/etc/hosts",
+		"/Users/ddebelius/Sites/wp/wp-content/plugins/navis-fusion-mapper/navis-fusion-mapper.php",
+		"/Users/ddebelius/Sites/wp/wp-content/plugins/navis-ft-layer-builder/navis-ft-layer-builder.php",
+		"/Users/ddebelius/Sites/wp/wp-content/plugins/navis-ft-layer-builder/js/ft-builder.js",
+		"/Users/ddebelius/Sites/wp/wp-config-old.php",
+		"/Users/ddebelius/Sites/wp/wp-config.php",
+		"/Users/ddebelius/Sites/wp/.htaccess",
+		"/Users/ddebelius/Sites/wp/wp-content/plugins/argo-audio-player/argo-audio-player.php",
+		"/Users/ddebelius/Sites/wp/wp-content/plugins/navis-slideshows/navis-slideshows.php",
+		"/Users/ddebelius/Sites/wp/wp-content/themes/statewatch/includes/collection-background.php",
+		"/Users/ddebelius/Sites/wp/wp-content/themes/statewatch/includes/topics/topics.php",
+		"/Users/ddebelius/Sites/wp/wp-content/themes/statewatch/includes/template.php",
+		"/Users/ddebelius/Sites/wp/wp-content/themes/statewatch/functions.php",
+		"/Users/ddebelius/.bash_profile",
+		"/Users/ddebelius/working/red-river/js/gio-pitch-speed.png",
+		"/Users/ddebelius/working/red-river/.gitignore",
+		"/Users/ddebelius/working/red-river/less/bootstrap.less",
+		"/Users/ddebelius/working/red-river/less/responsive.less",
+		"/Users/ddebelius/working/red-river/less/pagination.less",
+		"/Users/ddebelius/working/red-river/less/utilities.less",
+		"/Users/ddebelius/working/red-river/less/base.less",
+		"/Users/ddebelius/working/red-river/css/base.css",
+		"/Users/ddebelius/working/heroku-stellar-twitter-bot/stellar2twitter.rb",
+		"/Users/ddebelius/Dropbox/d3/earthquakes.html",
+		"/Users/ddebelius/working/red-river/less/reset.less",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/plugins/navis-documentcloud/navis-documentcloud.php",
+		"/Users/ddebelius/Dropbox/d3/drought.json",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/includes/editor.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-includes/class-wp-editor.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-includes/js/tinymce/wp-tinymce.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-includes/js/tinymce/tiny_mce.js",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/js/tinymce/plugins/argo/tinymce.js",
+		"/Users/ddebelius/working/dotfiles/sublime/Browser.sublime-build",
+		"/Users/ddebelius/Library/Application",
+		"/Users/ddebelius/working/Support/Thimblr/themes/blog.html",
+		"/Users/ddebelius/working/thimblr-base/Gemfile",
+		"/Users/ddebelius/working/thimblr-base/config/settings.default.yaml",
+		"/Users/ddebelius/working/thimblr-base/config.ru",
+		"/Users/ddebelius/working/thimblr-base/themes/Redux.html",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/single.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/loop.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/js/responsive-ad.js",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/header.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/post-meta.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/functions.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/includes/topics/topics.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/includes/settings/statewatch.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/plugins/navis-jiffy-posts/navis-jiffy-posts.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/footer.php",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/js/analytics.js",
+		"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/featured-topics.php",
+		"/Users/ddebelius/working/dotfiles/.gitignore",
+		"/Users/ddebelius/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/ddebelius/working/dotfiles/sublime/Preferences.sublime-settings",
+		"/Users/ddebelius/working/dotfiles/sublime/GitHub.sublime-settings",
+		"/Users/ddebelius/working/dotfiles/sublime/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"*.lis",
+			"",
+			"*.lis",
+			"*.inc",
+			"*.lis",
+			"",
+			"*.js",
+			"*.inc",
+			"*.lis",
+			"*.scss",
+			"*.inc",
+			"*.js",
+			"*.inc",
+			"*.js",
+			"*.scss",
+			"/css/*",
+			"",
+			"*.xsl",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"twitter",
+			"{{ copy.og_image }}",
+			"tags",
+			"sharing",
+			"get_auth",
+			"auth",
+			".search",
+			".match",
+			"render",
+			"copy",
+			"copy.",
+			"slug",
+			"theme",
+			"render",
+			"s3",
+			"10.44.17.203",
+			"less",
+			"deployme",
+			"deploy_to_s3",
+			"deploy_to",
+			"_gzi'",
+			"_gzi",
+			"text",
+			"meta",
+			"postme",
+			"twitter",
+			"fa-",
+			"notes",
+			"pubdate",
+			"tags",
+			".tags",
+			"text-align: rig",
+			"e1e",
+			"#e6e1d8",
+			"source",
+			"pubd",
+			"tag",
+			"text-al",
+			"127.0.0.1",
+			"127.0",
+			"127.0.0.1",
+			"font-fami",
+			"text-wrapp",
+			"p {",
+			"p",
+			"baseLineHeight",
+			"h1",
+			"header",
+			"audio",
+			"iframe",
+			"text",
+			".npr",
+			"copy_the",
+			"cssm",
+			"render_template_string",
+			"_render_tu",
+			"production",
+			"less",
+			"quote",
+			"center-block",
+			"blockqu",
+			"text-align: r",
+			".tags",
+			".tag",
+			"make-lg",
+			"col-",
+			"blockq",
+			"blockquo",
+			"weight",
+			"block",
+			"quot",
+			"<im",
+			"span",
+			"grayLight",
+			"baseFontSize",
+			"font-s",
+			"baseLineHeight",
+			"line",
+			"DOC_KEY",
+			"render",
+			"debu",
+			"indexof",
+			"zero",
+			"chart",
+			"showinv",
+			"copy and ",
+			"a numb",
+			"be a na",
+			"prec",
+			"numT",
+			"exact",
+			"g.yAxis.tickInterval",
+			"numT",
+			"exactTi",
+			"axis_in",
+			"transpo",
+			"colorpic",
+			"g.yAxis.ex ",
+			"g.yAxis.ex",
+			"p>",
+			"zero",
+			"translate",
+			"++",
+			"+ 1",
+			"canvas",
+			"updateC",
+			"typepi",
+			"title",
+			"fieldmes",
+			"ui",
+			"configui",
+			"config",
+			"update",
+			"dec",
+			"decim",
+			"savecurr",
+			"canv",
+			"xaxis",
+			"previous",
+			"loadchart",
+			"label",
+			"xax",
+			"zero",
+			"invalid",
+			"createchart",
+			"download",
+			"downloadima",
+			"download"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"{{ S3_BASE_URL }}/img/{{ slug }}/og_image.png",
+			"127.0.0.1",
+			"10.44.17.203",
+			"line-height-base",
+			"make-md",
+			"gray-light",
+			"font-size-base",
+			"line-height-computed",
+			"tickInterval",
+			"li>",
+			"jQuery",
+			"STATEIMPACT.",
+			"npr-call btn btn-mini btn-success",
+			"npr-uncall btn btn-mini btn-warning",
+			".slide",
+			"slides",
+			" article ",
+			"article",
+			"stories",
+			"dd",
+			"allsongs",
+			"health",
+			"allsongs",
+			"li",
+			"p",
+			"h3",
+			"li class=\"span2\"",
+			"../",
+			"/",
+			"../../",
+			"span3",
+			"s/",
+			"<dl>",
+			"",
+			"<?php bloginfo('stylesheet_directory'); ?>/img/reporters/",
+			"./img/reporters/",
+			"768/768",
+			"span2",
+			"h4",
+			"100x100",
+			"p",
+			"h4",
+			"12",
+			"11",
+			"10",
+			"9",
+			"8",
+			"6",
+			"4",
+			"5",
+			"4",
+			"3",
+			"2",
+			"1",
+			"5",
+			"','",
+			"y",
+			"name",
+			"July",
+			"June",
+			"May",
+			"Dec",
+			"Nov",
+			"Oct",
+			"Sept",
+			"Aug",
+			"Jul",
+			"June",
+			"May",
+			"Apr",
+			"Mar",
+			"Feb",
+			"Jan",
+			"name",
+			"y",
+			"period",
+			"year",
+			"y",
+			", "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "theme.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"app.py",
+				"app.py"
+			],
+			[
+				"fab",
+				"fabfile.py"
+			],
+			[
+				"app",
+				"app_config.py"
+			],
+			[
+				"theme.html.tpl",
+				"tumblrs/skunkbear/theme.html.tpl"
+			],
+			[
+				"theme.html",
+				"tumblrs/skunkbear/theme.html"
+			],
+			[
+				"app.less",
+				"tumblrs/skunkbear/app.less"
+			],
+			[
+				"theme",
+				"tumblrs/returntoiowa/theme.html.tpl"
+			],
+			[
+				"the",
+				"tumblrs/returntoiowa/theme.html"
+			],
+			[
+				"type",
+				"less/bootstrap-3/type.less"
+			],
+			[
+				"theme.",
+				"tumblrs/ari-whitehouse/theme.html"
+			],
+			[
+				"vari",
+				"tumblrs/socialmediadesk/variables.less"
+			],
+			[
+				"app_c",
+				"app_config.py"
+			],
+			[
+				"app.less.cs",
+				"tumblrs/ari-whitehouse/app.less.css"
+			],
+			[
+				"boot",
+				"less/bootstrap-3/bootstrap.less"
+			],
+			[
+				"mixi",
+				"less/bootstrap-3/mixins.less"
+			],
+			[
+				"var",
+				"less/bootstrap/variables.less"
+			],
+			[
+				"can",
+				"www/js/lib/canvg.js"
+			],
+			[
+				"chart",
+				"www/css/chartbuilder.css"
+			],
+			[
+				"gne",
+				"www/css/gneisschart.css"
+			],
+			[
+				"riker",
+				"scripts/riker.coffee"
+			],
+			[
+				"mewa",
+				"scripts/mewantfood.coffee"
+			],
+			[
+				"cof",
+				"scripts/coffee.coffee"
+			],
+			[
+				"ap",
+				"app.py"
+			],
+			[
+				"them",
+				"tumblr/theme.html"
+			],
+			[
+				"tum",
+				"tumblr_utils.py"
+			],
+			[
+				"fa",
+				"fabfile.py"
+			],
+			[
+				"pub",
+				"public_app.py"
+			],
+			[
+				"",
+				"app_config.py"
+			],
+			[
+				"ft-bu",
+				"wp-content/plugins/navis-ft-layer-builder/js/ft-builder.js"
+			],
+			[
+				"audio",
+				"wp-content/plugins/argo-audio-player/argo-audio-player.php"
+			],
+			[
+				"slide",
+				"wp-content/plugins/navis-slideshows/navis-slideshows.php"
+			],
+			[
+				"collection",
+				"wp-content/themes/statewatch/includes/collection-background.php"
+			],
+			[
+				"topics",
+				"wp-content/themes/statewatch/includes/topics/topics.php"
+			],
+			[
+				"template.php",
+				"wp-content/themes/statewatch/includes/template.php"
+			],
+			[
+				"functions",
+				"wp-content/themes/statewatch/functions.php"
+			],
+			[
+				"navis-fusion",
+				"wp-content/plugins/navis-fusion-mapper/navis-fusion-mapper.php"
+			],
+			[
+				"back",
+				"includes/collection-background.php"
+			],
+			[
+				"topic_",
+				"includes/topic_loop.php"
+			],
+			[
+				"tag",
+				"tag.php"
+			],
+			[
+				"ar",
+				"archive.php"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"sing",
+				"single.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"topi",
+				"includes/topics/topics.php"
+			],
+			[
+				"sty",
+				"style.css"
+			],
+			[
+				"res",
+				"js/responsive-ad.js"
+			],
+			[
+				"ana",
+				"js/analytics.js"
+			],
+			[
+				"feat",
+				"featured-topics.php"
+			],
+			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"state",
+				"includes/settings/statewatch.php"
+			],
+			[
+				"meta",
+				"post-meta.php"
+			],
+			[
+				"header",
+				"header.php"
+			],
+			[
+				"styl",
+				"style.css"
+			],
+			[
+				"ecom",
+				"ecommerce.scss"
+			],
+			[
+				"rel",
+				"related.scss"
+			],
+			[
+				"lists",
+				"lists.scss"
+			],
+			[
+				"dd",
+				"config/hosts/dev-ddebelius.inc"
+			],
+			[
+				"responsive-c",
+				"templates/javascript/lib/jquery.responsive-carousel.js"
+			],
+			[
+				"agg",
+				"templates/css/responsive/aggregation.scss"
+			],
+			[
+				"responsive-",
+				"templates/javascript/lib/jquery.responsive-carousel.js"
+			],
+			[
+				"laz",
+				"templates/javascript/images/lazyLoadTwo.js"
+			],
+			[
+				"responsive",
+				"templates/javascript/responsive_page.js"
+			],
+			[
+				"dev-d",
+				"config/hosts/dev-ddebelius.inc"
+			],
+			[
+				"respond.js",
+				"templates/javascript/lib/respond.js"
+			],
+			[
+				"ieo",
+				"templates/css/generated/ieoverrides.lis"
+			],
+			[
+				"css3",
+				"templates/javascript/lib/css3-mediaqueries.js"
+			],
+			[
+				"swipin",
+				"templates/javascript/swipe/swipeInit.js"
+			],
+			[
+				"relate",
+				"templates/css/responsive/related.scss"
+			],
+			[
+				"buil",
+				"build.xml"
+			],
+			[
+				"responsive_p",
+				"templates/javascript/responsive_page.js"
+			],
+			[
+				"_va",
+				"templates/css/base/_variables.scss"
+			],
+			[
+				"rela",
+				"templates/css/responsive/related.scss"
+			],
+			[
+				"contentfoo",
+				"templates/css/responsive/contentfooter.scss"
+			],
+			[
+				"globa",
+				"templates/css/responsive/globalnav2012.scss"
+			],
+			[
+				"responsive_pa",
+				"templates/javascript/responsive_page.js"
+			],
+			[
+				"responsive_",
+				"templates/xsl/custom/blogs/responsive_series.xsl"
+			],
+			[
+				"related",
+				"templates/css/responsive/related.scss"
+			],
+			[
+				"story",
+				"templates/css/responsive/storycontent.scss"
+			],
+			[
+				"_variab",
+				"templates/css/base/_variables.scss"
+			],
+			[
+				"renderd",
+				"templates/javascript/disqus/renderDisqus.js"
+			],
+			[
+				"jquery.d",
+				"templates/javascript/disqus/jquery.disqus.js"
+			],
+			[
+				"grid",
+				"templates/css/lib/foundation/sass/npr_semantic_grid.scss"
+			],
+			[
+				"foundation",
+				"templates/css/lib/foundation/sass/npr_semantic_grid.scss"
+			],
+			[
+				"relates",
+				"templates/css/responsive/related.scss"
+			],
+			[
+				"respons",
+				"templates/xsl/custom/blogs/responsive_series.xsl"
+			],
+			[
+				"_m",
+				"templates/css/base/_mixins.scss"
+			],
+			[
+				"_",
+				"templates/css/base/_variables.scss"
+			],
+			[
+				"storycontent",
+				"templates/css/responsive/storycontent.scss"
+			],
+			[
+				"globaln",
+				"templates/css/responsive/globalnav2012.scss"
+			],
+			[
+				"swip",
+				"templates/javascript/lib/swipe.js"
+			],
+			[
+				"comments",
+				"templates/css/responsive/comments.scss"
+			],
+			[
+				"blogind",
+				"templates/javascript/generated/blogIndex.lis"
+			],
+			[
+				"responsive_pag",
+				"templates/javascript/responsive_page.js"
+			],
+			[
+				"responsive_s",
+				"templates/xsl/custom/blogs/responsive_series.xsl"
+			],
+			[
+				"responsive_fe",
+				"templates/xsl/custom/blogs/responsive_featured.xsl"
+			],
+			[
+				"cms",
+				"cms.py"
+			],
+			[
+				"req",
+				"requirements.txt"
+			],
+			[
+				"requi",
+				"requirements.txt"
+			],
+			[
+				"backgroun",
+				"themes/statewatch/includes/collection-background.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"quo",
+				"/Users/ddebelius/working/sublime-projects/quotable.sublime-project"
+			],
+			[
+				"stl",
+				"/Users/ddebelius/working/sublime-projects/stl-lobbying.sublime-project"
+			],
+			[
+				"st",
+				"/Users/ddebelius/working/sublime-projects/stl-lobbying.sublime-project"
+			],
+			[
+				"dash",
+				"/Users/ddebelius/working/sublime-projects/dashboard2.sublime-project"
+			],
+			[
+				"char",
+				"/Users/ddebelius/working/sublime-projects/chartbuilder.sublime-project"
+			],
+			[
+				"tot",
+				"/Users/ddebelius/working/sublime-projects/totebot2.sublime-project"
+			],
+			[
+				"play",
+				"/Users/ddebelius/working/sublime-projects/playgrounds2.sublime-project"
+			],
+			[
+				"playg",
+				"/Users/ddebelius/working/sublime-projects/playgrounds2.sublime-project"
+			],
+			[
+				"npr",
+				"/Users/ddebelius/working/sublime-projects/npr-trunk.sublime-project"
+			],
+			[
+				"trun",
+				"/Users/ddebelius/working/sublime-projects/npr-trunk.sublime-project"
+			],
+			[
+				"ply",
+				"/Users/ddebelius/working/sublime-projects/playgrounds2.sublime-project"
+			],
+			[
+				"pla",
+				"/Users/ddebelius/working/sublime-projects/playgrounds2.sublime-project"
+			],
+			[
+				"pl",
+				"/Users/ddebelius/working/sublime-projects/playgrounds2.sublime-project"
+			],
+			[
+				"",
+				"/Users/ddebelius/Dropbox/stateimpact/stateimpact.sublime-project"
+			],
+			[
+				"fra",
+				"/Users/ddebelius/Dropbox/stateimpact/working/fracking.sublime-project"
+			],
+			[
+				"stat",
+				"/Users/ddebelius/Dropbox/stateimpact/stateimpact.sublime-project"
+			],
+			[
+				"nh",
+				"/Users/ddebelius/Dropbox/stateimpact/working/nh-voices.sublime-project"
+			],
+			[
+				"ida",
+				"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/idaho-jobless.sublime-project"
+			],
+			[
+				"id",
+				"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/idaho-jobless.sublime-project"
+			],
+			[
+				"jobl",
+				"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/idaho-jobless.sublime-project"
+			],
+			[
+				"idaho",
+				"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/idaho-jobless.sublime-project"
+			],
+			[
+				"aro",
+				"/Users/ddebelius/Dropbox/stateimpact/working/argo-foundation.sublime-project"
+			],
+			[
+				"job",
+				"/Users/ddebelius/Dropbox/stateimpact/wordpress/wp-content/themes/statewatch/idaho-jobless.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"vintage":
+		{
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
